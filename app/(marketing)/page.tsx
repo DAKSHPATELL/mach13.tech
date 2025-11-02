@@ -1,132 +1,113 @@
-import Image from "next/image";
-import Link from "next/link";
-import dynamic from "next/dynamic";
-import { FeatureCard } from "@/components/FeatureCard";
-import { Hero } from "@/components/Hero";
+'use client';
 
-const LogoCloud = dynamic(async () => {
-  const mod = await import("@/components/LogoCloud");
-  return { default: mod.LogoCloud };
-});
-const CTASection = dynamic(async () => {
-  const mod = await import("@/components/CTASection");
-  return { default: mod.CTASection };
-});
-const MetricsKPI = dynamic(async () => {
-  const mod = await import("@/components/MetricsKPI");
-  return { default: mod.MetricsKPI };
-});
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion, useReducedMotion } from 'framer-motion';
 
-const valueProps = [
-  {
-    title: "Document-grounded answers with citations",
-    description: "From SOPs, manuals, IFS/HACCP, SDS/TDS, and OEM specs.",
-    image: "/illustrations/blueprint.svg"
-  },
-  {
-    title: "Custom ML for sensors & vision",
-    description: "Predictive maintenance, anomaly detection, visual QA.",
-    image: "/illustrations/pipeline.svg"
-  },
-  {
-    title: "Measured outcomes",
-    description: "Time-to-answer, first-try accuracy, and compliance readiness.",
-    image: "/illustrations/dashboard.svg"
-  }
-];
-
-const highlights = [
-  {
-    title: "Document connectors",
-    description: "PDF, Word/Excel, SharePoint, S3, on-prem shares — plug in the sources you already trust."
-  },
-  {
-    title: "Policy guardrails",
-    description: "RBAC scaffolding ensures the right teams see the right answers with audit trails."
-  },
-  {
-    title: "Observability",
-    description: "Track questions asked, sources used, and satisfaction signals to close the loop."
-  }
-];
-
-export default function Page() {
+export default function HomePage() {
+  const prefersReduced = useReducedMotion();
   return (
-    <>
-      <Hero />
-      <section aria-labelledby="value-props" className="grid gap-6 sm:grid-cols-3">
-        <h2 id="value-props" className="sr-only">
-          Value propositions
-        </h2>
-        {valueProps.map((value) => (
-          <FeatureCard key={value.title} title={value.title} description={value.description} image={value.image} />
-        ))}
-      </section>
-      <section className="grid gap-12 rounded-3xl border border-divider bg-white px-6 py-12 sm:px-12" aria-labelledby="connectors">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+    <main className="relative">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(50%_60%_at_50%_0%,rgba(10,37,64,.12),transparent),linear-gradient(180deg,rgba(215,0,21,.05),transparent)]" />
+      <section className="px-6 md:px-10 lg:px-16 pt-20 pb-10 md:pt-28 md:pb-16">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 id="connectors" className="text-2xl font-semibold text-foreground">
-              One platform built for regulated production
-            </h2>
-            <p className="mt-3 max-w-xl text-sm text-foreground/70">
-              Context OS and custom ML models share the same foundation: high-trust content ingestion, policy guardrails, and measurable KPIs.
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-[#0B0B0C]">
+              AI-driven industrial efficiency
+            </h1>
+            <p className="mt-6 text-lg md:text-xl text-[#0B0B0C]/80">
+              Mach13 builds document-grounded assistants and custom machine learning for sensor and image data.
+              We help teams find precise answers with citations, reduce scrap, and keep audits calm — without changing existing systems.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link href="/contact#book" className="rounded-md bg-[#0A2540] px-5 py-3 text-white text-base font-semibold hover:bg-[#0A2540]/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A2540]">
+                Book a 15-minute appointment
+              </Link>
+              <Link href="/products/context-os" className="rounded-md border border-[#0A2540] px-5 py-3 text-[#0A2540] text-base font-semibold hover:bg-[#0A2540]/5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A2540]">
+                Explore products
+              </Link>
+            </div>
+            <p className="mt-6 text-sm text-[#0B0B0C]/60">
+              Based in Gujarat, India. Also serving Aachen, Germany.
             </p>
           </div>
-          <Link
-            href="/products/context-os"
-            className="inline-flex items-center justify-center rounded-full border border-divider px-5 py-3 text-sm font-semibold text-foreground transition hover:border-steel hover:text-steel focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-steel"
-          >
-            Explore Context OS
-          </Link>
+
+          <div className="relative aspect-[4/3] rounded-xl overflow-hidden ring-1 ring-[#EDEDED]">
+            <motion.div
+              initial={prefersReduced ? {} : { scale: 0.98, opacity: 0 }}
+              animate={prefersReduced ? {} : { scale: 1, opacity: 1 }}
+              transition={{ duration: 0.9, ease: 'easeOut' }}
+              className="h-full w-full"
+            >
+              <Image
+                src="/illustrations/hero-assembly.svg"
+                alt="Industrial data and documents unified"
+                fill
+                priority
+                className="object-cover"
+              />
+            </motion.div>
+          </div>
         </div>
-        <div className="grid gap-6 sm:grid-cols-3">
-          {highlights.map((item) => (
-            <div key={item.title} className="flex flex-col gap-3 rounded-2xl border border-divider/70 bg-background px-5 py-6">
-              <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
-              <p className="text-sm text-foreground/70">{item.description}</p>
+      </section>
+
+      <section className="px-6 md:px-10 lg:px-16 py-12 md:py-16 border-t border-[#EDEDED] bg-white/60 backdrop-blur">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+          {[{
+            title: 'Document-grounded answers with citations',
+            body: 'Manuals, standard operating procedures, quality guidelines, customer requirements, and equipment specifications — answered with the exact source passage.'
+          },{
+            title: 'Custom machine learning for sensors and vision',
+            body: 'Time-series sensors and image data models for predictive maintenance, anomaly detection, and visual quality checks.'
+          },{
+            title: 'Measured outcomes',
+            body: 'Time-to-answer, first-attempt accuracy, and audit readiness. Clear metrics, small pilots, and fast iteration.'
+          }].map(v => (
+            <div key={v.title} className="p-6 rounded-lg ring-1 ring-[#EDEDED] bg-white">
+              <h3 className="text-lg font-semibold text-[#0B0B0C]">{v.title}</h3>
+              <p className="mt-3 text-[#0B0B0C]/80">{v.body}</p>
             </div>
           ))}
         </div>
       </section>
-      <LogoCloud />
-      <section className="grid gap-10 rounded-3xl border border-divider bg-white px-6 py-12 sm:grid-cols-[1.2fr_1fr] sm:px-12" aria-labelledby="stack-unified">
-        <div className="space-y-6">
-          <h2 id="stack-unified" className="text-2xl font-semibold text-foreground">
-            Assistants and custom ML share a common stack
-          </h2>
-          <p className="text-sm text-foreground/70">
-            Document-grounded answers give teams context. Sensor and vision models catch issues before they escape. Together, they close the loop between knowledge and action.
-          </p>
-          <ul className="space-y-4 text-sm text-foreground/80">
-            <li className="flex items-start gap-3">
-              <span aria-hidden className="mt-1 inline-flex h-2 w-2 rounded-full bg-steel" />
-              <span>Hybrid RAG + knowledge graph maps machines, lines, recipes, and SKUs.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span aria-hidden className="mt-1 inline-flex h-2 w-2 rounded-full bg-steel" />
-              <span>Grounded citations by default, so audits stay calm.</span>
-            </li>
-            <li className="flex items-start gap-3">
-              <span aria-hidden className="mt-1 inline-flex h-2 w-2 rounded-full bg-steel" />
-              <span>Time-series and vision models deployed as containerized APIs on-prem or in the cloud.</span>
-            </li>
-          </ul>
-        </div>
-        <div className="rounded-3xl border border-divider bg-background p-6">
-          <Image
-            src="/illustrations/mesh.svg"
-            alt="Abstract illustration of connected production lines"
-            width={400}
-            height={240}
-            className="w-full"
-          />
-          <p className="mt-4 text-xs text-foreground/60">
-            All projects include data intake, evaluation gates, and handover playbooks.
-          </p>
+
+      <section className="px-6 md:px-10 lg:px-16 py-14 md:py-20">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-extrabold text-[#0B0B0C]">Built for regulated operations</h2>
+            <ul className="mt-6 space-y-3 text-[#0B0B0C]/80">
+              <li>• Confidential by default. Non-disclosure agreements on request.</li>
+              <li>• Role-based access control scaffolding for least-privilege answers.</li>
+              <li>• Citations for every answer to support audits and internal reviews.</li>
+              <li>• Two-week pilot playbook with clear acceptance criteria.</li>
+            </ul>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative aspect-square rounded-lg overflow-hidden ring-1 ring-[#EDEDED]">
+              <Image src="/illustrations/panel-docs.svg" alt="Documents" fill className="object-cover" />
+            </div>
+            <div className="relative aspect-square rounded-lg overflow-hidden ring-1 ring-[#EDEDED]">
+              <Image src="/illustrations/panel-sensors.svg" alt="Sensors" fill className="object-cover" />
+            </div>
+            <div className="relative aspect-square rounded-lg overflow-hidden ring-1 ring-[#EDEDED]">
+              <Image src="/illustrations/panel-vision.svg" alt="Vision" fill className="object-cover" />
+            </div>
+            <div className="relative aspect-square rounded-lg overflow-hidden ring-1 ring-[#EDEDED]">
+              <Image src="/illustrations/panel-security.svg" alt="Security" fill className="object-cover" />
+            </div>
+          </div>
         </div>
       </section>
-      <MetricsKPI />
-      <CTASection />
-    </>
+
+      <section className="px-6 md:px-10 lg:px-16 py-12 md:py-16 border-t border-[#EDEDED]">
+        <div className="max-w-6xl mx-auto text-center">
+          <h3 className="text-2xl font-extrabold text-[#0B0B0C]">Start with a short discovery</h3>
+          <p className="mt-3 text-[#0B0B0C]/80">Fifteen minutes to understand your documentation and data. If there is a fit, we propose a small pilot with clear metrics.</p>
+          <Link href="/contact#book" className="inline-block mt-6 rounded-md bg-[#D70015] px-6 py-3 text-white font-semibold hover:bg-[#D70015]/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#D70015]">
+            Book an appointment
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }

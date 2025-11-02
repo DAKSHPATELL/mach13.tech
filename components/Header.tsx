@@ -8,7 +8,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/products/context-os", label: "Products" },
   { href: "/solutions", label: "Solutions" },
-  { href: "/case-studies", label: "Case Studies" },
+  { href: "/case-studies", label: "Playbooks" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" }
