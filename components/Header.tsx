@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -8,13 +9,12 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/products/context-os", label: "Products" },
   { href: "/solutions", label: "Solutions" },
-  { href: "/case-studies", label: "Playbooks" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" }
 ] as const;
 
-export function Header() {
+export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -35,10 +35,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-divider/70 bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-3 text-foreground">
-          <span aria-hidden className="flex h-10 w-10 items-center justify-center rounded-full bg-steel text-lg font-semibold text-white">
-            M13
-          </span>
+        <Link href="/" className="flex items-center gap-3 text-foreground" aria-label="Mach13 home">
+          <Image src="/logo.svg" alt="Mach13" width={48} height={48} priority className="h-12 w-12" />
           <span className="text-lg font-semibold tracking-tight">Mach13</span>
         </Link>
         <nav aria-label="Main navigation" className="hidden items-center gap-8 text-sm font-medium text-foreground/90 md:flex">

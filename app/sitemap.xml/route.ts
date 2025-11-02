@@ -5,7 +5,6 @@ const routes = [
   "/products/context-os",
   "/products/custom-ml",
   "/solutions",
-  "/case-studies",
   "/about",
   "/blog",
   "/contact",
