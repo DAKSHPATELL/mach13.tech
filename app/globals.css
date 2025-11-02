@@ -11,14 +11,15 @@
   --color-border: 226 232 240;
 }
 
+/* Force light mode - disable dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    color-scheme: dark;
-    --color-background: 15 23 42;
-    --color-foreground: 248 250 252;
-    --color-surface: 30 41 59;
-    --color-muted: 51 65 85;
-    --color-border: 71 85 105;
+    color-scheme: light;
+    --color-background: 255 255 255;
+    --color-foreground: 15 23 42;
+    --color-surface: 248 250 252;
+    --color-muted: 241 245 249;
+    --color-border: 226 232 240;
   }
 }
 
