@@ -12,7 +12,7 @@ export default function AboutPageContent() {
     <section className="px-6 py-16 sm:px-8 md:px-10 lg:px-16">
       <div className="mx-auto flex max-w-6xl flex-col gap-12">
         <section
-          className="grid gap-10 rounded-3xl border border-divider bg-surface px-6 py-12 shadow-subtle sm:grid-cols-[1.1fr_0.9fr] sm:px-12"
+          className="grid gap-10 rounded-3xl border border-divider bg-white px-8 py-12 shadow-subtle sm:grid-cols-[1.1fr_0.9fr] sm:px-12"
           aria-labelledby="about-heading"
         >
           <div className="space-y-6">
@@ -20,11 +20,11 @@ export default function AboutPageContent() {
               {t('aboutPage.title')}
             </h1>
             <p className="text-base leading-relaxed text-foreground/75">{t('aboutPage.intro')}</p>
-            <div className="rounded-2xl border border-divider/70 bg-background px-5 py-4 text-sm text-foreground/70">
+            <div className="rounded-2xl border border-divider/70 bg-slate-50 px-6 py-5 text-sm text-foreground/70">
               <p>{t('aboutPage.founder')}</p>
             </div>
           </div>
-          <figure className="rounded-3xl border border-divider bg-background p-6">
+          <figure className="rounded-3xl border border-divider bg-slate-50 p-6">
             <Image
               src="/illustrations/network.svg"
               alt={t('aboutPage.illustrationAlt')}
@@ -40,7 +40,7 @@ export default function AboutPageContent() {
 
         <section
           aria-labelledby="values-heading"
-          className="rounded-3xl border border-divider bg-surface px-6 py-12 shadow-subtle sm:px-12"
+          className="rounded-3xl border border-divider bg-white px-8 py-12 shadow-subtle sm:px-12"
         >
           <div className="mx-auto flex max-w-4xl flex-col gap-6">
             <h2 id="values-heading" className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
@@ -48,7 +48,7 @@ export default function AboutPageContent() {
             </h2>
             <div className="grid gap-6 sm:grid-cols-3">
               {valueKeys.map((key) => (
-                <div key={key} className="rounded-2xl border border-divider/70 bg-background px-5 py-6">
+                <div key={key} className="rounded-2xl border border-divider/70 bg-slate-50 px-6 py-6 hover:bg-slate-100 transition-colors">
                   <h3 className="text-lg font-semibold text-foreground">{t(`aboutPage.values.${key}.title`)}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-foreground/70">
                     {t(`aboutPage.values.${key}.body`)}

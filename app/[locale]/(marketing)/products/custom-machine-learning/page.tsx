@@ -3,12 +3,12 @@
 import Image from 'next/image';
 import { useTranslation } from '@/lib/i18n/useTranslation';
 
-const timeSeriesKeys = [0, 1, 2] as const;
-const visionKeys = [0, 1, 2] as const;
-const deliveryKeys = [0, 1, 2, 3] as const;
-
 export default function CustomMachineLearningPage() {
   const { t } = useTranslation();
+  
+  const timeSeriesPoints = t<string[]>('productDetail.customMl.timeSeriesPoints');
+  const visionPoints = t<string[]>('productDetail.customMl.visionPoints');
+  const deliveryPoints = t<string[]>('productDetail.customMl.deliveryPoints');
 
   return (
     <section className="px-6 py-16 sm:px-8 md:px-10 lg:px-16">
@@ -42,37 +42,46 @@ export default function CustomMachineLearningPage() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="space-y-3 rounded-3xl border border-divider bg-surface px-6 py-6 shadow-subtle text-sm leading-relaxed text-foreground/75">
+          <div className="space-y-4 rounded-3xl border border-divider bg-white px-8 py-8 shadow-subtle text-sm leading-relaxed text-foreground/75">
             <h2 className="text-2xl font-semibold text-foreground">
               {t('productDetail.customMl.timeSeriesTitle')}
             </h2>
             <p>{t('productDetail.customMl.timeSeriesIntro')}</p>
-            <ul className="space-y-2">
-              {timeSeriesKeys.map((index) => (
-                <li key={index}>• {t(`productDetail.customMl.timeSeriesPoints.${index}`)}</li>
+            <ul className="space-y-3">
+              {timeSeriesPoints.map((item, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <span className="text-steel mt-1">•</span>
+                  <span>{item}</span>
+                </li>
               ))}
             </ul>
           </div>
-          <div className="space-y-3 rounded-3xl border border-divider bg-surface px-6 py-6 shadow-subtle text-sm leading-relaxed text-foreground/75">
+          <div className="space-y-4 rounded-3xl border border-divider bg-white px-8 py-8 shadow-subtle text-sm leading-relaxed text-foreground/75">
             <h2 className="text-2xl font-semibold text-foreground">
               {t('productDetail.customMl.visionTitle')}
             </h2>
             <p>{t('productDetail.customMl.visionIntro')}</p>
-            <ul className="space-y-2">
-              {visionKeys.map((index) => (
-                <li key={index}>• {t(`productDetail.customMl.visionPoints.${index}`)}</li>
+            <ul className="space-y-3">
+              {visionPoints.map((item, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <span className="text-steel mt-1">•</span>
+                  <span>{item}</span>
+                </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <div className="rounded-3xl border border-divider bg-background px-6 py-6 text-sm leading-relaxed text-foreground/75 shadow-subtle">
+        <div className="rounded-3xl border border-divider bg-slate-50 px-8 py-8 text-sm leading-relaxed text-foreground/75 shadow-subtle">
           <h2 className="text-xl font-semibold text-foreground">
             {t('productDetail.customMl.deliveryTitle')}
           </h2>
-          <ul className="mt-3 space-y-2">
-            {deliveryKeys.map((index) => (
-              <li key={index}>• {t(`productDetail.customMl.deliveryPoints.${index}`)}</li>
+          <ul className="mt-4 space-y-3">
+            {deliveryPoints.map((item, index) => (
+              <li key={index} className="flex items-start gap-2">
+                <span className="text-steel mt-1">•</span>
+                <span>{item}</span>
+              </li>
             ))}
           </ul>
         </div>

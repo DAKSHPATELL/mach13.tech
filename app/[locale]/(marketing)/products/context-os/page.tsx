@@ -2,11 +2,11 @@
 
 import { useTranslation } from '@/lib/i18n/useTranslation';
 
-const featureKeys = [0, 1, 2, 3, 4] as const;
-const coverageKeys = [0, 1, 2] as const;
-
 export default function ContextOSPage() {
   const { t } = useTranslation();
+  
+  const features = t<string[]>('productDetail.contextOs.features');
+  const coverage = t<string[]>('productDetail.contextOs.coverage');
 
   return (
     <section className="px-6 py-16 sm:px-8 md:px-10 lg:px-16">
@@ -21,29 +21,35 @@ export default function ContextOSPage() {
         </header>
 
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="rounded-3xl border border-divider bg-surface px-6 py-6 shadow-subtle">
+          <div className="rounded-3xl border border-divider bg-white px-8 py-8 shadow-subtle">
             <h2 className="text-2xl font-semibold text-foreground">
               {t('productDetail.contextOs.featuresTitle')}
             </h2>
-            <ul className="mt-4 space-y-2 text-sm leading-relaxed text-foreground/75">
-              {featureKeys.map((index) => (
-                <li key={index}>• {t(`productDetail.contextOs.features.${index}`)}</li>
+            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-foreground/75">
+              {features.map((item, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <span className="text-steel mt-1">•</span>
+                  <span>{item}</span>
+                </li>
               ))}
             </ul>
           </div>
-          <div className="rounded-3xl border border-divider bg-surface px-6 py-6 shadow-subtle">
+          <div className="rounded-3xl border border-divider bg-white px-8 py-8 shadow-subtle">
             <h2 className="text-2xl font-semibold text-foreground">
               {t('productDetail.contextOs.coverageTitle')}
             </h2>
-            <ul className="mt-4 space-y-2 text-sm leading-relaxed text-foreground/75">
-              {coverageKeys.map((index) => (
-                <li key={index}>• {t(`productDetail.contextOs.coverage.${index}`)}</li>
+            <ul className="mt-4 space-y-3 text-sm leading-relaxed text-foreground/75">
+              {coverage.map((item, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <span className="text-steel mt-1">•</span>
+                  <span>{item}</span>
+                </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <div className="rounded-3xl border border-divider bg-background px-6 py-6 text-sm leading-relaxed text-foreground/75 shadow-subtle">
+        <div className="rounded-3xl border border-divider bg-slate-50 px-8 py-8 text-sm leading-relaxed text-foreground/75 shadow-subtle">
           <h2 className="text-xl font-semibold text-foreground">
             {t('productDetail.contextOs.pilotTitle')}
           </h2>

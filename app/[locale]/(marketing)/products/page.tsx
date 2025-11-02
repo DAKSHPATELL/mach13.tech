@@ -22,7 +22,7 @@ export default function ProductsOverviewPage() {
 
         <div className="grid gap-8 md:grid-cols-2">
           {productCardKeys.map((key) => (
-            <article key={key} className="flex h-full flex-col rounded-3xl border border-divider bg-surface px-6 py-6 shadow-subtle">
+            <article key={key} className="flex h-full flex-col rounded-3xl border border-divider bg-white px-8 py-8 shadow-subtle hover:shadow-lg transition-shadow">
               <h2 className="text-2xl font-semibold text-foreground">{t(`productsPage.cards.${key}.title`)}</h2>
               <p className="mt-3 text-sm leading-relaxed text-foreground/75">
                 {t(`productsPage.cards.${key}.description`)}
@@ -39,7 +39,7 @@ export default function ProductsOverviewPage() {
               })()}
               <Link
                 href={`/products/${key === 'contextOs' ? 'context-os' : 'custom-machine-learning'}`}
-                className="mt-6 inline-flex w-fit items-center rounded-full border border-steel px-4 py-2 text-sm font-semibold text-steel transition hover:bg-steel/10"
+                className="mt-6 inline-flex w-fit items-center rounded-full bg-steel px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-steel/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-steel"
               >
                 {t(`productsPage.cards.${key}.cta`)}
               </Link>
@@ -47,7 +47,7 @@ export default function ProductsOverviewPage() {
           ))}
         </div>
 
-        <section className="rounded-3xl border border-divider bg-background px-6 py-8 shadow-subtle">
+        <section className="rounded-3xl border border-divider bg-slate-50 px-8 py-8 shadow-subtle">
           <h2 className="text-2xl font-semibold text-foreground">
             {t('productsPage.support.title')}
           </h2>
