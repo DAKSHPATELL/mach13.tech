@@ -54,15 +54,15 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-divider/70 bg-background/80 backdrop-blur dark:border-divider/40 dark:bg-background/70">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-3 text-foreground" aria-label={t("brand.name")}>
-          <Image src="/logo.svg" alt={t("brand.name")} width={48} height={48} priority className="h-12 w-12" />
-          <span className="text-lg font-semibold tracking-tight">{t("brand.name")}</span>
+    <header className="sticky top-0 z-50 border-b border-divider/50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+        <Link href="/" className="flex items-center gap-3 text-foreground transition-opacity hover:opacity-80" aria-label={t("brand.name")}>
+          <Image src="/logo.svg" alt={t("brand.name")} width={40} height={40} priority className="h-10 w-10" />
+          <span className="text-xl font-bold tracking-tight">{t("brand.name")}</span>
         </Link>
         <nav
           aria-label="Main navigation"
-          className="hidden flex-1 items-center justify-end gap-8 text-sm font-medium text-foreground/90 md:flex"
+          className="hidden flex-1 items-center justify-end gap-8 text-sm font-semibold text-foreground/80 md:flex"
         >
           {navItems.map(({ href, labelKey }) => {
             const isActive = activePath === href || (href !== "/" && activePath.startsWith(href));
@@ -70,7 +70,7 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
-                className={`transition-colors hover:text-steel focus-visible:text-steel ${isActive ? "text-steel" : ""}`}
+                className={`transition-all duration-200 hover:text-steel ${isActive ? "text-steel font-bold" : ""}`}
                 aria-current={isActive ? "page" : undefined}
               >
                 {t(labelKey)}
