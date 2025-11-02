@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+dist
+build
+.turbo
+.vercel
+.DS_Store
+.env*
+!.env.example
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+coverage
