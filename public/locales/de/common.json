@@ -1,0 +1,259 @@
+{
+  "brand": {
+    "name": "Mach13",
+    "tagline": "KI-Systeme für regulierte Fertigung"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "productsContextOs": "Context OS",
+    "productsCustomMl": "Individuelle ML-Lösungen"
+  },
+  "language": {
+    "label": "Sprache",
+    "switchTo": "{{language}} auswählen",
+    "en": "English",
+    "de": "Deutsch",
+    "fr": "Français",
+    "it": "Italiano"
+  },
+  "hero": {
+    "badge": "Messbare Ergebnisse zuerst",
+    "title": "Zuverlässige KI für regulierte Produktion.",
+    "subtitle": "Mach13 verbindet freigegebene Dokumente, Historian-Daten und Machine Vision, damit Ihr Team Abweichungen in Minuten statt Tagen behebt.",
+    "ctaPrimary": "Diagnose vereinbaren",
+    "ctaSecondary": "Fähigkeiten ansehen",
+    "statPilot": {
+      "value": "14 Tage",
+      "label": "Pilot, um Ausbeute oder Reaktionszeit nachzuweisen"
+    },
+    "statTraceable": {
+      "value": "100 % nachverfolgbar",
+      "label": "Quellenangaben und Änderungsprotokolle zu jeder Antwort"
+    },
+    "statDowntime": {
+      "value": "Keine Ausfallzeit",
+      "label": "Bereitstellung neben bestehendem MES und QMS"
+    },
+    "note": "Teams in der EU und Indien. DSGVO-konform.",
+    "videoPrimaryAlt": "Operatoren prüfen ein KI-gestütztes Produktions-Dashboard.",
+    "videoSecondaryAlt": "Mach13-Video mit KI-gestützten Video-Overlays."
+  },
+  "overview": {
+    "title": "Was wir liefern",
+    "intro": "Wir entwerfen, implementieren und betreiben KI-Systeme, die mit Ihren validierten Prozessen zusammenarbeiten.",
+    "items": {
+      "context": {
+        "title": "Dokumentgestützte Copiloten",
+        "body": "Context OS zeigt Arbeitsanweisungen, PPAP-Dokumente und SOP-Änderungen mit Quellenangaben, die Audit-Teams akzeptieren."
+      },
+      "analytics": {
+        "title": "Sensor- und Bildanalytik",
+        "body": "Individuelle Modelle bewerten Anomalien, klassifizieren Defekte und senden Alarme, die Linienführer sofort umsetzen können."
+      },
+      "governance": {
+        "title": "Operative Governance",
+        "body": "Strukturierte Freigaben, Audit-Exporte und Least-Privilege-Zugriff, abgestimmt auf Ihre bestehenden Vorgaben."
+      }
+    },
+    "cta": "Lassen Sie uns sprechen"
+  },
+  "operations": {
+    "title": "Jeden Rüstvorgang stabilisieren",
+    "body": "Wir verbinden Historian-Signale, Sichtprüfungen und Dokumentaktualisierungen in einer Konsole. Vorgesetzte sehen Auslöser, Notlösung und freigegebene Korrektur.",
+    "bullets": {
+      "overlay": "Echtzeit-Überlagerung von Telemetrie und relevanten Anweisungen.",
+      "handover": "Automatische Schichtübergaben mit Bestätigungsverfolgung.",
+      "handsFree": "Freihand-Modus für Reinraum- und Wartungsszenarien."
+    },
+    "cta": "Linie optimieren"
+  },
+  "trust": {
+    "title": "Vertrauenswürdig in regulierten Linien",
+    "body": "Unsere Ingenieur:innen arbeiten nach denselben Qualitätssystemen wie Ihr Team — mit NDAs und gesicherten Umgebungen passend zu Ihren Richtlinien.",
+    "cards": {
+      "automotive": {
+        "title": "Automotive Tier-1",
+        "body": "Dokumenten-Assistenten validiert gegen IATF-16949-Vorgaben."
+      },
+      "pharma": {
+        "title": "Pharmazeutische Verpackung",
+        "body": "Chargenfreigabe-Copiloten im Einklang mit FDA 21 CFR Part 11."
+      },
+      "automation": {
+        "title": "Industrielle Automation",
+        "body": "Bildprüfung abgestimmt auf IEC-62443-Zonierung."
+      },
+      "security": {
+        "title": "Sicherheitsniveau",
+        "body": "Kontrollen geprüft von ISO-27001-Lead-Auditor:innen und EU-Datenschutzjurist:innen."
+      }
+    },
+    "cta": "Referenzen anfordern"
+  },
+  "process": {
+    "title": "So laufen Projekte",
+    "body": "Ihr Team behält die Steuerung, während wir messbare Verbesserungen liefern.",
+    "steps": {
+      "diagnostic": {
+        "title": "Woche 0–1 · Diagnose",
+        "body": "Gemeinsame Sichtung von Dokumenten, Historian-Daten und Ziel-KPIs. Pilotumfang und Governance festlegen."
+      },
+      "pilot": {
+        "title": "Woche 2–4 · Pilotaufbau",
+        "body": "Context OS konfigurieren, maßgeschneiderte Modelle trainieren und Produktionsdaten anbinden — ohne validierte Systeme zu stören."
+      },
+      "scale": {
+        "title": "Ab Woche 5 · Rollout & Support",
+        "body": "Härtung für breiteren Einsatz, Schulung der Nutzer:innen und laufende Modellüberwachung."
+      }
+    },
+    "cta": "Diagnose vereinbaren"
+  },
+  "closing": {
+    "title": "Bereit, Vermutungen aus Ihrer Linie zu entfernen?",
+    "body": "Buchen Sie eine Diagnose, um Dokumentation und Datenlandschaft zu besprechen. Wir liefern einen konkreten Plan oder treten zurück — ohne vage Versprechen.",
+    "primaryCta": "Diagnose vereinbaren",
+    "secondaryCta": "Lassen Sie uns sprechen"
+  },
+  "contactPage": {
+    "title": "Diagnosegespräch buchen",
+    "subtitle": "Wählen Sie einen 15-minütigen Slot, um Dokumentation, Historian-Daten und KPIs zu besprechen.",
+    "emailLead": "Lieber per E-Mail? Schreiben Sie an",
+    "emailTrail": "Wir antworten innerhalb eines Werktags.",
+    "precall": "Teilen Sie uns vorab die Dokumente oder Produktionslinien mit, die wir prüfen sollen; wir bereiten uns entsprechend vor. Sie können auch über LinkedIn verbinden:",
+    "widgetLabel": "Calendly Buchungs-Widget",
+    "linkedInLabel": "Daksh Patel auf LinkedIn",
+    "placeholderNotice": "Setzen Sie NEXT_PUBLIC_CALENDLY_URL, um Ihren Buchungslink zu laden."
+  },
+  "aboutPage": {
+    "title": "Fokus auf disziplinierte Fertigung",
+    "intro": "Mach13 unterstützt Operator:innen, Qualitätsverantwortliche und Werksleiter dabei, Wissen aus kontrollierten Dokumenten und Sensoren nutzbar zu machen. Im Mittelpunkt stehen messbare Ergebnisse: schnellere Antworten, ruhigere Audits und Linien, die weiterlaufen.",
+    "founder": "Gegründet von Daksh Patel. Hintergrund in Sensoranalytik und dokumentgestützter KI. Sitz in Gujarat, Zusammenarbeit mit Teams in ganz Europa.",
+    "valuesTitle": "Werte, die jede Zusammenarbeit prägen",
+    "values": {
+      "precision": {
+        "title": "Präzision",
+        "body": "Wir kartieren Abläufe, bevor wir liefern. Messwerte zählen mehr als Hype."
+      },
+      "privacy": {
+        "title": "Privacy by Design",
+        "body": "Hosting, Aufbewahrung und Zugriffsrechte entsprechen der DSGVO und Ihren internen Richtlinien."
+      },
+      "roi": {
+        "title": "Messbarer ROI",
+        "body": "Dashboards zeigen eingesparte Zeit, verhinderte Vorfälle und bestandene Audits."
+      }
+    },
+    "illustrationAlt": "Abstraktes Netzwerk aus verbundenen Dokumenten und Sensoren."
+  },
+  "productsPage": {
+    "title": "Das passende Produkt für Ihre Anlage konfigurieren",
+    "intro": "Zwei Angebote, jeweils auf Ihre regulatorischen Anforderungen und Datenlandschaft zugeschnitten.",
+    "cards": {
+      "contextOs": {
+        "title": "Context OS",
+        "description": "Dokumentgestützte Copiloten, die Antworten mit Quellenangaben aus Handbüchern, SOPs und Kundenanforderungen liefern.",
+        "features": [
+          "Hybride Suche mit Anlagen-Graphen und Freigabeständen.",
+          "Rollenbasierte Leitplanken, die Ihre Freigabematrix abbilden.",
+          "Dashboards für Reaktionszeit, Zufriedenheit und Zitationsqualität."
+        ],
+        "cta": "Context OS entdecken"
+      },
+      "customMl": {
+        "title": "Individuelle ML-Lösungen",
+        "description": "Sensor- und Bildanalytik, die Drift meldet, Defekte kennzeichnet und Operator:innen unterstützt.",
+        "features": [
+          "Anomalieerkennung und Predictive Maintenance auf Zeitreihen.",
+          "Visuelle Inspektion für Oberflächen, Label und Baugruppen.",
+          "Bereitstellungen gehärtet für IEC 62443 und 21 CFR Part 11."
+        ],
+        "cta": "Custom ML entdecken"
+      }
+    },
+    "support": {
+      "title": "Jede Zusammenarbeit umfasst",
+      "items": [
+        "Compliance-Reviews mit ISO-27001- und DSGVO-Fachleuten.",
+        "Change-Management-Playbooks für Operator:innen und Qualitätsteams.",
+        "Model- und Datenmonitoring mit wöchentlichen Zusammenfassungen."
+      ]
+    }
+  },
+  "productDetail": {
+    "contextOs": {
+      "title": "Context OS für den Shopfloor",
+      "intro": "Ein dokumentgestützter Assistent, der operative und qualitätsrelevante Fragen mit nachvollziehbaren Quellen beantwortet.",
+      "featuresTitle": "Schlüsselmerkmale",
+      "features": [
+        "Hybride Suche mit Wissensgraphen für Maschinen, Linien und Freigabestände.",
+        "Zitate standardmäßig für jede Antwort und Änderung.",
+        "Connectoren für PDF, Office, SharePoint, S3-kompatiblen Speicher und gesicherte On-Prem-Shares.",
+        "Zugriffspolitiken entsprechend Ihrer Freigabematrix und Trennung von Funktionen.",
+        "Dashboards zu Quellen, Anfragen und Zufriedenheit."
+      ],
+      "coverageTitle": "Einsatzbereiche",
+      "coverage": [
+        "Qualität & Compliance: schnellere Audit-Antworten mit Passagen, die Prüfungen bestehen.",
+        "Betrieb & Instandhaltung: schnelle Nachschlagewerte für Alarme, Drehmomente und Ersatzteile.",
+        "Onboarding: verkürzte Einarbeitung auf komplexen Linien ohne neue Handbücher zu schreiben."
+      ],
+      "pilotTitle": "Pilotaufbau",
+      "pilotBody": "Zweiwöchige Sprints mit kuratiertem Dokumentensatz, klarer Verbesserung der Antwortzeiten und vereinbarten Zitiergenauigkeiten vor dem Start. Wir übergeben eine produktionsreife Lösung plus Governance-Checkliste."
+    },
+    "customMl": {
+      "title": "Individuelle Machine-Learning-Modelle für Sensorik und Vision",
+      "intro": "Wir entwickeln und betreiben Modelle für Zeitreihen und Bilddaten, um Produktion zu stabilisieren und Teams zu unterstützen.",
+      "timeSeriesTitle": "Fähigkeiten für Zeitreihen",
+      "timeSeriesIntro": "Anomalien früh erkennen, Drift prognostizieren und Wartungsfenster sicher planen.",
+      "timeSeriesPoints": [
+        "Feature Engineering aus Historian-, SPS- und SCADA-Signalen.",
+        "Predictive-Maintenance-Modelle mit kalibrierten Schwellen und Alarmen.",
+        "Multivariate Prognosen für Durchsatz, Ausschuss und Energieverbrauch."
+      ],
+      "visionTitle": "Fähigkeiten für Bildverarbeitung",
+      "visionIntro": "Unterstützt Prüfer:innen mit automatisierter Analyse, die echte Defekte hervorhebt und Rauschen ignoriert.",
+      "visionPoints": [
+        "Oberflächenfehler-Erkennung, Klassifikation und Segmentierung.",
+        "OCR für Chargencodes und regulatorische Kennzeichnungen.",
+        "Bereitstellungen auf Edge-Geräten oder abgesicherten Cloud-Endpunkten mit Monitoring."
+      ],
+      "deliveryTitle": "Vorgehensmodell",
+      "deliveryPoints": [
+        "Datenaufnahme und Labeling-Plan gemeinsam mit Operator:innen und Qualitätsmanagement.",
+        "Baselines und Ablation-Studien für jedes ausgelieferte Modell dokumentiert.",
+        "Validierungsprotokolle und Abnahmekriterien vor Produktionseinsatz vereinbart.",
+        "Übergabe mit Betriebsanweisungen, Retrain-Kadenzen und Eskalationswegen."
+      ]
+    }
+  },
+  "footer": {
+    "tagline": "Standorte: Gujarat, Indien und Aachen, Deutschland.",
+    "description": "Mach13 liefert dokumentgestützte Assistenten und Machine Learning für industrielle Teams.",
+    "products": "Produkte",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutz",
+    "imprint": "Impressum",
+    "copyright": "© {{year}} Mach13. Alle Rechte vorbehalten."
+  },
+  "cookie": {
+    "title": "Cookie-Einstellungen",
+    "description": "Wir verwenden Cookies, um Traffic zu analysieren und zu verstehen, welche Inhalte helfen. Sie können Analyse-Cookies jederzeit akzeptieren, ablehnen oder konfigurieren.",
+    "analyticsTitle": "Analyse-Cookies",
+    "analyticsDescription": "Aktivieren Sie anonyme Analysen, um Inhalte zu verbessern. Es gibt keine Werbung oder Tracking durch Dritte.",
+    "allowAnalytics": "Analyse-Cookies erlauben",
+    "accept": "Akzeptieren",
+    "reject": "Ablehnen",
+    "customise": "Anpassen",
+    "save": "Einstellungen speichern",
+    "cancel": "Abbrechen"
+  },
+  "notifications": {
+    "videoFallback": "Video nicht verfügbar. Standbild wird angezeigt."
+  }
+}

@@ -8,12 +8,15 @@ const config: Config = {
     "./components/**/*.{ts,tsx}",
     "./lib/**/*.{ts,tsx}"
   ],
+  darkMode: "media",
   theme: {
     extend: {
       colors: {
-        background: "#F8F9FB",
-        foreground: "#0B0B0C",
-        divider: "#EDEDED",
+        background: "rgb(var(--color-background) / <alpha-value>)",
+        foreground: "rgb(var(--color-foreground) / <alpha-value>)",
+        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        muted: "rgb(var(--color-muted) / <alpha-value>)",
+        divider: "rgb(var(--color-border) / <alpha-value>)",
         steel: "#0A2540",
         signal: "#D70015"
       },

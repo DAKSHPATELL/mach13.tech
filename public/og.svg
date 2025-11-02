@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540" />
+      <stop offset="100%" stop-color="#142F4F" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grad)" rx="24" />
+  <text x="50%" y="45%" font-family="'Arial', 'Helvetica', sans-serif" font-size="120" fill="#F4F6FC" font-weight="700" text-anchor="middle">Mach13</text>
+  <rect x="450" y="330" width="300" height="6" fill="#D70015" rx="3" />
+  <text x="50%" y="62%" font-family="'Arial', 'Helvetica', sans-serif" font-size="42" fill="#F4F6FC" font-weight="400" text-anchor="middle">Dependable AI for regulated production</text>
+</svg>

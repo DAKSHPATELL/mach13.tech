@@ -1,0 +1,259 @@
+{
+  "brand": {
+    "name": "Mach13",
+    "tagline": "AI systems for disciplined manufacturing"
+  },
+  "navigation": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "productsContextOs": "Context OS",
+    "productsCustomMl": "Custom Machine Learning"
+  },
+  "language": {
+    "label": "Language",
+    "switchTo": "Switch to {{language}}",
+    "en": "English",
+    "de": "Deutsch",
+    "fr": "Français",
+    "it": "Italiano"
+  },
+  "hero": {
+    "badge": "Documented outcomes first",
+    "title": "Build dependable AI for regulated production.",
+    "subtitle": "Mach13 connects controlled documents, historian feeds, and machine vision so your teams resolve deviations in minutes — not days.",
+    "ctaPrimary": "Book a diagnostic",
+    "ctaSecondary": "See capabilities",
+    "statPilot": {
+      "value": "14 days",
+      "label": "Pilot to prove yield or response-time ROI"
+    },
+    "statTraceable": {
+      "value": "100% traceable",
+      "label": "Citations and change logs on every answer"
+    },
+    "statDowntime": {
+      "value": "Zero downtime",
+      "label": "Deploy beside existing MES and QMS"
+    },
+    "note": "EU & India delivery teams. GDPR aligned.",
+    "videoPrimaryAlt": "Operators reviewing an AI-assisted production dashboard.",
+    "videoSecondaryAlt": "Mach13 video reel demonstrating AI video generation overlays."
+  },
+  "overview": {
+    "title": "What we deliver",
+    "intro": "We design, implement, and operate AI systems that coexist with your validated processes.",
+    "items": {
+      "context": {
+        "title": "Document-grounded copilots",
+        "body": "Context OS surfaces work instructions, PPAP artefacts, and SOP changes with inline citations that audit teams accept."
+      },
+      "analytics": {
+        "title": "Sensor and vision analytics",
+        "body": "Custom models score anomalies, classify defects, and dispatch alerts that your line leads can act on immediately."
+      },
+      "governance": {
+        "title": "Operational governance",
+        "body": "Structured approvals, audit exports, and least-privilege access that match the playbooks you already enforce."
+      }
+    },
+    "cta": "Let's talk"
+  },
+  "operations": {
+    "title": "Stabilise every changeover",
+    "body": "We stitch together historian signals, visual inspections, and document updates into a single console. Supervisors see what tripped alarms, the current stop-gap, and the approved fix.",
+    "bullets": {
+      "overlay": "Real-time overlay of telemetry and relevant procedures.",
+      "handover": "Automatic shift handovers with acknowledgement tracking.",
+      "handsFree": "Hands-free mode for cleanroom and maintenance scenarios."
+    },
+    "cta": "Optimize my line"
+  },
+  "trust": {
+    "title": "Trusted in highly regulated lines",
+    "body": "Our engineers operate under the same quality systems as your teams, with NDAs and secure environments aligned to your policies.",
+    "cards": {
+      "automotive": {
+        "title": "Automotive Tier 1 suppliers",
+        "body": "Document assistants validated against IATF 16949 procedures."
+      },
+      "pharma": {
+        "title": "Pharmaceutical packaging",
+        "body": "Batch-release copilots aligned with FDA 21 CFR Part 11."
+      },
+      "automation": {
+        "title": "Industrial automation",
+        "body": "Vision inspection tuned for IEC 62443 zone segmentation."
+      },
+      "security": {
+        "title": "Security posture",
+        "body": "Controls reviewed by ISO 27001 lead auditors and EU GDPR counsel."
+      }
+    },
+    "cta": "Request references"
+  },
+  "process": {
+    "title": "How engagements run",
+    "body": "Your team stays in control while we deliver measurable improvements.",
+    "steps": {
+      "diagnostic": {
+        "title": "Week 0–1 · Diagnostic",
+        "body": "Jointly review documents, historian feeds, and target KPIs. Agree on pilot scope and governance requirements."
+      },
+      "pilot": {
+        "title": "Week 2–4 · Pilot build",
+        "body": "Configure Context OS, train bespoke models, and connect to your production data without disrupting validated systems."
+      },
+      "scale": {
+        "title": "Week 5+ · Scale & support",
+        "body": "Harden for wider rollout, train end-users, and keep models refreshed with continuous monitoring."
+      }
+    },
+    "cta": "Book a diagnostic"
+  },
+  "closing": {
+    "title": "Ready to remove guesswork from your line?",
+    "body": "Book a diagnostic call to review your documentation and data landscape. We will share a concrete plan or step aside — no vague pitches.",
+    "primaryCta": "Book a diagnostic",
+    "secondaryCta": "Let's talk"
+  },
+  "contactPage": {
+    "title": "Book a diagnostic call",
+    "subtitle": "Choose a 15-minute slot to review your documentation, historian feeds, and KPIs.",
+    "emailLead": "Prefer email? Write to",
+    "emailTrail": "We respond within one business day.",
+    "precall": "Share the documents or production lines you'd like us to review in advance; we'll arrive prepared. You can also connect on LinkedIn:",
+    "widgetLabel": "Calendly scheduling widget",
+    "linkedInLabel": "Daksh Patel on LinkedIn",
+    "placeholderNotice": "Set NEXT_PUBLIC_CALENDLY_URL to load your scheduling link."
+  },
+  "aboutPage": {
+    "title": "Focused on disciplined manufacturing",
+    "intro": "Mach13 helps operators, quality leaders, and plant managers unlock the knowledge buried in controlled documents and sensors. We concentrate on measurable outcomes: faster answers, calmer audits, and lines that keep running.",
+    "founder": "Founded by Daksh Patel. Background in sensor analytics and document-grounded AI. Based in Gujarat, collaborating with teams throughout Europe.",
+    "valuesTitle": "Values that shape every engagement",
+    "values": {
+      "precision": {
+        "title": "Precision",
+        "body": "We map workflows before we ship. Measurements matter more than hype."
+      },
+      "privacy": {
+        "title": "Privacy by design",
+        "body": "Hosting, retention, and access controls align with GDPR and your internal policies."
+      },
+      "roi": {
+        "title": "Measured ROI",
+        "body": "Dashboards show time saved, issues prevented, and audits passed."
+      }
+    },
+    "illustrationAlt": "Abstract network representing connected documents and sensors."
+  },
+  "productsPage": {
+    "title": "Configure the right product for your plant",
+    "intro": "Two offerings, each adapted to your regulatory and data landscape.",
+    "cards": {
+      "contextOs": {
+        "title": "Context OS",
+        "description": "Document-grounded copilots that deliver cited answers across manuals, SOPs, and customer requirements.",
+        "features": [
+          "Hybrid retrieval with equipment graphs and release states.",
+          "Role-based guardrails that mirror your approval matrix.",
+          "Dashboards tracking response time, satisfaction, and citations."
+        ],
+        "cta": "Explore Context OS"
+      },
+      "customMl": {
+        "title": "Custom Machine Learning",
+        "description": "Sensor and vision intelligence that warns about drift, flags defects, and supports operators.",
+        "features": [
+          "Time-series anomaly detection and predictive maintenance.",
+          "Vision inspection for surfaces, labels, and assemblies.",
+          "Deployments hardened for IEC 62443 and 21 CFR Part 11."
+        ],
+        "cta": "Explore Custom ML"
+      }
+    },
+    "support": {
+      "title": "Every engagement includes",
+      "items": [
+        "Compliance reviews with ISO 27001 and GDPR counsel.",
+        "Change management playbooks for operators and quality leads.",
+        "Model and data monitoring with weekly summaries."
+      ]
+    }
+  },
+  "productDetail": {
+    "contextOs": {
+      "title": "Context OS for the factory floor",
+      "intro": "A document-grounded assistant that answers operational and quality questions with traceable citations.",
+      "featuresTitle": "Key features",
+      "features": [
+        "Hybrid retrieval with knowledge graphs covering machines, lines, and release versions.",
+        "Citations by default for every answer and modification.",
+        "Connectors for PDF, Office files, SharePoint, S3-compatible storage, and secure on-premise shares.",
+        "Access policies that follow your approval matrix and segregation of duties.",
+        "Dashboards tracking sources, queries, and satisfaction ratings."
+      ],
+      "coverageTitle": "Where it helps",
+      "coverage": [
+        "Quality and compliance: faster audit answers with source passages that stand up in reviews.",
+        "Operations and maintenance: quick lookups for alarms, torque values, and part substitutions.",
+        "Onboarding: speed up ramp-up on complex production lines without rewriting manuals."
+      ],
+      "pilotTitle": "Pilot structure",
+      "pilotBody": "Two-week sprints with a curated document set, measurable time-to-answer improvements, and citation accuracy thresholds agreed before kickoff. We leave your team with a production-ready stack and a governance checklist."
+    },
+    "customMl": {
+      "title": "Custom machine learning for sensors and vision",
+      "intro": "We design and deploy models for time-series and vision data to stabilise production and support your operators.",
+      "timeSeriesTitle": "Time-series capabilities",
+      "timeSeriesIntro": "Detect anomalies before they escalate, forecast drift, and schedule maintenance windows with confidence.",
+      "timeSeriesPoints": [
+        "Feature engineering from historian, PLC, and SCADA signals.",
+        "Predictive maintenance models with calibrated risk thresholds and alerts.",
+        "Multivariate forecasting for throughput, scrap, and energy use."
+      ],
+      "visionTitle": "Vision capabilities",
+      "visionIntro": "Support inspectors with automated analysis that highlights real defects and ignores noise.",
+      "visionPoints": [
+        "Surface defect detection, classification, and semantic segmentation.",
+        "Optical character recognition for lot codes and regulatory labels.",
+        "Deployments on edge devices or secure cloud endpoints with monitoring hooks."
+      ],
+      "deliveryTitle": "Delivery approach",
+      "deliveryPoints": [
+        "Data intake and labelling plan co-designed with your operators and quality managers.",
+        "Baselines and ablation studies documented for every model released.",
+        "Validation protocols and acceptance gates agreed before production deployment.",
+        "Handover with operating procedures, retraining cadence, and escalation paths."
+      ]
+    }
+  },
+  "footer": {
+    "tagline": "Operating out of Gujarat, India and Aachen, Germany.",
+    "description": "Mach13 delivers document-grounded assistants and machine learning for industrial teams.",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacy": "Privacy",
+    "imprint": "Impressum",
+    "copyright": "© {{year}} Mach13. All rights reserved."
+  },
+  "cookie": {
+    "title": "Cookie preferences",
+    "description": "We use cookies to analyse traffic and understand which content helps visitors. You can accept, reject, or configure analytics cookies at any time.",
+    "analyticsTitle": "Analytics cookies",
+    "analyticsDescription": "Enable anonymous analytics to help us improve content. No advertising or third-party tracking pixels are used.",
+    "allowAnalytics": "Allow analytics cookies",
+    "accept": "Accept",
+    "reject": "Reject",
+    "customise": "Customise",
+    "save": "Save preferences",
+    "cancel": "Cancel"
+  },
+  "notifications": {
+    "videoFallback": "Video unavailable. Showing high-resolution still."
+  }
+}

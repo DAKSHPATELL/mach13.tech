@@ -21,6 +21,7 @@ Visit `http://localhost:3000` after the dev server starts.
 | Name | Required | Description |
 | --- | --- | --- |
 | `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Yes | Plausible analytics domain, e.g. `mach13.tech`. |
+| `NEXT_PUBLIC_CALENDLY_URL` | Optional | Full Calendly booking link. Defaults to a placeholder if unset. |
 
 Duplicate `.env.example` as `.env.local` and update the value before running locally or deploying.
 
@@ -33,7 +34,8 @@ Duplicate `.env.example` as `.env.local` and update the value before running loc
 
 ## Calendly Setup
 
-Open `app/(marketing)/contact/page.tsx` and replace `YOUR-CALENDLY-USERNAME` inside `calendlyUrl` with your Calendly slug. The inline widget loads automatically on the client.
+Set `NEXT_PUBLIC_CALENDLY_URL` in `.env.local` to your booking link (for example `https://calendly.com/mach13/15min?hide_event_type_details=1&hide_gdpr_banner=1`).
+The contact page widget reads this value at runtime; leave it unset while developing if you do not want the embed to load.
 
 ## Cookie Consent
 
@@ -44,13 +46,15 @@ Open `app/(marketing)/contact/page.tsx` and replace `YOUR-CALENDLY-USERNAME` ins
 
 ## Hero Media
 
-Place a compressed, muted MP4 video at `public/videos/factory-hero.mp4` for the homepage hero. A fallback illustration (`public/illustrations/hero-assembly.svg`) displays automatically if the video is missing or fails to load.
+Two hero reels live in `public/videos/AI_Startup_Website_Video_Concepts.mp4` and `public/videos/AI_Video_Generation_for_Mach_.mp4`.
+Keep them compressed (muted, `playsinline`) to maintain performance. The homepage and the operations section fall back to `public/illustrations/hero-assembly.svg` when motion is disabled or the video fails to load.
 
 ## Editing Content & Style
 
 - Brand colours, typography, and spacing tokens: `tailwind.config.ts` and `app/globals.css`.
-- Page copy: files in `app/(marketing)` for marketing pages; legal copy in `app/(legal)`; blog posts in `content/blog` (Markdown with front matter).
-- Illustrations: replace SVGs in `public/illustrations/`; the Open Graph image lives at `public/og.png`.
+- Marketing pages: `app/[locale]/(marketing)/*` (four locales — `en`, `de`, `fr`, `it`). Legal copy lives in `app/[locale]/(legal)`.
+- Translations: `public/locales/{en,de,fr,it}/common.json`. All UI strings and CTAs are sourced from this file.
+- Illustrations & media: assets in `public/illustrations/`, `public/videos/`, and the Open Graph image at `public/og.svg`.
 
 ## Deploying on Vercel
 
@@ -69,4 +73,3 @@ Place a compressed, muted MP4 video at `public/videos/factory-hero.mp4` for the 
 3. Mark `mach13.tech` as the primary domain so `www` redirects to the apex.
 4. Trigger a redeploy or run `npx vercel --prod` to issue fresh certificates.
 5. Verify HTTPS for both `https://mach13.tech` and `https://www.mach13.tech`.
-

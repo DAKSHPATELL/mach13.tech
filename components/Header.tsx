@@ -3,26 +3,45 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "@/lib/i18n/useTranslation";
+import LanguageSwitcherWrapper from "@/components/LanguageSwitcherWrapper";
+import { isLocale } from "@/lib/i18n/settings";
 
-const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/products/context-os", label: "Context OS" },
-  { href: "/products/custom-machine-learning", label: "Custom Machine Learning" },
-  { href: "/solutions", label: "Solutions" },
-  { href: "/playbooks", label: "Playbooks" },
-  { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" }
-] as const;
+type NavItem = {
+  href: string;
+  labelKey: string;
+};
+
+const navItems: NavItem[] = [
+  { href: "/", labelKey: "navigation.home" },
+  { href: "/products", labelKey: "navigation.products" },
+  { href: "/about", labelKey: "navigation.about" },
+  { href: "/contact", labelKey: "navigation.contact" }
+];
 
 export default function Header() {
+  const { t } = useTranslation();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
+  const activePath = useMemo(() => {
+    if (!pathname) {
+      return "/";
+    }
+    const segments = pathname.split("/").filter(Boolean);
+    if (segments.length === 0) {
+      return "/";
+    }
+    if (isLocale(segments[0])) {
+      segments.shift();
+    }
+    return `/${segments.join("/")}`;
+  }, [pathname]);
+
   useEffect(() => {
     setOpen(false);
-  }, [pathname]);
+  }, [activePath]);
 
   useEffect(() => {
     const handler = (event: KeyboardEvent) => {
@@ -35,15 +54,18 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-divider/70 bg-background/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-divider/70 bg-background/80 backdrop-blur dark:border-divider/40 dark:bg-background/70">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-3 text-foreground" aria-label="Mach13 home">
-          <Image src="/logo.svg" alt="Mach13" width={48} height={48} priority className="h-12 w-12" />
-          <span className="text-lg font-semibold tracking-tight">Mach13</span>
+        <Link href="/" className="flex items-center gap-3 text-foreground" aria-label={t("brand.name")}>
+          <Image src="/logo.svg" alt={t("brand.name")} width={48} height={48} priority className="h-12 w-12" />
+          <span className="text-lg font-semibold tracking-tight">{t("brand.name")}</span>
         </Link>
-        <nav aria-label="Main navigation" className="hidden items-center gap-8 text-sm font-medium text-foreground/90 md:flex">
-          {navItems.map(({ href, label }) => {
-            const isActive = pathname === href || (href !== "/" && pathname.startsWith(href));
+        <nav
+          aria-label="Main navigation"
+          className="hidden flex-1 items-center justify-end gap-8 text-sm font-medium text-foreground/90 md:flex"
+        >
+          {navItems.map(({ href, labelKey }) => {
+            const isActive = activePath === href || (href !== "/" && activePath.startsWith(href));
             return (
               <Link
                 key={href}
@@ -51,10 +73,11 @@ export default function Header() {
                 className={`transition-colors hover:text-steel focus-visible:text-steel ${isActive ? "text-steel" : ""}`}
                 aria-current={isActive ? "page" : undefined}
               >
-                {label}
+                {t(labelKey)}
               </Link>
             );
           })}
+          <LanguageSwitcherWrapper />
         </nav>
         <button
           type="button"
@@ -71,22 +94,25 @@ export default function Header() {
         aria-label="Mobile navigation"
         className={`md:hidden ${open ? "block" : "hidden"}`}
       >
-        <ul className="space-y-1 border-t border-divider/70 bg-background px-4 py-4 text-base font-medium">
-          {navItems.map(({ href, label }) => {
-            const isActive = pathname === href || (href !== "/" && pathname.startsWith(href));
-            return (
-              <li key={href}>
-                <Link
-                  href={href}
-                  className={`block rounded-md px-3 py-2 transition-colors hover:bg-white/60 hover:text-steel focus-visible:bg-white focus-visible:text-steel ${isActive ? "bg-white text-steel" : ""}`}
-                  aria-current={isActive ? "page" : undefined}
-                >
-                  {label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <div className="space-y-4 border-t border-divider/70 bg-background px-4 py-4 text-base font-medium dark:border-divider/40 dark:bg-background">
+          <ul className="space-y-1">
+            {navItems.map(({ href, labelKey }) => {
+              const isActive = activePath === href || (href !== "/" && activePath.startsWith(href));
+              return (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className={`block rounded-md px-3 py-2 transition-colors hover:bg-white/60 hover:text-steel focus-visible:bg-white focus-visible:text-steel dark:hover:bg-foreground/10 ${isActive ? "bg-white text-steel dark:bg-foreground/20 dark:text-steel" : ""}`}
+                    aria-current={isActive ? "page" : undefined}
+                  >
+                    {t(labelKey)}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <LanguageSwitcherWrapper className="w-full justify-between" />
+        </div>
       </nav>
     </header>
   );
