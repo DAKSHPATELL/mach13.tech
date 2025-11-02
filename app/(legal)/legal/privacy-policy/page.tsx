@@ -1,14 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy",
-  description: "Privacy placeholder for Mach13 at mach13.tech."
+  title: "Privacy Policy",
+  description: "Privacy policy placeholder for Mach13 at mach13.tech."
 };
 
 export default function PrivacyPage() {
   return (
     <div className="mx-auto max-w-3xl space-y-6 px-4 py-16 sm:px-0">
-      <h1 className="text-3xl font-semibold text-foreground">Datenschutzerklärung</h1>
+      <h1 className="text-3xl font-semibold text-foreground">Datenschutzerklärung / Privacy Policy</h1>
       <section className="space-y-4 text-sm text-foreground/80">
         <p>
           Mach13 nimmt Datenschutz ernst. Diese Seite dient als Platzhalter für eine vollständige Datenschutzerklärung gemäß DSGVO. Die endgültige Fassung beschreibt Datenkategorien, Zwecke der Verarbeitung, Rechtsgrundlagen, Speicherfristen und Betroffenenrechte.

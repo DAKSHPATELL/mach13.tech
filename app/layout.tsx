@@ -1,9 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import { ReactNode } from "react";
 import { baseMetadata, openGraphImage } from "@/lib/metadata";
+import dynamic from "next/dynamic";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,6 +29,9 @@ export const metadata: Metadata = {
 };
 
 const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
+const ConsentManager = dynamic(() => import("@/components/ConsentManager"), {
+  ssr: false
+});
 
 export default function RootLayout({
   children
@@ -38,18 +41,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body>
-        {plausibleDomain ? (
-          <Script
-            defer
-            data-domain={plausibleDomain}
-            src="https://plausible.io/js/script.js"
-            strategy="afterInteractive"
-          />
-        ) : null}
         <a className="skip-link" href="#main-content">
           Skip to main content
         </a>
         {children}
+        <ConsentManager plausibleDomain={plausibleDomain} />
       </body>
     </html>
   );

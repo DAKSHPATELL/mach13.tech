@@ -23,13 +23,14 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="space-y-12">
-      <section className="grid gap-10 rounded-3xl border border-divider bg-white px-6 py-12 sm:grid-cols-[1.1fr_0.9fr] sm:px-12" aria-labelledby="about-heading">
-        <div className="space-y-6">
-          <h1 id="about-heading" className="text-4xl font-semibold text-foreground">
-            Modernise Germany’s industrial heart with applied AI.
-          </h1>
-          <p className="text-base text-foreground/70">
+    <section className="px-6 py-16 md:px-10 lg:px-16">
+      <div className="mx-auto flex max-w-6xl flex-col gap-12">
+        <section className="grid gap-10 rounded-3xl border border-divider bg-white px-6 py-12 sm:grid-cols-[1.1fr_0.9fr] sm:px-12" aria-labelledby="about-heading">
+          <div className="space-y-6">
+            <h1 id="about-heading" className="text-4xl font-semibold text-foreground">
+              Modernise Germany’s industrial heart with applied AI.
+            </h1>
+            <p className="text-base text-foreground/70">
             Mach13 helps operators, quality leaders, and plant managers unlock the knowledge buried in documents and sensors. We focus on outcomes: faster answers, calmer audits, and lines that keep running.
           </p>
           <div className="rounded-2xl border border-divider/80 bg-background px-5 py-4 text-sm text-foreground/80">
@@ -40,26 +41,27 @@ export default function AboutPage() {
         </div>
         <figure className="rounded-3xl border border-divider bg-background p-6">
           <Image src="/illustrations/network.svg" alt="Abstract network illustration" width={400} height={240} className="w-full" />
-          <figcaption className="mt-3 text-xs text-foreground/60">
-            Mach13 blends document and sensor intelligence for regulated industries.
-          </figcaption>
-        </figure>
-      </section>
-      <section aria-labelledby="values-heading" className="rounded-3xl border border-divider bg-white px-6 py-12 sm:px-12">
-        <div className="mx-auto flex max-w-4xl flex-col gap-6">
-          <h2 id="values-heading" className="text-2xl font-semibold text-foreground">
-            Values that shape every engagement
-          </h2>
-          <div className="grid gap-6 sm:grid-cols-3">
-            {values.map((value) => (
-              <div key={value.title} className="rounded-2xl border border-divider/80 bg-background px-5 py-6">
-                <h3 className="text-lg font-semibold text-foreground">{value.title}</h3>
-                <p className="mt-2 text-sm text-foreground/70">{value.description}</p>
-              </div>
-            ))}
+            <figcaption className="mt-3 text-xs text-foreground/60">
+              Mach13 blends document and sensor intelligence for regulated industries.
+            </figcaption>
+          </figure>
+        </section>
+        <section aria-labelledby="values-heading" className="rounded-3xl border border-divider bg-white px-6 py-12 sm:px-12">
+          <div className="mx-auto flex max-w-4xl flex-col gap-6">
+            <h2 id="values-heading" className="text-2xl font-semibold text-foreground">
+              Values that shape every engagement
+            </h2>
+            <div className="grid gap-6 sm:grid-cols-3">
+              {values.map((value) => (
+                <div key={value.title} className="rounded-2xl border border-divider/80 bg-background px-5 py-6">
+                  <h3 className="text-lg font-semibold text-foreground">{value.title}</h3>
+                  <p className="mt-2 text-sm text-foreground/70">{value.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </section>
   );
 }

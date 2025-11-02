@@ -1,43 +1,48 @@
-/* eslint-disable @next/next/no-img-element */
+'use client';
+
+import { useEffect } from 'react';
 import Link from 'next/link';
 
+const calendlyUrl = 'https://calendly.com/YOUR-CALENDLY-USERNAME/15min?hide_event_type_details=1&hide_gdpr_banner=1';
+
 export default function ContactPage() {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
-    <main className="px-6 md:px-10 lg:px-16 py-16" id="book">
-      <div className="max-w-3xl mx-auto space-y-8">
-        <div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-[#0B0B0C]">Book an appointment</h1>
-          <p className="mt-6 text-lg text-[#0B0B0C]/80">
-            Prefer email? Write to <a className="underline" href="mailto:info@mach13.tech">info@mach13.tech</a>.
+    <section className="px-6 py-16 md:px-10 lg:px-16" id="book">
+      <div className="mx-auto max-w-4xl space-y-10">
+        <header className="space-y-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-foreground">Book a 15-minute appointment</h1>
+          <p className="text-lg text-foreground/80">
+            Prefer email? Write to <a className="underline" href="mailto:info@mach13.tech">info@mach13.tech</a>. We respond within one business day.
+          </p>
+        </header>
+        <div className="rounded-2xl border border-divider bg-white p-6 shadow-subtle">
+          <div
+            className="calendly-inline-widget h-[800px] w-full"
+            data-url={calendlyUrl}
+            aria-label="Calendly scheduling widget"
+          />
+          <p className="mt-4 text-xs text-foreground/60">
+            Replace <code>YOUR-CALENDLY-USERNAME</code> in <code>app/(marketing)/contact/page.tsx</code> with your Calendly user slug.
           </p>
         </div>
-        <div className="flex flex-col gap-4">
-          <a
-            href="https://www.picktime.com/9581da74-ab62-43f5-a00c-68aacec5895b"
-            className="ptbkbtn inline-flex items-center justify-center"
-            target="_blank"
-            rel="noreferrer"
-            style={{ float: 'none' }}
-          >
-            <img
-              src="https://www.picktime.com/img/widgetButtons/BookingPage/picktime-book-online-black.png"
-              alt="Book an appointment with Mach13"
-              className="h-12 w-auto"
-            />
-          </a>
-          <p className="text-sm text-[#0B0B0C]/60">
-            Opens the Picktime booking page in a new tab.
-          </p>
-        </div>
-        <div className="rounded-lg border border-[#EDEDED] bg-white p-6 text-sm text-[#0B0B0C]/70">
+        <div className="rounded-xl border border-divider bg-background p-6 text-sm text-foreground/80">
           <p>
-            Want prep material ahead of the call? Let us know the documents or production lines you want to discuss and we&apos;ll review before the meeting.
-          </p>
-          <p className="mt-3">
-            You can also connect via LinkedIn: <Link className="underline" href="https://www.linkedin.com/in/daksh-patel-ai/">Daksh Patel</Link>.
+            Want prep material ahead of the call? Let us know the documents or production lines you want to discuss and we&apos;ll review before meeting. You can also connect via LinkedIn: <Link className="underline" href="https://www.linkedin.com/in/daksh-patel-ai/">Daksh Patel</Link>.
           </p>
         </div>
       </div>
-    </main>
+    </section>
   );
 }

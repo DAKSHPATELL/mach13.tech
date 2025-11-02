@@ -32,7 +32,7 @@ export function Hero() {
           variants={fadeIn}
           className="max-w-2xl text-lg leading-relaxed text-foreground/80"
         >
-          Mach13 builds document-grounded assistants and custom ML that cut search time, reduce scrap, and keep audits calm.
+          Mach13 builds document-grounded assistants and custom machine learning that cut search time, reduce scrap, and keep audits calm.
         </motion.p>
         <motion.div variants={fadeIn} className="flex flex-wrap gap-3">
           <Link

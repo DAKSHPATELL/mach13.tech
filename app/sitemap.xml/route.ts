@@ -3,13 +3,14 @@ const baseUrl = "https://mach13.tech";
 const routes = [
   "/",
   "/products/context-os",
-  "/products/custom-ml",
+  "/products/custom-machine-learning",
   "/solutions",
+  "/playbooks",
   "/about",
   "/blog",
   "/contact",
   "/legal/impressum",
-  "/legal/privacy"
+  "/legal/privacy-policy"
 ];
 
 export function GET(): Response {

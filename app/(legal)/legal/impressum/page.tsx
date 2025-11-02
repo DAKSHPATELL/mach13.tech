@@ -15,7 +15,9 @@ export default function ImpressumPage() {
           <br />
           Daksh Patel
           <br />
-          Bremen, Deutschland
+          Hauptsitz: Gujarat, Indien
+          <br />
+          Betreuung für Deutschland: Aachen (Remote Office)
         </p>
         <p>
           Kontakt: <a className="text-steel underline" href="mailto:info@mach13.tech">info@mach13.tech</a>
