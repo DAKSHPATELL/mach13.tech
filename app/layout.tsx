@@ -25,7 +25,7 @@ export default async function RootLayout({
 }) {
   // This is the root layout - translations are handled in [locale] layout
   return (
-    <html className={inter.variable}>
+    <html lang="en" dir="ltr" className={inter.variable}>
       <body className="bg-background text-foreground antialiased">
         {children}
         <ConsentManager plausibleDomain={plausibleDomain} />
