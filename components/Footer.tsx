@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useTranslation } from "@/lib/i18n/useTranslation";
+import { withLocale } from "@/lib/i18n/href";
 
 const productLinks = [
   { href: "/products/context-os", labelKey: "navigation.productsContextOs" },
@@ -19,7 +20,7 @@ const legalLinks = [
 ] as const;
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const year = new Date().getFullYear();
 
   return (
@@ -35,7 +36,7 @@ export default function Footer() {
           <ul className="space-y-2">
             {productLinks.map(({ href, labelKey }) => (
               <li key={href}>
-                <Link href={href} className="transition hover:text-foreground">
+                <Link href={withLocale(href, locale)} className="transition hover:text-foreground">
                   {t(labelKey)}
                 </Link>
               </li>
@@ -47,7 +48,7 @@ export default function Footer() {
           <ul className="space-y-2">
             {companyLinks.map(({ href, labelKey }) => (
               <li key={href}>
-                <Link href={href} className="transition hover:text-foreground">
+                <Link href={withLocale(href, locale)} className="transition hover:text-foreground">
                   {t(labelKey)}
                 </Link>
               </li>
@@ -58,7 +59,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {legalLinks.map(({ href, labelKey }) => (
                 <li key={href}>
-                  <Link href={href} className="transition hover:text-foreground">
+                  <Link href={withLocale(href, locale)} className="transition hover:text-foreground">
                     {t(labelKey)}
                   </Link>
                 </li>

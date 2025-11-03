@@ -2,11 +2,12 @@
 
 import Link from 'next/link';
 import { useTranslation } from '@/lib/i18n/useTranslation';
+import { withLocale } from '@/lib/i18n/href';
 
 const productCardKeys = ['contextOs', 'customMl'] as const;
 
 export default function ProductsOverviewPage() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   return (
     <section className="px-6 py-16 sm:px-8 md:px-10 lg:px-16">
@@ -38,7 +39,7 @@ export default function ProductsOverviewPage() {
                 );
               })()}
               <Link
-                href={`/products/${key === 'contextOs' ? 'context-os' : 'custom-machine-learning'}`}
+                href={withLocale(`/products/${key === 'contextOs' ? 'context-os' : 'custom-machine-learning'}`, locale)}
                 className="mt-6 inline-flex w-fit items-center rounded-full bg-steel px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-steel/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-steel"
               >
                 {t(`productsPage.cards.${key}.cta`)}

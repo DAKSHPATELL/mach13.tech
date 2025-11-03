@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "@/lib/i18n/useTranslation";
+import { withLocale } from "@/lib/i18n/href";
 import LanguageSwitcherWrapper from "@/components/LanguageSwitcherWrapper";
 import { isLocale } from "@/lib/i18n/settings";
 
@@ -21,7 +22,7 @@ const navItems: NavItem[] = [
 ];
 
 export default function Header() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -69,7 +70,7 @@ export default function Header() {
             return (
               <Link
                 key={href}
-                href={href}
+                href={withLocale(href, locale)}
                 className={`transition-all duration-200 hover:text-steel ${isActive ? "text-steel font-bold" : ""}`}
                 aria-current={isActive ? "page" : undefined}
               >
@@ -101,7 +102,7 @@ export default function Header() {
               return (
                 <li key={href}>
                   <Link
-                    href={href}
+                    href={withLocale(href, locale)}
                     className={`block rounded-md px-3 py-2 transition-colors hover:bg-white/60 hover:text-steel focus-visible:bg-white focus-visible:text-steel dark:hover:bg-foreground/10 ${isActive ? "bg-white text-steel dark:bg-foreground/20 dark:text-steel" : ""}`}
                     aria-current={isActive ? "page" : undefined}
                   >

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from "@/lib/i18n/useTranslation";
+import { withLocale } from "@/lib/i18n/href";
 import PickTimeButton from "@/components/PickTimeButton";
 
 const HERO_VIDEOS = [
@@ -63,7 +64,7 @@ function CTAButton({ href, label, tone = "primary", eventId, className }: CTABut
 }
 
 export default function HomePage() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
   const prefersReduced = useReducedMotion();
   const [primaryVideoFailed, setPrimaryVideoFailed] = useState(false);
   const [secondaryVideoFailed, setSecondaryVideoFailed] = useState(false);
@@ -117,7 +118,7 @@ export default function HomePage() {
             <div className="mt-8 flex flex-wrap gap-4">
               <PickTimeButton url="https://www.picktime.com/9581da74-ab62-43f5-a00c-68aacec5895b" />
               <Link
-                href="/products/context-os"
+                href={withLocale("/products/context-os", locale)}
                 className="rounded-md border border-[#0A2540] px-5 py-3 text-[#0A2540] text-base font-semibold hover:bg-[#0A2540]/5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A2540]"
               >
                 Explore products
@@ -186,12 +187,12 @@ export default function HomePage() {
             ))}
           </div>
           <div>
-            <CTAButton
-              href="/contact"
-              label={t("overview.cta")}
-              tone="secondary"
-              eventId="overview_cta"
-            />
+              <CTAButton
+                href={withLocale("/contact", locale)}
+                label={t("overview.cta")}
+                tone="secondary"
+                eventId="overview_cta"
+              />
           </div>
         </div>
       </section>
@@ -210,7 +211,7 @@ export default function HomePage() {
               ))}
             </ul>
             <CTAButton
-              href="/products/custom-machine-learning"
+              href={withLocale("/products/custom-machine-learning", locale)}
               label={t("operations.cta")}
               tone="primary"
               eventId="operations_cta"
@@ -265,7 +266,7 @@ export default function HomePage() {
             ))}
           </div>
           <CTAButton
-            href="/contact"
+            href={withLocale("/contact", locale)}
             label={t("trust.cta")}
             tone="secondary"
             eventId="trust_cta"
@@ -290,7 +291,7 @@ export default function HomePage() {
             ))}
           </ol>
           <CTAButton
-            href="/contact#book"
+            href={withLocale("/contact#book", locale)}
             label={t("process.cta")}
             eventId="process_cta"
           />
@@ -305,13 +306,13 @@ export default function HomePage() {
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <CTAButton
-              href="/contact#book"
+              href={withLocale("/contact#book", locale)}
               label={t("closing.primaryCta")}
               eventId="closing_primary"
               className="bg-white text-steel hover:bg-white/90 focus-visible:outline-white"
             />
             <CTAButton
-              href="/contact"
+              href={withLocale("/contact", locale)}
               label={t("closing.secondaryCta")}
               tone="ghost"
               eventId="closing_secondary"
