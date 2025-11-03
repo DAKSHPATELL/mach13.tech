@@ -124,9 +124,9 @@
     "emailLead": "Preferisci l’e-mail? Scrivi a",
     "emailTrail": "Rispondiamo entro un giorno lavorativo.",
     "precall": "Anticipa documenti o linee produttive da analizzare; arriveremo preparati. Puoi anche contattarci su LinkedIn:",
-    "widgetLabel": "Widget di pianificazione Calendly",
+    "widgetLabel": "Widget di pianificazione Picktime",
     "linkedInLabel": "Daksh Patel su LinkedIn",
-    "placeholderNotice": "Imposta NEXT_PUBLIC_CALENDLY_URL per caricare il tuo link di prenotazione."
+    "placeholderNotice": "Il widget Picktime si carica automaticamente in questa pagina."
   },
   "aboutPage": {
     "title": "Focus sulla produzione disciplinata",

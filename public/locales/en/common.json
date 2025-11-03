@@ -124,9 +124,9 @@
     "emailLead": "Prefer email? Write to",
     "emailTrail": "We respond within one business day.",
     "precall": "Share the documents or production lines you'd like us to review in advance; we'll arrive prepared. You can also connect on LinkedIn:",
-    "widgetLabel": "Calendly scheduling widget",
+    "widgetLabel": "Picktime scheduling widget",
     "linkedInLabel": "Daksh Patel on LinkedIn",
-    "placeholderNotice": "Set NEXT_PUBLIC_CALENDLY_URL to load your scheduling link."
+    "placeholderNotice": "The Picktime widget loads automatically on this page."
   },
   "aboutPage": {
     "title": "Focused on disciplined manufacturing",

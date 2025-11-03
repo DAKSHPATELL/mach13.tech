@@ -21,7 +21,6 @@ Visit `http://localhost:3000` after the dev server starts.
 | Name | Required | Description |
 | --- | --- | --- |
 | `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Yes | Plausible analytics domain, e.g. `mach13.tech`. |
-| `NEXT_PUBLIC_CALENDLY_URL` | Optional | Full Calendly booking link. Defaults to a placeholder if unset. |
 
 Duplicate `.env.example` as `.env.local` and update the value before running locally or deploying.
 
@@ -32,10 +31,15 @@ Duplicate `.env.example` as `.env.local` and update the value before running loc
 - `npm run start` – serve the production build locally
 - `npm run lint` – run the Next.js ESLint configuration
 
-## Calendly Setup
+## Scheduling (Picktime)
 
-Set `NEXT_PUBLIC_CALENDLY_URL` in `.env.local` to your booking link (for example `https://calendly.com/mach13/15min?hide_event_type_details=1&hide_gdpr_banner=1`).
-The contact page widget reads this value at runtime; leave it unset while developing if you do not want the embed to load.
+Picktime powers booking across the site:
+
+- A reusable button lives in `components/PickTimeButton.tsx` with variants (`primary`, `outline`, `floating`).
+- The optional right-side strip widget is provided by `components/PicktimeWidget.tsx` and loaded in `app/layout.tsx`.
+- The contact page at `app/[locale]/(marketing)/contact/page.tsx` uses an inline Picktime embed. The script is loaded once per session via a `data-picktime="1"` attribute.
+
+Update the Picktime URL in these components to point to your booking page if needed.
 
 ## Cookie Consent
 

@@ -124,9 +124,9 @@
     "emailLead": "Lieber per E-Mail? Schreiben Sie an",
     "emailTrail": "Wir antworten innerhalb eines Werktags.",
     "precall": "Teilen Sie uns vorab die Dokumente oder Produktionslinien mit, die wir prüfen sollen; wir bereiten uns entsprechend vor. Sie können auch über LinkedIn verbinden:",
-    "widgetLabel": "Calendly Buchungs-Widget",
+    "widgetLabel": "Picktime Buchungs-Widget",
     "linkedInLabel": "Daksh Patel auf LinkedIn",
-    "placeholderNotice": "Setzen Sie NEXT_PUBLIC_CALENDLY_URL, um Ihren Buchungslink zu laden."
+    "placeholderNotice": "Das Picktime-Widget wird auf dieser Seite automatisch geladen."
   },
   "aboutPage": {
     "title": "Fokus auf disziplinierte Fertigung",

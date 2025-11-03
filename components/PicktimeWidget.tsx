@@ -20,7 +20,7 @@ export default function PicktimeWidget() {
           alt="Book an appointment with Mach13"
         />
       </a>
-      <Script src="https://www.picktime.com/assets/booking.js" strategy="lazyOnload" />
+      <Script src="https://www.picktime.com/assets/booking.js" strategy="lazyOnload" data-picktime="1" />
     </>
   );
 }
