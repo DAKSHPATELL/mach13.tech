@@ -1,7 +1,7 @@
 {
   "brand": {
     "name": "Mach13",
-    "tagline": "AI systems for disciplined manufacturing"
+    "tagline": "AI for disciplined manufacturing."
   },
   "navigation": {
     "home": "Home",
@@ -20,9 +20,9 @@
     "it": "Italiano"
   },
   "hero": {
-    "badge": "Documented outcomes first",
-    "title": "Build dependable AI for regulated production.",
-    "subtitle": "Mach13 connects controlled documents, historian feeds, and machine vision so your teams resolve deviations in minutes — not days.",
+    "badge": "Results. Documented.",
+    "title": "Dependable AI. For regulated production.",
+    "subtitle": "Connect your documents, sensors, and vision. Resolve deviations in minutes. Not days.",
     "ctaPrimary": "Book a diagnostic",
     "ctaSecondary": "See capabilities",
     "statPilot": {
@@ -38,12 +38,12 @@
       "label": "Deploy beside existing MES and QMS"
     },
     "note": "EU & India delivery teams. GDPR aligned.",
-    "videoPrimaryAlt": "Operators reviewing an AI-assisted production dashboard.",
-    "videoSecondaryAlt": "Mach13 video reel demonstrating AI video generation overlays."
+    "videoPrimaryAlt": "Industrial robotic arms calibrating components inside a factory cell.",
+    "videoSecondaryAlt": "Sensor dashboards highlighting computer vision analytics overlays."
   },
   "overview": {
-    "title": "What we deliver",
-    "intro": "We design, implement, and operate AI systems that coexist with your validated processes.",
+    "title": "What we deliver.",
+    "intro": "AI systems that coexist with your validated processes.",
     "items": {
       "context": {
         "title": "Document-grounded copilots",
@@ -61,8 +61,8 @@
     "cta": "Let's talk"
   },
   "operations": {
-    "title": "Stabilise every changeover",
-    "body": "We stitch together historian signals, visual inspections, and document updates into a single console. Supervisors see what tripped alarms, the current stop-gap, and the approved fix.",
+    "title": "Stabilise every changeover.",
+    "body": "We stitch together historian signals, visual inspections, and document updates. Supervisors see the alarm, the stop-gap, and the approved fix. All in one place.",
     "bullets": {
       "overlay": "Real-time overlay of telemetry and relevant procedures.",
       "handover": "Automatic shift handovers with acknowledgement tracking.",
@@ -71,8 +71,8 @@
     "cta": "Optimize my line"
   },
   "trust": {
-    "title": "Trusted in highly regulated lines",
-    "body": "Our engineers operate under the same quality systems as your teams, with NDAs and secure environments aligned to your policies.",
+    "title": "Trusted in regulated lines.",
+    "body": "Our engineers operate under the same quality systems as your teams. Secure environments and NDAs come standard.",
     "cards": {
       "automotive": {
         "title": "Automotive Tier 1 suppliers",
@@ -94,8 +94,8 @@
     "cta": "Request references"
   },
   "process": {
-    "title": "How engagements run",
-    "body": "Your team stays in control while we deliver measurable improvements.",
+    "title": "How it works.",
+    "body": "Your team stays in control. We deliver measurable improvements.",
     "steps": {
       "diagnostic": {
         "title": "Week 0–1 · Diagnostic",
@@ -114,7 +114,7 @@
   },
   "closing": {
     "title": "Ready to remove guesswork from your line?",
-    "body": "Book a diagnostic call to review your documentation and data landscape. We will share a concrete plan or step aside — no vague pitches.",
+    "body": "Book a diagnostic to review your documentation and data. We'll share a concrete plan or step aside. No vague pitches.",
     "primaryCta": "Book a diagnostic",
     "secondaryCta": "Let's talk"
   },
@@ -126,11 +126,22 @@
     "precall": "Share the documents or production lines you'd like us to review in advance; we'll arrive prepared. You can also connect on LinkedIn:",
     "widgetLabel": "Picktime scheduling widget",
     "linkedInLabel": "Daksh Patel on LinkedIn",
-    "placeholderNotice": "The Picktime widget loads automatically on this page."
+    "placeholderNotice": "The Picktime widget loads automatically on this page.",
+    "form": {
+      "title": "Send us a message",
+      "subtitle": "Or, prefer email? Write to",
+      "name": "Full Name",
+      "email": "Email Address",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Thank you! Your message has been sent.",
+      "errorGeneral": "An error occurred. Please try again."
+    }
   },
   "aboutPage": {
-    "title": "Focused on disciplined manufacturing",
-    "intro": "Mach13 helps operators, quality leaders, and plant managers unlock the knowledge buried in controlled documents and sensors. We concentrate on measurable outcomes: faster answers, calmer audits, and lines that keep running.",
+    "title": "Focus. On disciplined manufacturing.",
+    "intro": "Mach13 helps operators, quality leaders, and plant managers unlock the knowledge buried in controlled documents and sensors. We focus on measurable outcomes: faster answers, calmer audits, and lines that keep running.",
     "founder": "Founded by Daksh Patel. Background in sensor analytics and document-grounded AI. Based in Gujarat, collaborating with teams throughout Europe.",
     "valuesTitle": "Values that shape every engagement",
     "values": {
@@ -139,7 +150,7 @@
         "body": "We map workflows before we ship. Measurements matter more than hype."
       },
       "privacy": {
-        "title": "Privacy by design",
+        "title": "Privacy",
         "body": "Hosting, retention, and access controls align with GDPR and your internal policies."
       },
       "roi": {
@@ -150,7 +161,7 @@
     "illustrationAlt": "Abstract network representing connected documents and sensors."
   },
   "productsPage": {
-    "title": "Configure the right product for your plant",
+    "title": "The right product for your plant.",
     "intro": "Two offerings, each adapted to your regulatory and data landscape.",
     "cards": {
       "contextOs": {
@@ -255,5 +266,8 @@
   },
   "notifications": {
     "videoFallback": "Video unavailable. Showing high-resolution still."
+  },
+  "layout": {
+    "skipToContent": "Skip to main content"
   }
 }

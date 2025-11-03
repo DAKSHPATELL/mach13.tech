@@ -26,10 +26,10 @@
 body {
   background-color: rgb(var(--color-background));
   color: rgb(var(--color-foreground));
-  font-feature-settings: "kern", "liga";
-  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
+  -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeSpeed; /* more native-feeling on WebKit */
 }
 
 .skip-link {
@@ -55,5 +55,6 @@ main:focus-visible {
 }
 
 ::selection {
-  background: rgba(10, 37, 64, 0.14);
+  /* subtler selection for premium feel */
+  background-color: rgba(10, 37, 64, 0.1);
 }

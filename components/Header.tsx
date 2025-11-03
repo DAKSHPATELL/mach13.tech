@@ -58,7 +58,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-divider/50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <Link href="/" className="flex items-center gap-3 text-foreground transition-opacity hover:opacity-80" aria-label={t("brand.name")}>
-          <Image src="/logo.svg" alt={t("brand.name")} width={40} height={40} priority className="h-10 w-10" />
+          <Image src="/logo.png" alt={t("brand.name")} width={40} height={40} priority className="h-10 w-10" />
           <span className="text-xl font-bold tracking-tight">{t("brand.name")}</span>
         </Link>
         <nav

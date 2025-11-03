@@ -1,7 +1,7 @@
 {
   "brand": {
     "name": "Mach13",
-    "tagline": "Systèmes d’IA pour une production maîtrisée"
+    "tagline": "L'IA pour la fabrication disciplinée."
   },
   "navigation": {
     "home": "Accueil",
@@ -20,63 +20,63 @@
     "it": "Italiano"
   },
   "hero": {
-    "badge": "Des résultats vérifiables",
-    "title": "Une IA fiable pour la production réglementée.",
-    "subtitle": "Mach13 relie documents contrôlés, données historian et vision industrielle afin que vos équipes résolvent les écarts en minutes, pas en jours.",
-    "ctaPrimary": "Planifier un diagnostic",
+    "badge": "Résultats. Documentés.",
+    "title": "IA fiable. Pour production réglementée.",
+    "subtitle": "Connectez documents, capteurs et vision. Résolvez les écarts en minutes. Pas en jours.",
+    "ctaPrimary": "Réserver un diagnostic",
     "ctaSecondary": "Voir les capacités",
     "statPilot": {
       "value": "14 jours",
-      "label": "Un pilote pour démontrer l’amélioration du rendement ou du temps de réponse"
+      "label": "Pilote pour prouver le ROI sur le rendement ou le temps de réponse"
     },
     "statTraceable": {
-      "value": "Traçabilité totale",
-      "label": "Citations et journaux de changements pour chaque réponse"
+      "value": "100 % traçable",
+      "label": "Citations et journaux de modifications pour chaque réponse"
     },
     "statDowntime": {
-      "value": "Aucune interruption",
-      "label": "Déploiement en parallèle de votre MES et QMS existants"
+      "value": "Zéro arrêt",
+      "label": "Déploiement aux côtés de vos MES et QMS existants"
     },
-    "note": "Équipes en UE et en Inde. Aligné RGPD.",
-    "videoPrimaryAlt": "Des opérateurs analysent un tableau de bord de production assisté par IA.",
+    "note": "Équipes en UE et en Inde. Conforme RGPD.",
+    "videoPrimaryAlt": "Opérateurs examinant un tableau de bord de production assisté par IA.",
     "videoSecondaryAlt": "Bobine vidéo Mach13 montrant des superpositions générées par IA."
   },
   "overview": {
-    "title": "Ce que nous livrons",
-    "intro": "Nous concevons, mettons en œuvre et exploitons des systèmes d’IA qui respectent vos processus validés.",
+    "title": "Ce que nous livrons.",
+    "intro": "Des systèmes d'IA qui coexistent avec vos processus validés.",
     "items": {
       "context": {
-        "title": "Copilotes ancrés dans vos documents",
-        "body": "Context OS présente instructions, artefacts PPAP et mises à jour SOP avec des citations acceptées par vos auditeurs."
+        "title": "Context OS",
+        "body": "Un copilote qui trouve la bonne instruction, dans le bon document, avec des citations que les auditeurs acceptent."
       },
       "analytics": {
-        "title": "Analytique capteurs et vision",
-        "body": "Des modèles sur mesure notent les anomalies, classent les défauts et envoient des alertes exploitables immédiatement."
+        "title": "Capteurs & Vision",
+        "body": "Des modèles qui notent les anomalies, classent les défauts et envoient des alertes. Votre équipe peut agir. Immédiatement."
       },
       "governance": {
-        "title": "Gouvernance opérationnelle",
-        "body": "Approbations structurées, exports d’audit et accès au plus juste niveau selon vos procédures existantes."
+        "title": "Gouvernance Opérationnelle",
+        "body": "Approbations structurées, exports d'audit et contrôles d'accès conformes aux playbooks que vous appliquez déjà."
       }
     },
     "cta": "Discutons"
   },
   "operations": {
-    "title": "Stabiliser chaque changement de série",
-    "body": "Nous regroupons signaux historian, inspections visuelles et mises à jour documentaires dans une console unique. Les superviseurs voient l’alerte, le palliatif et la correction approuvée.",
+    "title": "Stabiliser chaque changement.",
+    "body": "Nous lions signaux historian, inspections visuelles et documents. Les superviseurs voient l'alarme, la solution temporaire et le correctif. En un seul endroit.",
     "bullets": {
-      "overlay": "Superposition temps réel des télémétries et procédures pertinentes.",
+      "overlay": "Superposition en temps réel de la télémétrie et des procédures.",
       "handover": "Passations de poste automatiques avec suivi des accusés de réception.",
-      "handsFree": "Mode mains libres pour salles blanches et interventions de maintenance."
+      "handsFree": "Mode mains libres pour salles blanches et maintenance."
     },
     "cta": "Optimiser ma ligne"
   },
   "trust": {
-    "title": "Fiable sur des lignes fortement réglementées",
-    "body": "Nos ingénieurs respectent les mêmes systèmes qualité que vos équipes, avec NDA et environnements sécurisés adaptés à vos politiques.",
+    "title": "Fiable sur les lignes réglementées.",
+    "body": "Nos ingénieurs opèrent sous les mêmes systèmes qualité que vos équipes. Environnements sécurisés et NDA sont standards.",
     "cards": {
       "automotive": {
-        "title": "Équipementiers automobile Tier 1",
-        "body": "Assistants documentaires validés selon l’IATF 16949."
+        "title": "Fournisseurs automobile Tier 1",
+        "body": "Assistants documentaires validés selon les procédures IATF 16949."
       },
       "pharma": {
         "title": "Conditionnement pharmaceutique",
@@ -84,176 +84,187 @@
       },
       "automation": {
         "title": "Automatisation industrielle",
-        "body": "Inspection visuelle ajustée aux zones IEC 62443."
+        "body": "Inspection visuelle adaptée à la segmentation de zone IEC 62443."
       },
       "security": {
         "title": "Posture de sécurité",
-        "body": "Contrôles examinés par des auditeurs ISO 27001 et juristes RGPD."
+        "body": "Contrôles examinés par des auditeurs ISO 27001 et des juristes RGPD."
       }
     },
     "cta": "Demander des références"
   },
   "process": {
-    "title": "Déroulement d’une mission",
-    "body": "Votre équipe garde la main pendant que nous apportons des gains mesurables.",
+    "title": "Comment ça marche.",
+    "body": "Votre équipe garde le contrôle. Nous livrons des améliorations mesurables.",
     "steps": {
       "diagnostic": {
-        "title": "Semaines 0–1 · Diagnostic",
-        "body": "Revue conjointe des documents, flux historian et KPI visés. Définition du périmètre pilote et des exigences de gouvernance."
+        "title": "Semaine 0–1 · Diagnostic",
+        "body": "Nous analysons vos documents, flux historian et KPI. Puis nous validons le périmètre du pilote et la gouvernance."
       },
       "pilot": {
-        "title": "Semaines 2–4 · Construction du pilote",
-        "body": "Configuration de Context OS, entraînement des modèles et connexion à vos données de production sans perturber les systèmes validés."
+        "title": "Semaine 2–4 · Pilote",
+        "body": "Nous configurons Context OS, formons les modèles et connectons vos données – sans perturber les systèmes validés."
       },
       "scale": {
-        "title": "À partir de la semaine 5 · Extension & support",
-        "body": "Renforcement pour un déploiement élargi, formation des utilisateurs et supervision continue des modèles."
+        "title": "Semaine 5+ · Déploiement",
+        "body": "Nous renforçons le système, formons vos utilisateurs et surveillons les modèles pour garantir leur précision."
       }
     },
-    "cta": "Planifier un diagnostic"
+    "cta": "Réserver un diagnostic"
   },
   "closing": {
-    "title": "Prêt à éliminer les suppositions sur votre ligne ?",
-    "body": "Réservez un diagnostic pour examiner vos documents et données. Nous partageons un plan concret ou nous nous retirons — sans promesses floues.",
-    "primaryCta": "Planifier un diagnostic",
+    "title": "Prêt à éliminer les doutes sur votre ligne ?",
+    "body": "Réservez un diagnostic pour examiner vos documents et données. Nous partagerons un plan concret ou nous nous retirerons. Sans vagues promesses.",
+    "primaryCta": "Réserver un diagnostic",
     "secondaryCta": "Discutons"
   },
   "contactPage": {
-    "title": "Planifier un diagnostic",
+    "title": "Réserver un diagnostic.",
     "subtitle": "Choisissez un créneau de 15 minutes pour revoir votre documentation, vos données historian et vos indicateurs.",
     "emailLead": "Vous préférez l’e-mail ? Écrivez à",
     "emailTrail": "Réponse garantie sous un jour ouvré.",
     "precall": "Partagez à l’avance les documents ou lignes de production à examiner ; nous arriverons préparés. Vous pouvez aussi nous contacter sur LinkedIn :",
     "widgetLabel": "Widget de prise de rendez-vous Picktime",
     "linkedInLabel": "Daksh Patel sur LinkedIn",
-    "placeholderNotice": "Le widget Picktime se charge automatiquement sur cette page."
+    "placeholderNotice": "Le widget Picktime se charge automatiquement sur cette page.",
+    "form": {
+      "title": "Envoyez-nous un message",
+      "subtitle": "Ou vous préférez l'e-mail ? Écrivez à",
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "message": "Votre message",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "success": "Merci ! Votre message a été envoyé.",
+      "errorGeneral": "Une erreur est survenue. Veuillez réessayer."
+    }
   },
   "aboutPage": {
-    "title": "Un focus sur la production maîtrisée",
-    "intro": "Mach13 aide opérateurs, responsables qualité et directeurs d’usine à exploiter les connaissances enfouies dans les documents contrôlés et les capteurs. Nous visons des résultats mesurables : des réponses rapides, des audits sereins et des lignes qui ne s’arrêtent pas.",
-    "founder": "Fondée par Daksh Patel. Expertise en analytique capteurs et en IA ancrée dans la documentation. Basé au Gujarat, en collaboration avec des équipes partout en Europe.",
-    "valuesTitle": "Des valeurs qui guident chaque mission",
+    "title": "Focus. Sur la fabrication disciplinée.",
+    "intro": "Mach13 aide opérateurs, responsables qualité et directeurs d'usine à libérer le savoir enfoui dans les documents et capteurs. Nous nous concentrons sur des résultats mesurables : réponses rapides, audits sereins et lignes qui tournent.",
+    "founder": "Fondée par Daksh Patel. Expérience en analyse de capteurs et IA basée sur les documents. Basé au Gujarat, collaborant avec des équipes en Europe.",
+    "valuesTitle": "Des valeurs qui façonnent chaque mission.",
     "values": {
       "precision": {
         "title": "Précision",
-        "body": "Nous cartographions les flux avant livraison. Les mesures priment sur le battage médiatique."
+        "body": "Nous cartographions les flux avant de livrer. Les mesures priment sur le battage médiatique."
       },
       "privacy": {
-        "title": "Confidentialité intégrée",
+        "title": "Lecture seule",
         "body": "Hébergement, rétention et accès conformes au RGPD et à vos politiques internes."
       },
       "roi": {
-        "title": "ROI mesurable",
-        "body": "Les tableaux de bord montrent le temps gagné, les incidents évités et les audits réussis."
+        "title": "ROI mesuré",
+        "body": "Nos dashboards montrent le temps gagné, les problèmes évités et les audits réussis."
       }
     },
     "illustrationAlt": "Réseau abstrait reliant documents et capteurs."
   },
   "productsPage": {
-    "title": "Configurez l’offre adaptée à votre site",
-    "intro": "Deux offres, ajustées à vos contraintes réglementaires et à votre paysage de données.",
+    "title": "Le bon produit pour votre usine.",
+    "intro": "Deux offres, adaptées à votre cadre réglementaire et à vos données.",
     "cards": {
       "contextOs": {
         "title": "Context OS",
-        "description": "Des copilotes ancrés dans vos documents fournissant des réponses citées à partir de manuels, SOP et exigences clients.",
+        "description": "Copilotes basés sur vos documents qui fournissent des réponses citées issues de manuels, SOPs et exigences clients.",
         "features": [
-          "Recherche hybride avec graphes d’équipement et états de validation.",
-          "Garde-fous basés sur les rôles, conformes à votre matrice d’approbation.",
+          "Recherche hybride avec graphes d'équipements et états de validation.",
+          "Garde-fous basés sur les rôles, conformes à votre matrice d'approbation.",
           "Tableaux de bord sur le temps de réponse, la satisfaction et les citations."
         ],
         "cta": "Explorer Context OS"
       },
       "customMl": {
-        "title": "ML sur mesure",
-        "description": "Analytique capteurs et vision qui signale les dérives, détecte les défauts et assiste les opérateurs.",
+        "title": "Machine Learning sur mesure",
+        "description": "Intelligence capteurs et vision qui alerte sur les dérives, signale les défauts et assiste les opérateurs.",
         "features": [
-          "Détection d’anomalies temporelles et maintenance prédictive.",
+          "Détection d'anomalies et maintenance prédictive sur séries temporelles.",
           "Inspection visuelle pour surfaces, étiquettes et assemblages.",
-          "Déploiements conformes à l’IEC 62443 et au 21 CFR Part 11."
+          "Déploiements durcis pour IEC 62443 et 21 CFR Part 11."
         ],
-        "cta": "Explorer les solutions ML"
+        "cta": "Explorer le ML sur mesure"
       }
     },
     "support": {
-      "title": "Chaque mission comprend",
+      "title": "Chaque mission inclut",
       "items": [
-        "Revues de conformité avec experts ISO 27001 et juristes RGPD.",
-        "Playbooks d’accompagnement pour opérateurs et responsables qualité.",
-        "Monitoring des modèles et des données avec synthèses hebdomadaires."
+        "Revues de conformité avec des conseillers ISO 27001 et RGPD.",
+        "Playbooks de gestion du changement pour opérateurs et responsables qualité.",
+        "Suivi des modèles et données avec résumés hebdomadaires."
       ]
     }
   },
   "productDetail": {
     "contextOs": {
-      "title": "Context OS pour le terrain",
-      "intro": "Un copilote documentaire qui répond aux questions opérationnelles et qualité avec des sources traçables.",
+      "title": "Context OS. Pour l'atelier.",
+      "intro": "Un assistant basé sur vos documents qui répond aux questions opérationnelles et qualité avec des citations traçables.",
       "featuresTitle": "Fonctionnalités clés",
       "features": [
-        "Recherche hybride avec graphes de machines, lignes et versions libérées.",
-        "Citations activées par défaut pour chaque réponse et modification.",
-        "Connecteurs pour PDF, Office, SharePoint, stockage S3 et partages sécurisés on-premise.",
-        "Politiques d’accès alignées sur votre matrice d’approbation et la séparation des rôles.",
-        "Tableaux de bord sur les sources consultées, les requêtes et la satisfaction."
+        "Recherche hybride avec graphes de connaissances pour machines, lignes et versions.",
+        "Citations par défaut. Pour chaque réponse.",
+        "Connecteurs pour PDF, Office, SharePoint, stockage S3 et partages sécurisés sur site.",
+        "Politiques d'accès qui suivent votre matrice d'approbation et la séparation des tâches.",
+        "Tableaux de bord suivant les sources, requêtes et taux de satisfaction."
       ],
-      "coverageTitle": "Cas d’usage",
+      "coverageTitle": "Où il aide",
       "coverage": [
-        "Qualité & conformité : réponses plus rapides aux audits avec passages sources acceptés en revue.",
-        "Exploitation & maintenance : recherches rapides sur alarmes, couples et substitutions de pièces.",
-        "Onboarding : accélérer la montée en compétence sans réécrire les manuels."
+        "Qualité & Conformité : Réponses d'audit plus rapides avec des passages sources qui tiennent la route.",
+        "Opérations & Maintenance : Recherches rapides d'alarmes, couples de serrage et pièces de rechange.",
+        "Onboarding : Accélérer l'intégration sur des lignes complexes. Sans réécrire les manuels."
       ],
       "pilotTitle": "Structure du pilote",
-      "pilotBody": "Sprints de deux semaines avec corpus ciblé, amélioration mesurée du temps de réponse et seuils de précision définis avant démarrage. Nous livrons une solution prête pour la production et une checklist de gouvernance."
+      "pilotBody": "Sprints de deux semaines avec un jeu de documents défini, des améliorations mesurables du temps de réponse et des seuils de précision validés avant le démarrage. Nous vous laissons un système prêt pour la production et une checklist de gouvernance."
     },
     "customMl": {
-      "title": "Machine learning sur mesure pour capteurs et vision",
-      "intro": "Nous concevons et déployons des modèles sur données temporelles et visuelles pour stabiliser la production et soutenir vos équipes.",
-      "timeSeriesTitle": "Compétences temporelles",
-      "timeSeriesIntro": "Détecter les anomalies avant qu’elles ne s’aggravent, prévoir les dérives et planifier les arrêts de maintenance en confiance.",
+      "title": "Custom ML. Pour capteurs et vision.",
+      "intro": "Nous concevons et déployons des modèles pour données temporelles et visuelles afin de stabiliser la production et soutenir vos équipes.",
+      "timeSeriesTitle": "Capacités séries temporelles",
+      "timeSeriesIntro": "Détecter les anomalies avant qu'elles ne s'aggravent. Prévoir les dérives. Planifier la maintenance.",
       "timeSeriesPoints": [
-        "Feature engineering à partir de signaux historian, API et SCADA.",
-        "Modèles de maintenance prédictive avec seuils calibrés et alertes.",
-        "Prévisions multivariées pour débit, rebuts et consommation énergétique."
+        "Feature engineering à partir des signaux historian, PLC et SCADA.",
+        "Modèles de maintenance prédictive avec seuils de risque calibrés et alertes.",
+        "Prévisions multivariées pour le débit, les rebuts et la consommation d'énergie."
       ],
-      "visionTitle": "Compétences vision",
-      "visionIntro": "Assistants d’inspection qui mettent en avant les vrais défauts et ignorent le bruit.",
+      "visionTitle": "Capacités de vision",
+      "visionIntro": "Assister les inspecteurs avec une analyse qui surligne les vrais défauts et ignore le bruit.",
       "visionPoints": [
-        "Détection, classification et segmentation des défauts de surface.",
-        "OCR pour codes lots et marquages réglementaires.",
-        "Déploiements sur edge ou cloud sécurisé avec monitoring intégré."
+        "Détection, classification et segmentation sémantique des défauts de surface.",
+        "OCR pour les codes de lot et les étiquettes réglementaires.",
+        "Déploiements sur appareils edge ou endpoints cloud sécurisés avec monitoring."
       ],
       "deliveryTitle": "Approche de livraison",
       "deliveryPoints": [
-        "Plan de collecte et d’étiquetage co-construit avec opérateurs et qualité.",
-        "Baselines et études d’ablation documentées pour chaque modèle livré.",
-        "Protocoles de validation et critères d’acceptation définis avant mise en production.",
-        "Transfert avec procédures d’exploitation, cadence de ré-entraînement et voies d’escalade."
+        "Plan de collecte et d'étiquetage conçu avec vos opérateurs et responsables qualité.",
+        "Baselines et études d'ablation documentées pour chaque modèle livré.",
+        "Protocoles de validation et critères d'acceptation définis avant la production.",
+        "Transfert avec procédures opérationnelles, cadence de ré-entraînement et voies d'escalade."
       ]
     }
   },
   "footer": {
-    "tagline": "Implanté au Gujarat (Inde) et à Aix-la-Chapelle (Allemagne).",
-    "description": "Mach13 fournit des copilotes documentaires et du machine learning pour les équipes industrielles.",
+    "tagline": "Opérant depuis le Gujarat, Inde et Aix-la-Chapelle, Allemagne.",
+    "description": "Mach13 fournit des assistants documentaires et du machine learning pour les équipes industrielles.",
     "products": "Produits",
     "about": "À propos",
     "contact": "Contact",
-    "legal": "Mentions légales",
+    "legal": "Mentions",
     "privacy": "Confidentialité",
     "imprint": "Impressum",
     "copyright": "© {{year}} Mach13. Tous droits réservés."
   },
   "cookie": {
     "title": "Préférences de cookies",
-    "description": "Nous utilisons des cookies pour analyser le trafic et identifier les contenus utiles. Vous pouvez accepter, refuser ou configurer les cookies d’analyse à tout moment.",
-    "analyticsTitle": "Cookies d’analyse",
-    "analyticsDescription": "Activer l’analyse anonyme pour améliorer les contenus. Aucun pixel publicitaire tiers n’est utilisé.",
-    "allowAnalytics": "Autoriser les cookies d’analyse",
+    "description": "Nous utilisons des cookies pour analyser le trafic et comprendre quels contenus aident les visiteurs. Vous pouvez accepter, refuser ou configurer les cookies d'analyse à tout moment.",
+    "analyticsTitle": "Cookies d'analyse",
+    "analyticsDescription": "Activez les analyses anonymes pour nous aider à améliorer le contenu. Aucun pixel publicitaire ou de suivi tiers n'est utilisé.",
+    "allowAnalytics": "Autoriser les cookies d'analyse",
     "accept": "Accepter",
     "reject": "Refuser",
     "customise": "Personnaliser",
-    "save": "Enregistrer les préférences",
+    "save": "Enregistrer",
     "cancel": "Annuler"
   },
   "notifications": {
-    "videoFallback": "Vidéo indisponible. Affichage d’une image haute résolution."
+    "videoFallback": "Vidéo non disponible. Affichage d'une image fixe."
   }
 }

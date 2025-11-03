@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
-const siteName = "Mach13";
-const siteUrl = "https://mach13.tech";
+export const siteName = "Mach13";
+export const siteUrl = "https://mach13.tech";
 export const openGraphImage = {
-  url: "/og.svg",
+  url: "/logo.png",
   width: 1200,
   height: 630,
   alt: "Mach13 — Dependable AI for regulated production"
@@ -19,10 +19,20 @@ export const baseMetadata: Metadata = {
     template: `%s • ${siteName}`
   },
   description,
+  category: "technology",
+  keywords: [
+    "industrial AI",
+    "manufacturing analytics",
+    "document-grounded assistants",
+    "computer vision",
+    "Mach13",
+    "Aachen",
+    "Gujarat"
+  ],
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg"
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png"
   },
   openGraph: {
     title: siteName,

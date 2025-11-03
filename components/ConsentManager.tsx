@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import CookieBanner from "@/components/CookieBanner";
 import { loadAnalytics, unloadAnalytics } from "@/lib/consent";
 
@@ -10,20 +10,37 @@ type ConsentValue = "accepted" | "rejected" | "analytics-enabled" | "analytics-d
 
 type ConsentManagerProps = {
   plausibleDomain?: string;
+  plausibleScriptSrc?: string;
+  plausibleApiHost?: string;
 };
 
-export default function ConsentManager({ plausibleDomain }: ConsentManagerProps) {
+export default function ConsentManager({
+  plausibleDomain,
+  plausibleScriptSrc,
+  plausibleApiHost
+}: ConsentManagerProps) {
   const [consent, setConsent] = useState<ConsentValue | null>(null);
+
+  const load = useCallback(() => {
+    if (!plausibleDomain) {
+      return;
+    }
+    loadAnalytics({
+      domain: plausibleDomain,
+      scriptSrc: plausibleScriptSrc,
+      apiHost: plausibleApiHost
+    });
+  }, [plausibleApiHost, plausibleDomain, plausibleScriptSrc]);
 
   useEffect(() => {
     const stored = window.localStorage.getItem(STORAGE_KEY) as ConsentValue | null;
     if (stored) {
       setConsent(stored);
-      if ((stored === "accepted" || stored === "analytics-enabled") && plausibleDomain) {
-        loadAnalytics(plausibleDomain);
+      if (stored === "accepted" || stored === "analytics-enabled") {
+        load();
       }
     }
-  }, [plausibleDomain]);
+  }, [load]);
 
   const persist = (value: ConsentValue) => {
     window.localStorage.setItem(STORAGE_KEY, value);
@@ -32,9 +49,7 @@ export default function ConsentManager({ plausibleDomain }: ConsentManagerProps)
 
   const handleAccept = () => {
     persist("accepted");
-    if (plausibleDomain) {
-      loadAnalytics(plausibleDomain);
-    }
+    load();
   };
 
   const handleReject = () => {
@@ -45,9 +60,7 @@ export default function ConsentManager({ plausibleDomain }: ConsentManagerProps)
   const handleCustomise = (allowAnalytics: boolean) => {
     if (allowAnalytics) {
       persist("analytics-enabled");
-      if (plausibleDomain) {
-        loadAnalytics(plausibleDomain);
-      }
+      load();
     } else {
       unloadAnalytics();
       persist("analytics-disabled");

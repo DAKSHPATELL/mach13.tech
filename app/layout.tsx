@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import dynamic from "next/dynamic";
 import { baseMetadata } from "@/lib/metadata";
 import PicktimeWidget from "@/components/PicktimeWidget";
+import StructuredData from "@/components/StructuredData";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -14,6 +15,8 @@ const inter = Inter({
 export const metadata = baseMetadata;
 
 const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
+const plausibleScriptSrc = process.env.NEXT_PUBLIC_PLAUSIBLE_SCRIPT;
+const plausibleApiHost = process.env.NEXT_PUBLIC_PLAUSIBLE_API_HOST;
 const ConsentManager = dynamic(() => import("@/components/ConsentManager"), {
   ssr: false
 });
@@ -28,7 +31,12 @@ export default async function RootLayout({
     <html lang="en" dir="ltr" className={inter.variable}>
       <body className="bg-background text-foreground antialiased">
         {children}
-        <ConsentManager plausibleDomain={plausibleDomain} />
+        <StructuredData />
+        <ConsentManager
+          plausibleDomain={plausibleDomain}
+          plausibleScriptSrc={plausibleScriptSrc}
+          plausibleApiHost={plausibleApiHost}
+        />
         <PicktimeWidget />
       </body>
     </html>

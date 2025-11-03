@@ -1,6 +1,4 @@
 'use client';
-
-import Image from 'next/image';
 import { useTranslation } from '@/lib/i18n/useTranslation';
 
 export default function CustomMachineLearningPage() {
@@ -14,7 +12,7 @@ export default function CustomMachineLearningPage() {
     <section className="px-6 py-16 sm:px-8 md:px-10 lg:px-16">
       <div className="mx-auto max-w-5xl space-y-12">
         <header className="space-y-6">
-          <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+          <h1 className="text-4xl font-semibold tracking-tighter-xl text-foreground sm:text-5xl">
             {t('productDetail.customMl.title')}
           </h1>
           <p className="text-base leading-relaxed text-foreground/75 sm:text-lg">
@@ -23,26 +21,17 @@ export default function CustomMachineLearningPage() {
         </header>
 
         <div className="grid gap-6 md:grid-cols-2">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-divider bg-background shadow-subtle">
-            <Image
-              src="/illustrations/panel-sensors.svg"
-              alt={t('operations.bullets.overlay')}
-              fill
-              className="object-cover"
-            />
+          {/* Premium product visuals placeholders */}
+          <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-3xl border border-divider bg-slate-50">
+            <p className="text-sm text-foreground/50">[Premium Visual: {t('operations.bullets.overlay')}]</p>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-divider bg-background shadow-subtle">
-            <Image
-              src="/illustrations/panel-vision.svg"
-              alt={t('operations.bullets.handsFree')}
-              fill
-              className="object-cover"
-            />
+          <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-3xl border border-divider bg-slate-50">
+            <p className="text-sm text-foreground/50">[Premium Visual: {t('operations.bullets.handsFree')}]</p>
           </div>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="space-y-4 rounded-3xl border border-divider bg-white px-8 py-8 shadow-subtle text-sm leading-relaxed text-foreground/75">
+          <div className="space-y-4 rounded-3xl border border-divider bg-white px-8 py-8 text-sm leading-relaxed text-foreground/75">
             <h2 className="text-2xl font-semibold text-foreground">
               {t('productDetail.customMl.timeSeriesTitle')}
             </h2>
@@ -56,7 +45,7 @@ export default function CustomMachineLearningPage() {
               ))}
             </ul>
           </div>
-          <div className="space-y-4 rounded-3xl border border-divider bg-white px-8 py-8 shadow-subtle text-sm leading-relaxed text-foreground/75">
+          <div className="space-y-4 rounded-3xl border border-divider bg-white px-8 py-8 text-sm leading-relaxed text-foreground/75">
             <h2 className="text-2xl font-semibold text-foreground">
               {t('productDetail.customMl.visionTitle')}
             </h2>
@@ -72,7 +61,7 @@ export default function CustomMachineLearningPage() {
           </div>
         </div>
 
-        <div className="rounded-3xl border border-divider bg-slate-50 px-8 py-8 text-sm leading-relaxed text-foreground/75 shadow-subtle">
+        <div className="rounded-3xl border border-divider bg-slate-50 px-8 py-8 text-sm leading-relaxed text-foreground/75">
           <h2 className="text-xl font-semibold text-foreground">
             {t('productDetail.customMl.deliveryTitle')}
           </h2>

@@ -21,6 +21,8 @@ Visit `http://localhost:3000` after the dev server starts.
 | Name | Required | Description |
 | --- | --- | --- |
 | `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Yes | Plausible analytics domain, e.g. `mach13.tech`. |
+| `NEXT_PUBLIC_PLAUSIBLE_SCRIPT` | No | Override Plausible script URL (defaults to `https://plausible.io/js/script.js`). |
+| `NEXT_PUBLIC_PLAUSIBLE_API_HOST` | No | Optional custom API host for Plausible, sets the `data-api` attribute. |
 
 Duplicate `.env.example` as `.env.local` and update the value before running locally or deploying.
 
@@ -50,8 +52,8 @@ Update the Picktime URL in these components to point to your booking page if nee
 
 ## Hero Media
 
-Two hero reels live in `public/videos/AI_Startup_Website_Video_Concepts.mp4` and `public/videos/AI_Video_Generation_for_Mach_.mp4`.
-Keep them compressed (muted, `playsinline`) to maintain performance. The homepage and the operations section fall back to `public/illustrations/hero-assembly.svg` when motion is disabled or the video fails to load.
+Two hero reels live in `public/videos/factory-hero.mp4` and `public/videos/AI_Startup_Website_Video_Concepts.mp4`.
+Keep them compressed (muted, `playsinline`) to maintain performance. The homepage falls back to `public/images/hero-fallback.jpg` when motion is disabled or video playback fails; the operations section uses `public/illustrations/panel-vision.svg`.
 
 ## Editing Content & Style
 

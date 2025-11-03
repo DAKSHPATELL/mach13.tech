@@ -10,10 +10,10 @@ export default function ProductsOverviewPage() {
   const { t, locale } = useTranslation();
 
   return (
-    <section className="px-6 py-16 sm:px-8 md:px-10 lg:px-16">
+    <section className="px-4 py-14 sm:px-6 md:px-10 lg:px-16 sm:py-16">
       <div className="mx-auto max-w-6xl space-y-12">
         <header className="space-y-6">
-          <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+          <h1 className="text-4xl font-semibold tracking-tighter-xl text-foreground sm:text-5xl">
             {t('productsPage.title')}
           </h1>
           <p className="text-base leading-relaxed text-foreground/75 sm:text-lg">
@@ -23,8 +23,8 @@ export default function ProductsOverviewPage() {
 
         <div className="grid gap-8 md:grid-cols-2">
           {productCardKeys.map((key) => (
-            <article key={key} className="flex h-full flex-col rounded-3xl border border-divider bg-white px-8 py-8 shadow-subtle hover:shadow-lg transition-shadow">
-              <h2 className="text-2xl font-semibold text-foreground">{t(`productsPage.cards.${key}.title`)}</h2>
+            <article key={key} className="flex h-full flex-col rounded-3xl border border-divider bg-white px-8 py-8">
+              <h2 className="text-2xl font-semibold tracking-tighter-md text-foreground">{t(`productsPage.cards.${key}.title`)}</h2>
               <p className="mt-3 text-sm leading-relaxed text-foreground/75">
                 {t(`productsPage.cards.${key}.description`)}
               </p>
@@ -48,8 +48,8 @@ export default function ProductsOverviewPage() {
           ))}
         </div>
 
-        <section className="rounded-3xl border border-divider bg-slate-50 px-8 py-8 shadow-subtle">
-          <h2 className="text-2xl font-semibold text-foreground">
+        <section className="rounded-3xl border border-divider bg-slate-50 px-8 py-8">
+          <h2 className="text-2xl font-semibold tracking-tighter-md text-foreground">
             {t('productsPage.support.title')}
           </h2>
           {(() => {

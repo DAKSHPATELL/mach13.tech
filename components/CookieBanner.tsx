@@ -17,7 +17,7 @@ export default function CookieBanner({ onAccept, onReject, onCustomise }: Cookie
   return (
     <div className="fixed inset-x-0 bottom-0 z-[100] flex justify-center px-4 pb-6">
       <div
-        className="w-full max-w-4xl rounded-2xl border border-divider bg-surface/95 p-6 shadow-subtle backdrop-blur"
+        className="w-full max-w-4xl rounded-2xl border border-divider bg-surface/95 p-6 backdrop-blur"
         role="dialog"
         aria-modal="true"
         aria-labelledby="cookie-banner-title"

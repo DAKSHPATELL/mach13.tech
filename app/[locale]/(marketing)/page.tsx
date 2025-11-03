@@ -2,21 +2,22 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "framer-motion";
 import { useState } from "react";
 import { useTranslation } from "@/lib/i18n/useTranslation";
 import { withLocale } from "@/lib/i18n/href";
 import PickTimeButton from "@/components/PickTimeButton";
+import FadeInView from "@/components/FadeInView";
 
 const HERO_VIDEOS = [
   {
-    src: "/videos/AI_Startup_Website_Video_Concepts.mp4",
-    poster: "/illustrations/hero-assembly.svg",
+    src: "/videos/factory-hero.mp4",
+    poster: "/images/hero-fallback.jpg",
     altKey: "hero.videoPrimaryAlt"
   },
   {
-    src: "/videos/AI_Video_Generation_for_Mach_.mp4",
-    poster: "/illustrations/hero-assembly.svg",
+    src: "/videos/AI_Startup_Website_Video_Concepts.mp4",
+    poster: "/illustrations/panel-vision.svg",
     altKey: "hero.videoSecondaryAlt"
   }
 ] as const;
@@ -83,12 +84,12 @@ export default function HomePage() {
   ];
   const trustCards = ["automotive", "pharma", "automation", "security"] as const;
   const processSteps = ["diagnostic", "pilot", "scale"] as const;
-  const heroAccentClass = abVariant === "variant-b" ? "from-signal/25" : "from-steel/25";
+  const heroAccentClass = "from-steel/25";
 
   return (
     <main
       id="main-content"
-      className="relative flex flex-col gap-24 pb-24 text-foreground md:gap-28 md:pb-32"
+      className="relative flex flex-col gap-20 pb-20 text-foreground sm:gap-24 sm:pb-24 md:gap-28 md:pb-32"
       data-ab-variant={abVariant}
     >
       <div
@@ -96,19 +97,14 @@ export default function HomePage() {
         aria-hidden="true"
       />
 
-      <motion.section
-        initial={prefersReduced ? undefined : { opacity: 0, y: 24 }}
-        animate={prefersReduced ? undefined : { opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="px-6 pt-20 sm:px-8 md:px-10 lg:px-16"
-      >
+      <FadeInView as="section" className="px-4 pt-16 sm:px-6 md:px-10 lg:px-16 md:pt-20">
         <div className="mx-auto flex max-w-6xl flex-col-reverse items-start gap-16 md:flex-row md:items-center">
           <div className="max-w-xl space-y-8">
-            <span className="inline-flex items-center rounded-full border border-divider bg-surface px-4 py-1.5 text-xs font-semibold tracking-wide text-foreground/70 shadow-subtle/20">
+            <span className="inline-flex items-center rounded-full border border-divider bg-surface px-4 py-1.5 text-xs font-semibold tracking-wide text-foreground/70">
               {t("hero.badge")}
             </span>
             <div className="space-y-6">
-              <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+              <h1 className="text-4xl font-semibold tracking-tighter-xl text-foreground sm:text-5xl lg:text-6xl">
                 {t("hero.title")}
               </h1>
               <p className="text-base leading-relaxed text-foreground/75 sm:text-lg">
@@ -126,7 +122,7 @@ export default function HomePage() {
             </div>
             <dl className="grid gap-6 sm:grid-cols-3">
               {heroStats.map((stat) => (
-                <div key={stat.label} className="rounded-3xl border border-divider bg-surface px-5 py-4 shadow-subtle/30">
+                <div key={stat.label} className="rounded-3xl border border-divider bg-surface px-5 py-4">
                   <dt className="text-xs font-medium uppercase tracking-wide text-foreground/60">{stat.label}</dt>
                   <dd className="mt-2 text-xl font-semibold text-foreground">{stat.value}</dd>
                 </div>
@@ -136,7 +132,7 @@ export default function HomePage() {
           </div>
 
           <div className="w-full md:max-w-xl">
-            <div className="relative overflow-hidden rounded-3xl border border-divider/60 bg-surface shadow-subtle">
+            <div className="relative overflow-hidden rounded-3xl border border-divider/60 bg-surface">
               {!prefersReduced && !primaryVideoFailed ? (
                 <video
                   className="h-full w-full object-cover"
@@ -146,6 +142,7 @@ export default function HomePage() {
                   playsInline
                   poster={HERO_VIDEOS[0].poster}
                   onError={() => setPrimaryVideoFailed(true)}
+                  preload="auto"
                 >
                   <source src={HERO_VIDEOS[0].src} type="video/mp4" />
                 </video>
@@ -166,10 +163,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </motion.section>
+      </FadeInView>
 
-      <section id="capabilities" className="px-6 sm:px-8 md:px-10 lg:px-16">
-        <div className="mx-auto flex max-w-6xl flex-col gap-12 rounded-3xl border border-divider bg-surface px-6 py-14 shadow-subtle sm:px-10 md:py-16">
+      <FadeInView as="section" id="capabilities" className="px-4 sm:px-6 md:px-10 lg:px-16">
+        <div className="mx-auto flex max-w-6xl flex-col gap-12 rounded-3xl border border-divider bg-surface px-6 py-12 sm:px-10 md:py-16">
           <div className="max-w-3xl space-y-5">
             <h2 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
               {t("overview.title")}
@@ -195,10 +192,10 @@ export default function HomePage() {
               />
           </div>
         </div>
-      </section>
+      </FadeInView>
 
-      <section className="px-6 sm:px-8 md:px-10 lg:px-16">
-        <div className="mx-auto grid max-w-6xl gap-12 overflow-hidden rounded-3xl border border-divider bg-surface px-6 py-14 shadow-subtle sm:px-10 md:grid-cols-2 md:py-16">
+      <FadeInView as="section" className="px-4 sm:px-6 md:px-10 lg:px-16">
+        <div className="mx-auto grid max-w-6xl gap-12 overflow-hidden rounded-3xl border border-divider bg-surface px-6 py-12 sm:px-10 md:grid-cols-2 md:py-16">
           <div className="space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t("operations.title")}</h2>
             <p className="text-base leading-relaxed text-foreground/75">{t("operations.body")}</p>
@@ -228,6 +225,7 @@ export default function HomePage() {
                   playsInline
                   poster={HERO_VIDEOS[1].poster}
                   onError={() => setSecondaryVideoFailed(true)}
+                  preload="auto"
                 >
                   <source src={HERO_VIDEOS[1].src} type="video/mp4" />
                 </video>
@@ -247,10 +245,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </FadeInView>
 
-      <section className="px-6 sm:px-8 md:px-10 lg:px-16">
-        <div className="mx-auto flex max-w-6xl flex-col gap-12 rounded-3xl border border-divider bg-surface px-6 py-14 shadow-subtle sm:px-10 md:py-16">
+      <FadeInView as="section" className="px-4 sm:px-6 md:px-10 lg:px-16">
+        <div className="mx-auto flex max-w-6xl flex-col gap-12 rounded-3xl border border-divider bg-surface px-6 py-12 sm:px-10 md:py-16">
           <div className="space-y-4">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t("trust.title")}</h2>
             <p className="text-base leading-relaxed text-foreground/75">{t("trust.body")}</p>
@@ -272,10 +270,10 @@ export default function HomePage() {
             eventId="trust_cta"
           />
         </div>
-      </section>
+      </FadeInView>
 
- 	    <section className="px-6 sm:px-8 md:px-10 lg:px-16">
-        <div className="mx-auto flex max-w-6xl flex-col gap-12 rounded-3xl border border-divider bg-surface px-6 py-14 shadow-subtle sm:px-10 md:py-16">
+      <FadeInView as="section" className="px-4 sm:px-6 md:px-10 lg:px-16">
+        <div className="mx-auto flex max-w-6xl flex-col gap-12 rounded-3xl border border-divider bg-surface px-6 py-12 sm:px-10 md:py-16">
           <div className="space-y-4">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t("process.title")}</h2>
             <p className="text-base leading-relaxed text-foreground/75">{t("process.body")}</p>
@@ -296,10 +294,10 @@ export default function HomePage() {
             eventId="process_cta"
           />
         </div>
-      </section>
+      </FadeInView>
 
-      <section className="px-6 sm:px-8 md:px-10 lg:px-16">
-        <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-divider bg-steel px-6 py-16 text-white shadow-subtle sm:px-10 md:py-20">
+      <FadeInView as="section" className="px-4 sm:px-6 md:px-10 lg:px-16">
+        <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-divider bg-steel px-6 py-16 text-white sm:px-10 md:py-20">
           <div className="space-y-6">
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t("closing.title")}</h2>
             <p className="text-base leading-relaxed text-white/80">{t("closing.body")}</p>
@@ -320,7 +318,7 @@ export default function HomePage() {
             />
           </div>
         </div>
-      </section>
+      </FadeInView>
     </main>
   );
 }

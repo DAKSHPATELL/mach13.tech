@@ -1,6 +1,4 @@
 'use client';
-
-import Image from 'next/image';
 import { useTranslation } from '@/lib/i18n/useTranslation';
 
 const valueKeys = ['precision', 'privacy', 'roi'] as const;
@@ -9,14 +7,14 @@ export default function AboutPageContent() {
   const { t } = useTranslation();
 
   return (
-    <section className="px-6 py-16 sm:px-8 md:px-10 lg:px-16">
+    <section className="px-4 py-14 sm:px-6 md:px-10 lg:px-16 sm:py-16">
       <div className="mx-auto flex max-w-6xl flex-col gap-12">
         <section
-          className="grid gap-10 rounded-3xl border border-divider bg-white px-8 py-12 shadow-subtle sm:grid-cols-[1.1fr_0.9fr] sm:px-12"
+          className="grid gap-10 rounded-3xl border border-divider bg-white px-8 py-12 sm:grid-cols-[1.1fr_0.9fr] sm:px-12"
           aria-labelledby="about-heading"
         >
           <div className="space-y-6">
-            <h1 id="about-heading" className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+            <h1 id="about-heading" className="text-4xl font-semibold tracking-tighter-xl text-foreground sm:text-5xl">
               {t('aboutPage.title')}
             </h1>
             <p className="text-base leading-relaxed text-foreground/75">{t('aboutPage.intro')}</p>
@@ -24,14 +22,9 @@ export default function AboutPageContent() {
               <p>{t('aboutPage.founder')}</p>
             </div>
           </div>
-          <figure className="rounded-3xl border border-divider bg-slate-50 p-6">
-            <Image
-              src="/illustrations/network.svg"
-              alt={t('aboutPage.illustrationAlt')}
-              width={480}
-              height={320}
-              className="h-auto w-full"
-            />
+          {/* Premium imagery placeholder — replace with final asset */}
+          <figure className="flex aspect-video w-full items-center justify-center rounded-3xl border border-divider bg-slate-50 p-6">
+            <p className="text-sm text-foreground/50">[Premium Image: {t('aboutPage.illustrationAlt')}]</p>
             <figcaption className="mt-3 text-xs text-foreground/60">
               {t('aboutPage.illustrationAlt')}
             </figcaption>
@@ -40,7 +33,7 @@ export default function AboutPageContent() {
 
         <section
           aria-labelledby="values-heading"
-          className="rounded-3xl border border-divider bg-white px-8 py-12 shadow-subtle sm:px-12"
+          className="rounded-3xl border border-divider bg-white px-8 py-12 sm:px-12"
         >
           <div className="mx-auto flex max-w-4xl flex-col gap-6">
             <h2 id="values-heading" className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">

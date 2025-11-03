@@ -17,14 +17,16 @@ const config: Config = {
         surface: "rgb(var(--color-surface) / <alpha-value>)",
         muted: "rgb(var(--color-muted) / <alpha-value>)",
         divider: "rgb(var(--color-border) / <alpha-value>)",
-        steel: "#0A2540",
-        signal: "#D70015"
+        steel: "#0A2540"
       },
       fontFamily: {
         sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans]
       },
-      boxShadow: {
-        subtle: "0 20px 60px -40px rgba(10, 37, 64, 0.4)"
+      letterSpacing: {
+        "tighter-xl": "-.04em",
+        "tighter-lg": "-.03em",
+        "tighter-md": "-.02em",
+        "tight-sm": "-.01em"
       }
     }
   },

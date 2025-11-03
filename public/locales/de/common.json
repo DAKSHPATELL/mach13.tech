@@ -1,7 +1,7 @@
 {
   "brand": {
     "name": "Mach13",
-    "tagline": "KI-Systeme für regulierte Fertigung"
+    "tagline": "KI für disziplinierte Fertigung."
   },
   "navigation": {
     "home": "Startseite",
@@ -20,14 +20,14 @@
     "it": "Italiano"
   },
   "hero": {
-    "badge": "Messbare Ergebnisse zuerst",
-    "title": "Zuverlässige KI für regulierte Produktion.",
-    "subtitle": "Mach13 verbindet freigegebene Dokumente, Historian-Daten und Machine Vision, damit Ihr Team Abweichungen in Minuten statt Tagen behebt.",
-    "ctaPrimary": "Diagnose vereinbaren",
+    "badge": "Ergebnisse. Dokumentiert.",
+    "title": "Zuverlässige KI. Für regulierte Produktion.",
+    "subtitle": "Verbinden Sie Dokumente, Sensoren und Vision. Beheben Sie Abweichungen in Minuten. Nicht in Tagen.",
+    "ctaPrimary": "Diagnose buchen",
     "ctaSecondary": "Fähigkeiten ansehen",
     "statPilot": {
       "value": "14 Tage",
-      "label": "Pilot, um Ausbeute oder Reaktionszeit nachzuweisen"
+      "label": "Pilot, um ROI bei Ausbeute oder Reaktionszeit nachzuweisen"
     },
     "statTraceable": {
       "value": "100 % nachverfolgbar",
@@ -42,27 +42,27 @@
     "videoSecondaryAlt": "Mach13-Video mit KI-gestützten Video-Overlays."
   },
   "overview": {
-    "title": "Was wir liefern",
-    "intro": "Wir entwerfen, implementieren und betreiben KI-Systeme, die mit Ihren validierten Prozessen zusammenarbeiten.",
+    "title": "Was wir liefern.",
+    "intro": "KI-Systeme, die neben Ihren validierten Prozessen bestehen.",
     "items": {
       "context": {
-        "title": "Dokumentgestützte Copiloten",
-        "body": "Context OS zeigt Arbeitsanweisungen, PPAP-Dokumente und SOP-Änderungen mit Quellenangaben, die Audit-Teams akzeptieren."
+        "title": "Context OS",
+        "body": "Ein Copilot, der die richtige Anweisung aus dem richtigen Dokument findet. Mit Quellen, die Auditoren akzeptieren."
       },
       "analytics": {
-        "title": "Sensor- und Bildanalytik",
-        "body": "Individuelle Modelle bewerten Anomalien, klassifizieren Defekte und senden Alarme, die Linienführer sofort umsetzen können."
+        "title": "Sensorik & Vision",
+        "body": "Modelle, die Anomalien bewerten, Defekte klassifizieren und Alarme senden. Ihr Team kann reagieren. Sofort."
       },
       "governance": {
         "title": "Operative Governance",
-        "body": "Strukturierte Freigaben, Audit-Exporte und Least-Privilege-Zugriff, abgestimmt auf Ihre bestehenden Vorgaben."
+        "body": "Strukturierte Freigaben, Audit-Exporte und Zugriffskontrollen, die Ihren bestehenden Playbooks entsprechen."
       }
     },
     "cta": "Lassen Sie uns sprechen"
   },
   "operations": {
-    "title": "Jeden Rüstvorgang stabilisieren",
-    "body": "Wir verbinden Historian-Signale, Sichtprüfungen und Dokumentaktualisierungen in einer Konsole. Vorgesetzte sehen Auslöser, Notlösung und freigegebene Korrektur.",
+    "title": "Jeden Rüstvorgang stabilisieren.",
+    "body": "Wir verbinden Historian-Signale, Sichtprüfungen und Dokumente. Vorgesetzte sehen Alarm, Notlösung und Fix. Alles an einem Ort.",
     "bullets": {
       "overlay": "Echtzeit-Überlagerung von Telemetrie und relevanten Anweisungen.",
       "handover": "Automatische Schichtübergaben mit Bestätigungsverfolgung.",
@@ -71,105 +71,116 @@
     "cta": "Linie optimieren"
   },
   "trust": {
-    "title": "Vertrauenswürdig in regulierten Linien",
-    "body": "Unsere Ingenieur:innen arbeiten nach denselben Qualitätssystemen wie Ihr Team — mit NDAs und gesicherten Umgebungen passend zu Ihren Richtlinien.",
+    "title": "Bewährt in regulierten Linien.",
+    "body": "Unsere Ingenieure arbeiten nach denselben Qualitätssystemen wie Ihre Teams. Sichere Umgebungen und NDAs sind Standard.",
     "cards": {
       "automotive": {
-        "title": "Automotive Tier-1",
-        "body": "Dokumenten-Assistenten validiert gegen IATF-16949-Vorgaben."
+        "title": "Automotive Tier-1-Zulieferer",
+        "body": "Dokumenten-Assistenten, validiert nach IATF-16949-Verfahren."
       },
       "pharma": {
         "title": "Pharmazeutische Verpackung",
-        "body": "Chargenfreigabe-Copiloten im Einklang mit FDA 21 CFR Part 11."
+        "body": "Chargenfreigabe-Copiloten, abgestimmt auf FDA 21 CFR Part 11."
       },
       "automation": {
         "title": "Industrielle Automation",
-        "body": "Bildprüfung abgestimmt auf IEC-62443-Zonierung."
+        "body": "Bildprüfung, abgestimmt auf IEC-62443-Zonierung."
       },
       "security": {
-        "title": "Sicherheitsniveau",
-        "body": "Kontrollen geprüft von ISO-27001-Lead-Auditor:innen und EU-Datenschutzjurist:innen."
+        "title": "Sicherheitsstatus",
+        "body": "Kontrollen, geprüft von ISO-27001-Auditoren und EU-DSGVO-Juristen."
       }
     },
     "cta": "Referenzen anfordern"
   },
   "process": {
-    "title": "So laufen Projekte",
-    "body": "Ihr Team behält die Steuerung, während wir messbare Verbesserungen liefern.",
+    "title": "Wie es funktioniert.",
+    "body": "Ihr Team behält die Kontrolle. Wir liefern messbare Verbesserungen.",
     "steps": {
       "diagnostic": {
         "title": "Woche 0–1 · Diagnose",
-        "body": "Gemeinsame Sichtung von Dokumenten, Historian-Daten und Ziel-KPIs. Pilotumfang und Governance festlegen."
+        "body": "Wir prüfen Ihre Dokumente, Historian-Daten und Ziel-KPIs. Dann definieren wir Pilot-Umfang und Governance."
       },
       "pilot": {
         "title": "Woche 2–4 · Pilotaufbau",
-        "body": "Context OS konfigurieren, maßgeschneiderte Modelle trainieren und Produktionsdaten anbinden — ohne validierte Systeme zu stören."
+        "body": "Wir konfigurieren Context OS, trainieren Modelle und verbinden Ihre Daten – ohne validierte Systeme zu stören."
       },
       "scale": {
-        "title": "Ab Woche 5 · Rollout & Support",
-        "body": "Härtung für breiteren Einsatz, Schulung der Nutzer:innen und laufende Modellüberwachung."
+        "title": "Ab Woche 5 · Skalierung & Support",
+        "body": "Wir härten das System für den Rollout, schulen Ihre Nutzer und überwachen die Modelle, damit sie präzise bleiben."
       }
     },
-    "cta": "Diagnose vereinbaren"
+    "cta": "Diagnose buchen"
   },
   "closing": {
-    "title": "Bereit, Vermutungen aus Ihrer Linie zu entfernen?",
-    "body": "Buchen Sie eine Diagnose, um Dokumentation und Datenlandschaft zu besprechen. Wir liefern einen konkreten Plan oder treten zurück — ohne vage Versprechen.",
-    "primaryCta": "Diagnose vereinbaren",
+    "title": "Bereit, Vermutungen von Ihrer Linie zu entfernen?",
+    "body": "Buchen Sie eine Diagnose, um Ihre Dokumente und Daten zu prüfen. Wir teilen einen konkreten Plan oder treten zurück. Keine vagen Versprechen.",
+    "primaryCta": "Diagnose buchen",
     "secondaryCta": "Lassen Sie uns sprechen"
   },
   "contactPage": {
-    "title": "Diagnosegespräch buchen",
-    "subtitle": "Wählen Sie einen 15-minütigen Slot, um Dokumentation, Historian-Daten und KPIs zu besprechen.",
+    "title": "Diagnose buchen.",
+    "subtitle": "Wählen Sie einen 15-Minuten-Slot, um Dokumentation, Historian-Daten und KPIs zu besprechen.",
     "emailLead": "Lieber per E-Mail? Schreiben Sie an",
     "emailTrail": "Wir antworten innerhalb eines Werktags.",
     "precall": "Teilen Sie uns vorab die Dokumente oder Produktionslinien mit, die wir prüfen sollen; wir bereiten uns entsprechend vor. Sie können auch über LinkedIn verbinden:",
     "widgetLabel": "Picktime Buchungs-Widget",
     "linkedInLabel": "Daksh Patel auf LinkedIn",
-    "placeholderNotice": "Das Picktime-Widget wird auf dieser Seite automatisch geladen."
+    "placeholderNotice": "Das Picktime-Widget wird auf dieser Seite automatisch geladen.",
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "subtitle": "Oder lieber per E-Mail? Schreiben Sie an",
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "message": "Ihre Nachricht",
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet...",
+      "success": "Vielen Dank! Ihre Nachricht wurde gesendet.",
+      "errorGeneral": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
   },
   "aboutPage": {
-    "title": "Fokus auf disziplinierte Fertigung",
-    "intro": "Mach13 unterstützt Operator:innen, Qualitätsverantwortliche und Werksleiter dabei, Wissen aus kontrollierten Dokumenten und Sensoren nutzbar zu machen. Im Mittelpunkt stehen messbare Ergebnisse: schnellere Antworten, ruhigere Audits und Linien, die weiterlaufen.",
+    "title": "Fokus. Auf disziplinierte Fertigung.",
+    "intro": "Mach13 hilft Operatoren, Qualitätsleitern und Werksleitern, das Wissen in Dokumenten und Sensoren zu erschließen. Wir fokussieren uns auf messbare Ergebnisse: schnellere Antworten, ruhigere Audits und Linien, die laufen.",
     "founder": "Gegründet von Daksh Patel. Hintergrund in Sensoranalytik und dokumentgestützter KI. Sitz in Gujarat, Zusammenarbeit mit Teams in ganz Europa.",
-    "valuesTitle": "Werte, die jede Zusammenarbeit prägen",
+    "valuesTitle": "Werte, die jede Zusammenarbeit prägen.",
     "values": {
       "precision": {
         "title": "Präzision",
-        "body": "Wir kartieren Abläufe, bevor wir liefern. Messwerte zählen mehr als Hype."
+        "body": "Wir bilden Workflows ab, bevor wir liefern. Messwerte statt Hype."
       },
       "privacy": {
-        "title": "Privacy by Design",
-        "body": "Hosting, Aufbewahrung und Zugriffsrechte entsprechen der DSGVO und Ihren internen Richtlinien."
+        "title": "Read-only",
+        "body": "Hosting, Speicherung und Zugriffsrechte sind DSGVO-konform und folgen Ihren internen Richtlinien."
       },
       "roi": {
         "title": "Messbarer ROI",
-        "body": "Dashboards zeigen eingesparte Zeit, verhinderte Vorfälle und bestandene Audits."
+        "body": "Dashboards zeigen gesparte Zeit, verhinderte Probleme und bestandene Audits."
       }
     },
-    "illustrationAlt": "Abstraktes Netzwerk aus verbundenen Dokumenten und Sensoren."
+    "illustrationAlt": "Abstraktes Netzwerk, das Dokumente und Sensoren verbindet."
   },
   "productsPage": {
-    "title": "Das passende Produkt für Ihre Anlage konfigurieren",
-    "intro": "Zwei Angebote, jeweils auf Ihre regulatorischen Anforderungen und Datenlandschaft zugeschnitten.",
+    "title": "Das richtige Produkt für Ihr Werk.",
+    "intro": "Zwei Angebote, angepasst an Ihre regulatorischen Anforderungen und Daten.",
     "cards": {
       "contextOs": {
         "title": "Context OS",
-        "description": "Dokumentgestützte Copiloten, die Antworten mit Quellenangaben aus Handbüchern, SOPs und Kundenanforderungen liefern.",
+        "description": "Dokumentgestützte Copiloten, die zitierte Antworten aus Handbüchern, SOPs und Kundenanforderungen liefern.",
         "features": [
           "Hybride Suche mit Anlagen-Graphen und Freigabeständen.",
           "Rollenbasierte Leitplanken, die Ihre Freigabematrix abbilden.",
-          "Dashboards für Reaktionszeit, Zufriedenheit und Zitationsqualität."
+          "Dashboards für Reaktionszeit, Zufriedenheit und Zitationen."
         ],
         "cta": "Context OS entdecken"
       },
       "customMl": {
-        "title": "Individuelle ML-Lösungen",
-        "description": "Sensor- und Bildanalytik, die Drift meldet, Defekte kennzeichnet und Operator:innen unterstützt.",
+        "title": "Individuelles Machine Learning",
+        "description": "Sensor- und Visions-Intelligenz, die vor Drift warnt, Defekte findet und Operatoren unterstützt.",
         "features": [
-          "Anomalieerkennung und Predictive Maintenance auf Zeitreihen.",
-          "Visuelle Inspektion für Oberflächen, Label und Baugruppen.",
-          "Bereitstellungen gehärtet für IEC 62443 und 21 CFR Part 11."
+          "Zeitreihen-Anomalieerkennung und Predictive Maintenance.",
+          "Visuelle Inspektion für Oberflächen, Etiketten und Baugruppen.",
+          "Deployments gehärtet für IEC 62443 und 21 CFR Part 11."
         ],
         "cta": "Custom ML entdecken"
       }
@@ -177,61 +188,61 @@
     "support": {
       "title": "Jede Zusammenarbeit umfasst",
       "items": [
-        "Compliance-Reviews mit ISO-27001- und DSGVO-Fachleuten.",
-        "Change-Management-Playbooks für Operator:innen und Qualitätsteams.",
-        "Model- und Datenmonitoring mit wöchentlichen Zusammenfassungen."
+        "Compliance-Reviews mit ISO-27001- und DSGVO-Beratern.",
+        "Change-Management-Playbooks für Operatoren und Qualitätsleiter.",
+        "Modell- und Datenmonitoring mit wöchentlichen Berichten."
       ]
     }
   },
   "productDetail": {
     "contextOs": {
-      "title": "Context OS für den Shopfloor",
+      "title": "Context OS. Für die Werkshalle.",
       "intro": "Ein dokumentgestützter Assistent, der operative und qualitätsrelevante Fragen mit nachvollziehbaren Quellen beantwortet.",
       "featuresTitle": "Schlüsselmerkmale",
       "features": [
-        "Hybride Suche mit Wissensgraphen für Maschinen, Linien und Freigabestände.",
-        "Zitate standardmäßig für jede Antwort und Änderung.",
-        "Connectoren für PDF, Office, SharePoint, S3-kompatiblen Speicher und gesicherte On-Prem-Shares.",
-        "Zugriffspolitiken entsprechend Ihrer Freigabematrix und Trennung von Funktionen.",
-        "Dashboards zu Quellen, Anfragen und Zufriedenheit."
+        "Hybride Suche mit Wissensgraphen für Maschinen, Linien und Freigabeversionen.",
+        "Zitate als Standard. Für jede Antwort.",
+        "Connectoren für PDF, Office, SharePoint, S3-Speicher und sichere On-Premise-Freigaben.",
+        "Zugriffsrichtlinien, die Ihrer Freigabematrix und Funktionstrennung folgen.",
+        "Dashboards zur Verfolgung von Quellen, Anfragen und Zufriedenheit."
       ],
-      "coverageTitle": "Einsatzbereiche",
+      "coverageTitle": "Wo es hilft",
       "coverage": [
-        "Qualität & Compliance: schnellere Audit-Antworten mit Passagen, die Prüfungen bestehen.",
-        "Betrieb & Instandhaltung: schnelle Nachschlagewerte für Alarme, Drehmomente und Ersatzteile.",
-        "Onboarding: verkürzte Einarbeitung auf komplexen Linien ohne neue Handbücher zu schreiben."
+        "Qualität & Compliance: Schnellere Audit-Antworten mit Quellpassagen, die Prüfungen standhalten.",
+        "Betrieb & Wartung: Schnelles Nachschlagen von Alarmen, Drehmomenten und Ersatzteilen.",
+        "Onboarding: Schnelleres Einarbeiten an komplexen Linien. Ohne Umschreiben von Handbüchern."
       ],
-      "pilotTitle": "Pilotaufbau",
-      "pilotBody": "Zweiwöchige Sprints mit kuratiertem Dokumentensatz, klarer Verbesserung der Antwortzeiten und vereinbarten Zitiergenauigkeiten vor dem Start. Wir übergeben eine produktionsreife Lösung plus Governance-Checkliste."
+      "pilotTitle": "Pilotstruktur",
+      "pilotBody": "Zweiwöchige Sprints mit kuratierten Dokumenten, messbaren Verbesserungen der Antwortzeit und vorab vereinbarten Genauigkeitszielen. Wir übergeben ein produktionsreifes System und eine Governance-Checkliste."
     },
     "customMl": {
-      "title": "Individuelle Machine-Learning-Modelle für Sensorik und Vision",
-      "intro": "Wir entwickeln und betreiben Modelle für Zeitreihen und Bilddaten, um Produktion zu stabilisieren und Teams zu unterstützen.",
+      "title": "Custom ML. Für Sensoren und Vision.",
+      "intro": "Wir entwickeln und betreiben Modelle für Zeitreihen- und Bilddaten, um die Produktion zu stabilisieren und Ihre Teams zu unterstützen.",
       "timeSeriesTitle": "Fähigkeiten für Zeitreihen",
-      "timeSeriesIntro": "Anomalien früh erkennen, Drift prognostizieren und Wartungsfenster sicher planen.",
+      "timeSeriesIntro": "Anomalien erkennen, bevor sie eskalieren. Drift vorhersagen. Wartung mit Vertrauen planen.",
       "timeSeriesPoints": [
         "Feature Engineering aus Historian-, SPS- und SCADA-Signalen.",
-        "Predictive-Maintenance-Modelle mit kalibrierten Schwellen und Alarmen.",
+        "Predictive-Maintenance-Modelle mit kalibrierten Risikoschwellen und Alarmen.",
         "Multivariate Prognosen für Durchsatz, Ausschuss und Energieverbrauch."
       ],
-      "visionTitle": "Fähigkeiten für Bildverarbeitung",
-      "visionIntro": "Unterstützt Prüfer:innen mit automatisierter Analyse, die echte Defekte hervorhebt und Rauschen ignoriert.",
+      "visionTitle": "Fähigkeiten für Vision",
+      "visionIntro": "Unterstützt Prüfer mit automatisierter Analyse, die echte Defekte hervorhebt und Rauschen ignoriert.",
       "visionPoints": [
-        "Oberflächenfehler-Erkennung, Klassifikation und Segmentierung.",
-        "OCR für Chargencodes und regulatorische Kennzeichnungen.",
-        "Bereitstellungen auf Edge-Geräten oder abgesicherten Cloud-Endpunkten mit Monitoring."
+        "Oberflächendefekterkennung, Klassifizierung und semantische Segmentierung.",
+        "OCR für Chargencodes und regulatorische Etiketten.",
+        "Deployments auf Edge-Geräten oder sicheren Cloud-Endpunkten mit Monitoring."
       ],
       "deliveryTitle": "Vorgehensmodell",
       "deliveryPoints": [
-        "Datenaufnahme und Labeling-Plan gemeinsam mit Operator:innen und Qualitätsmanagement.",
-        "Baselines und Ablation-Studien für jedes ausgelieferte Modell dokumentiert.",
-        "Validierungsprotokolle und Abnahmekriterien vor Produktionseinsatz vereinbart.",
-        "Übergabe mit Betriebsanweisungen, Retrain-Kadenzen und Eskalationswegen."
+        "Datenaufnahme- und Labeling-Plan, gemeinsam mit Operatoren und Qualität entwickelt.",
+        "Baselines und Ablationsstudien für jedes Modell dokumentiert.",
+        "Validierungsprotokolle und Abnahmekriterien vor dem Produktionseinsatz vereinbart.",
+        "Übergabe mit Betriebsanweisungen, Retrain-Kadenz und Eskalationspfaden."
       ]
     }
   },
   "footer": {
-    "tagline": "Standorte: Gujarat, Indien und Aachen, Deutschland.",
+    "tagline": "Tätig aus Gujarat, Indien und Aachen, Deutschland.",
     "description": "Mach13 liefert dokumentgestützte Assistenten und Machine Learning für industrielle Teams.",
     "products": "Produkte",
     "about": "Über uns",
