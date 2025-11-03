@@ -29,7 +29,7 @@ export default function ProductsOverviewPage() {
                 {t(`productsPage.cards.${key}.description`)}
               </p>
               {(() => {
-                const features = t<string[]>(`productsPage.cards.${key}.features`);
+                const features = t<string[] | null>(`productsPage.cards.${key}.features`) ?? [];
                 return (
                   <ul className="mt-4 space-y-2 text-sm leading-relaxed text-foreground/70">
                     {features.map((item, index) => (
@@ -53,7 +53,7 @@ export default function ProductsOverviewPage() {
             {t('productsPage.support.title')}
           </h2>
           {(() => {
-            const supportItems = t<string[]>('productsPage.support.items');
+            const supportItems = t<string[] | null>('productsPage.support.items') ?? [];
             return (
               <ul className="mt-4 space-y-2 text-sm leading-relaxed text-foreground/75">
                 {supportItems.map((item, index) => (

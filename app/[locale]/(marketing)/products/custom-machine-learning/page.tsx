@@ -4,9 +4,9 @@ import { useTranslation } from '@/lib/i18n/useTranslation';
 export default function CustomMachineLearningPage() {
   const { t } = useTranslation();
   
-  const timeSeriesPoints = t<string[]>('productDetail.customMl.timeSeriesPoints');
-  const visionPoints = t<string[]>('productDetail.customMl.visionPoints');
-  const deliveryPoints = t<string[]>('productDetail.customMl.deliveryPoints');
+  const timeSeriesPoints = t<string[] | null>('productDetail.customMl.timeSeriesPoints') ?? [];
+  const visionPoints = t<string[] | null>('productDetail.customMl.visionPoints') ?? [];
+  const deliveryPoints = t<string[] | null>('productDetail.customMl.deliveryPoints') ?? [];
 
   return (
     <section className="px-6 py-16 sm:px-8 md:px-10 lg:px-16">

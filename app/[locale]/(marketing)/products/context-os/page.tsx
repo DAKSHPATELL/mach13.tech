@@ -5,8 +5,8 @@ import { useTranslation } from '@/lib/i18n/useTranslation';
 export default function ContextOSPage() {
   const { t } = useTranslation();
   
-  const features = t<string[]>('productDetail.contextOs.features');
-  const coverage = t<string[]>('productDetail.contextOs.coverage');
+  const features = t<string[] | null>('productDetail.contextOs.features') ?? [];
+  const coverage = t<string[] | null>('productDetail.contextOs.coverage') ?? [];
 
   return (
     <section className="px-6 py-16 sm:px-8 md:px-10 lg:px-16">
