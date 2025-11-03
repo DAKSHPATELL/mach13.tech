@@ -39,14 +39,18 @@ export default function PickTimeButton({
       : variant === 'outline'
       ? 'bg-white text-[#0A2540] border border-[#0A2540] hover:bg-[#0A2540]/5 focus:ring-[#0A2540]'
       : 'fixed right-3 bottom-3 z-[9999] bg-[#0A2540] text-white shadow-lg hover:bg-[#0A2540]/90 focus:ring-[#0A2540]';
+  const readinessStyles = ready ? '' : 'opacity-70 pointer-events-none cursor-wait';
 
   return (
     <a
       href={url}
       target="_blank"
       rel="noreferrer"
-      className={[base, styles, className].join(' ')}
+      className={[base, styles, readinessStyles, className].join(' ').trim()}
       aria-label={label}
+      aria-disabled={!ready}
+      tabIndex={ready ? 0 : -1}
+      data-picktime-ready={ready ? 'true' : 'false'}
     >
       {label}
     </a>

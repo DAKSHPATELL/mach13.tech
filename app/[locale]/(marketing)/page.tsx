@@ -116,12 +116,12 @@ export default function HomePage() {
             </div>
             <div className="mt-8 flex flex-wrap gap-4">
               <PickTimeButton url="https://www.picktime.com/9581da74-ab62-43f5-a00c-68aacec5895b" />
-              <a
+              <Link
                 href="/products/context-os"
                 className="rounded-md border border-[#0A2540] px-5 py-3 text-[#0A2540] text-base font-semibold hover:bg-[#0A2540]/5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A2540]"
               >
                 Explore products
-              </a>
+              </Link>
             </div>
             <dl className="grid gap-6 sm:grid-cols-3">
               {heroStats.map((stat) => (
