@@ -1,13 +1,19 @@
+import Link from "next/link";
+
+export const metadata = { title: "Page introuvable · 404" };
+
 export default function NotFound() {
   return (
-    <main className="px-6 md:px-10 lg:px-16 py-20">
-      <h1 className="text-3xl font-bold text-foreground">Page not found</h1>
-      <p className="mt-3 text-foreground/70">Try the homepage or the Products page.</p>
-      <div className="mt-6 flex gap-4">
-        <a className="px-4 py-2 rounded bg-[#0A2540] text-white" href="/">Home</a>
-        <a className="px-4 py-2 rounded border border-[#0A2540] text-[#0A2540]" href="/products">Products</a>
-      </div>
-    </main>
+    <section className="container-x flex min-h-[60vh] flex-col items-center justify-center py-24 text-center">
+      <span className="eyebrow">Erreur 404</span>
+      <h1 className="display mt-4 text-5xl sm:text-6xl">Page introuvable</h1>
+      <p className="mt-4 max-w-md text-muted">
+        La page que vous recherchez n&apos;existe pas ou a été déplacée. / The page you are looking for
+        could not be found.
+      </p>
+      <Link href="/" className="btn-primary mt-8">
+        Retour à l&apos;accueil / Back home
+      </Link>
+    </section>
   );
 }
-

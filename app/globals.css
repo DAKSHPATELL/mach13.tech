@@ -4,57 +4,101 @@
 
 :root {
   color-scheme: light;
-  --color-background: 255 255 255;
-  --color-foreground: 15 23 42;
-  --color-surface: 248 250 252;
-  --color-muted: 241 245 249;
-  --color-border: 226 232 240;
 }
 
-/* Force light mode - disable dark mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: light;
-    --color-background: 255 255 255;
-    --color-foreground: 15 23 42;
-    --color-surface: 248 250 252;
-    --color-muted: 241 245 249;
-    --color-border: 226 232 240;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background-color: rgb(var(--color-background));
-  color: rgb(var(--color-foreground));
-  font-feature-settings: "kern" 1, "liga" 1, "clig" 1;
-  -webkit-font-smoothing: auto;
+  background-color: theme("colors.cream");
+  color: theme("colors.ink");
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeSpeed; /* more native-feeling on WebKit */
+}
+
+::selection {
+  background: theme("colors.plum.200");
+  color: theme("colors.plum.900");
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-block text-xs font-semibold uppercase tracking-[0.28em] text-magenta;
+  }
+
+  .display {
+    @apply font-display font-medium leading-[1.05] tracking-tight text-plum-900;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magenta/60 focus-visible:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-plum-gradient text-white shadow-glow hover:-translate-y-0.5 hover:shadow-[0_26px_70px_-18px_rgba(200,30,147,0.55)];
+  }
+
+  .btn-ghost {
+    @apply btn border border-plum-200 bg-white/70 text-plum-800 hover:border-plum-400 hover:bg-white;
+  }
+
+  .card {
+    @apply rounded-3xl border border-line bg-white/85 shadow-card backdrop-blur-sm;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-line bg-white/80 px-4 py-2 text-sm font-medium text-plum-800;
+  }
+
+  .icon-badge {
+    @apply flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-plum-50 text-plum-600 ring-1 ring-plum-100;
+  }
+
+  .link-quiet {
+    @apply text-muted transition-colors hover:text-magenta;
+  }
+}
+
+/* Scroll-reveal (progressive enhancement — visible by default if JS is off) */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 .skip-link {
   position: absolute;
-  top: -40px;
   left: 1rem;
-  padding: 0.75rem 1rem;
-  background: rgb(var(--color-surface));
-  color: rgb(var(--color-foreground));
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 40px -20px rgba(10, 37, 64, 0.45);
+  top: -3rem;
+  z-index: 100;
+  border-radius: 0.75rem;
+  background: theme("colors.plum.800");
+  padding: 0.6rem 1rem;
+  color: #fff;
   transition: top 0.2s ease;
-  z-index: 50;
 }
-
 .skip-link:focus {
   top: 1rem;
-}
-
-main:focus-visible {
-  outline: 2px solid #0A2540;
-  outline-offset: 4px;
-}
-
-::selection {
-  /* subtler selection for premium feel */
-  background-color: rgba(10, 37, 64, 0.1);
 }

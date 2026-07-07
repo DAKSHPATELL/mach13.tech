@@ -1,43 +1,97 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import type { Metadata } from "next";
+import { Cormorant_Garamond, Poppins } from "next/font/google";
 import { ReactNode } from "react";
-import dynamic from "next/dynamic";
-import { baseMetadata } from "@/lib/metadata";
-import PicktimeWidget from "@/components/PicktimeWidget";
-import StructuredData from "@/components/StructuredData";
+import Providers from "@/components/Providers";
 
-const inter = Inter({
+const display = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400", "600", "800"],
-  variable: "--font-inter"
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-display",
+  display: "swap"
 });
 
-export const metadata = baseMetadata;
-
-const plausibleDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN;
-const plausibleScriptSrc = process.env.NEXT_PUBLIC_PLAUSIBLE_SCRIPT;
-const plausibleApiHost = process.env.NEXT_PUBLIC_PLAUSIBLE_API_HOST;
-const ConsentManager = dynamic(() => import("@/components/ConsentManager"), {
-  ssr: false
+const sans = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap"
 });
 
-export default async function RootLayout({
-  children
-}: {
-  children: ReactNode;
-}) {
-  // This is the root layout - translations are handled in [locale] layout
+const siteUrl = "https://mach13.tech";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Shree Beauté Indienne — Institut de beauté à Paris 20e",
+    template: "%s · Shree Beauté Indienne"
+  },
+  description:
+    "Institut de beauté à Paris 20e. Épilation au fil et à la cire, onglerie, soins du visage, modelage et henné. Prenez rendez-vous en ligne chez Shree Beauté Indienne.",
+  keywords: [
+    "institut de beauté Paris",
+    "épilation au fil",
+    "onglerie",
+    "soin du visage",
+    "henné",
+    "modelage",
+    "Paris 20e",
+    "Shree Beauté Indienne"
+  ],
+  alternates: { canonical: siteUrl },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: siteUrl,
+    siteName: "Shree Beauté Indienne",
+    title: "Shree Beauté Indienne — Institut de beauté à Paris 20e",
+    description:
+      "Des soins sur-mesure pour sublimer votre beauté : épilation, onglerie, soins du visage, modelage et henné.",
+    images: [{ url: "/banner.png", width: 1254, height: 1254, alt: "Shree Beauté Indienne" }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shree Beauté Indienne — Institut de beauté à Paris 20e",
+    description: "Épilation, onglerie, soins du visage, modelage et henné à Paris 20e.",
+    images: ["/banner.png"]
+  },
+  icons: { icon: "/logo.png", apple: "/logo.png" }
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  name: "Shree Beauté Indienne",
+  image: `${siteUrl}/banner.png`,
+  url: siteUrl,
+  telephone: "+33188480712",
+  priceRange: "€€",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "77 rue des Pyrénées",
+    postalCode: "75020",
+    addressLocality: "Paris",
+    addressCountry: "FR"
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "10:00",
+      closes: "19:00"
+    }
+  ]
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" dir="ltr" className={inter.variable}>
-      <body className="bg-background text-foreground antialiased">
-        {children}
-        <StructuredData />
-        <ConsentManager
-          plausibleDomain={plausibleDomain}
-          plausibleScriptSrc={plausibleScriptSrc}
-          plausibleApiHost={plausibleApiHost}
+    <html lang="fr" dir="ltr" className={`${display.variable} ${sans.variable}`}>
+      <body className="font-sans antialiased">
+        <Providers>{children}</Providers>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <PicktimeWidget />
       </body>
     </html>
   );
