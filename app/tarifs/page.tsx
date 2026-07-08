@@ -30,16 +30,16 @@ export default function PricesPage() {
         {universes.map((u) => (
           <div key={u.name}>
             <Reveal>
-              <h2 className="display flex items-center gap-4 text-3xl sm:text-4xl">
-                {u.name}
-                <span className="h-px flex-1 bg-line" />
+              <h2 className="display flex items-center gap-5 text-3xl sm:text-4xl">
+                <span className="whitespace-nowrap">{u.name}</span>
+                <span className="h-px flex-1 bg-gradient-to-r from-gold via-gold/40 to-transparent" />
               </h2>
             </Reveal>
             <div className="mt-8 grid gap-6 lg:grid-cols-2">
               {u.categories.map((cat, i) => (
                 <Reveal key={cat.id} delay={i * 60}>
-                  <div id={cat.id} className="card scroll-mt-28 p-6 sm:p-7">
-                    <h3 className="font-display text-xl font-semibold text-plum-800">
+                  <div id={cat.id} className="card scroll-mt-28 p-6 transition-shadow duration-500 hover:shadow-gold-glow sm:p-7">
+                    <h3 className="flex items-center gap-2 font-display text-2xl font-medium text-plum-800">
                       {cat.title[lang]}
                     </h3>
                     <ul className="mt-4 divide-y divide-line/70">
@@ -53,7 +53,7 @@ export default function PricesPage() {
                               </span>
                             )}
                           </span>
-                          <span className="whitespace-nowrap font-display text-lg font-semibold text-magenta">
+                          <span className="whitespace-nowrap font-display text-xl font-semibold text-gold-ink">
                             {formatPrice(item, lang)}
                           </span>
                         </li>

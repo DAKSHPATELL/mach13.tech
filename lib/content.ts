@@ -349,6 +349,58 @@ export const timeSlots = [
   "17:00", "17:30", "18:00", "18:30"
 ];
 
+export const henneChapter = {
+  eyebrow: t("Notre signature", "Our signature"),
+  title: t("L'art du henné", "The art of henna"),
+  quote: t(
+    "Un art transmis, tracé à la main.",
+    "An art passed down, drawn by hand."
+  ),
+  text1: t(
+    "Le henné est le cœur indien de la maison. Chaque motif est dessiné à la main, au fil d'un geste patient et précis.",
+    "Henna is the Indian heart of the house. Every pattern is drawn by hand, through a patient and precise gesture."
+  ),
+  text2: t(
+    "Mariages, fêtes ou simple envie de beauté : nous traçons pour vous des motifs traditionnels et raffinés.",
+    "Weddings, celebrations or simply a wish for beauty: we draw traditional, refined patterns just for you."
+  ),
+  cta: t("Réserver un henné", "Book a henna")
+};
+
+export const marqueeWords = {
+  fr: ["Épilation au fil", "Onglerie", "Soins du visage", "Modelage", "Henné", "Beauté Indienne"],
+  en: ["Threading", "Nail care", "Facials", "Massage", "Henna", "Indian beauty"]
+};
+
+export type Testimonial = { name: string; text: L; city: L };
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "Amélie R.",
+    city: t("Paris 20ᵉ", "Paris 20th"),
+    text: t(
+      "Un accueil chaleureux et un henné magnifique pour mon mariage. Un vrai moment d'exception.",
+      "A warm welcome and gorgeous henna for my wedding. A truly exceptional moment."
+    )
+  },
+  {
+    name: "Sarah K.",
+    city: t("Paris", "Paris"),
+    text: t(
+      "L'épilation au fil est d'une précision incroyable. Je ne vais plus ailleurs.",
+      "The threading is incredibly precise. I won't go anywhere else now."
+    )
+  },
+  {
+    name: "Léa M.",
+    city: t("Montreuil", "Montreuil"),
+    text: t(
+      "Institut raffiné, équipe à l'écoute, résultat parfait. Le soin visage est un pur moment de détente.",
+      "A refined institute, an attentive team, a perfect result. The facial is pure relaxation."
+    )
+  }
+];
+
 export const footer = {
   quickLinks: t("Liens rapides", "Quick links"),
   rights: t(

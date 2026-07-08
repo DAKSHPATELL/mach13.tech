@@ -1,20 +1,28 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Poppins } from "next/font/google";
+import { Cormorant_Garamond, Jost, Marcellus } from "next/font/google";
 import { ReactNode } from "react";
 import Providers from "@/components/Providers";
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
   variable: "--font-display",
   display: "swap"
 });
 
-const sans = Poppins({
+const sans = Jost({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600"],
   variable: "--font-sans",
+  display: "swap"
+});
+
+const caps = Marcellus({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-caps",
   display: "swap"
 });
 
@@ -85,7 +93,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="fr" dir="ltr" className={`${display.variable} ${sans.variable}`}>
+    <html lang="fr" dir="ltr" className={`${display.variable} ${sans.variable} ${caps.variable}`}>
       <body className="font-sans antialiased">
         <Providers>{children}</Providers>
         <script

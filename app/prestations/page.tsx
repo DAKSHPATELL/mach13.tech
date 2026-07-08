@@ -5,6 +5,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
 import { Icon, Calendar, ArrowRight } from "@/components/Icons";
+import { Paisley, GoldRule, ArchFrame } from "@/components/Ornaments";
 import { useLang } from "@/lib/i18n";
 import { servicesPage, services, cta } from "@/lib/content";
 import { priceCategories } from "@/lib/prices";
@@ -39,53 +40,58 @@ export default function ServicesPage() {
 
       <section className="container-x py-20 sm:py-24">
         <Reveal className="text-center">
-          <span className="eyebrow">{servicesPage.chooseEyebrow[lang]}</span>
-          <h2 className="display mx-auto mt-4 max-w-2xl text-4xl sm:text-5xl">
+          <span className="eyebrow justify-center">
+            <Paisley gold className="h-4 w-4" />
+            {servicesPage.chooseEyebrow[lang]}
+          </span>
+          <h2 className="display mx-auto mt-5 max-w-2xl text-4xl sm:text-5xl">
             {servicesPage.chooseTitle[lang]}
           </h2>
+          <GoldRule className="mt-6" />
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mt-16 grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => {
             const from = fromPrice(s.id);
             return (
               <Reveal key={s.id} delay={i * 70}>
-                <article className="card group flex h-full flex-col overflow-hidden sm:flex-row">
-                  <div className="relative aspect-[4/3] overflow-hidden sm:aspect-auto sm:w-2/5">
-                    <Image
-                      src={s.image}
-                      alt={s.title[lang]}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 40vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col p-6">
-                    <span className="flex items-center gap-2 text-magenta">
-                      <Icon name={s.icon} className="h-5 w-5" />
-                      <h3 className="font-display text-2xl font-semibold text-plum-900">
-                        {s.title[lang]}
-                      </h3>
+                <article className="group flex h-full flex-col text-center">
+                  <div className="relative mx-auto w-full max-w-[17rem]">
+                    <ArchFrame id={`prest-${s.id}`} className="aspect-[3/4]">
+                      <Image
+                        src={s.image}
+                        alt={s.title[lang]}
+                        fill
+                        sizes="(max-width: 640px) 80vw, 280px"
+                        className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+                      />
+                    </ArchFrame>
+                    <span className="absolute left-1/2 top-3 -translate-x-1/2 opacity-70 transition-opacity group-hover:opacity-100">
+                      <Paisley gold className="h-5 w-5" />
                     </span>
-                    <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{s.text[lang]}</p>
-                    {from !== null && (
-                      <p className="mt-4 text-sm text-muted">
-                        {servicesPage.fromLabel[lang]}{" "}
-                        <span className="font-display text-2xl font-semibold text-plum-800">
-                          {from} €
-                        </span>
-                      </p>
-                    )}
-                    <div className="mt-5 flex flex-wrap gap-2.5">
-                      <Link href="/reservation" className="btn-primary !px-5 !py-2.5 text-xs">
-                        <Calendar className="h-4 w-4" />
-                        {cta.book[lang]}
-                      </Link>
-                      <Link href={s.priceHref} className="btn-ghost !px-5 !py-2.5 text-xs">
-                        {cta.seePrices[lang]}
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    </div>
+                  </div>
+                  <span className="mt-6 flex items-center justify-center gap-2 text-plum-600">
+                    <Icon name={s.icon} className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-1 font-display text-3xl font-medium text-plum-900">{s.title[lang]}</h3>
+                  <p className="mx-auto mt-2 max-w-xs flex-1 text-sm leading-relaxed text-muted">
+                    {s.text[lang]}
+                  </p>
+                  {from !== null && (
+                    <p className="mt-3 font-caps text-xs uppercase tracking-[0.18em] text-gold-ink">
+                      {servicesPage.fromLabel[lang]}{" "}
+                      <span className="text-plum-800">{from} €</span>
+                    </p>
+                  )}
+                  <div className="mt-5 flex flex-wrap justify-center gap-2.5">
+                    <Link href="/reservation" className="btn-primary !px-5 !py-2.5 text-xs">
+                      <Calendar className="h-4 w-4" />
+                      {cta.book[lang]}
+                    </Link>
+                    <Link href={s.priceHref} className="btn-ghost !px-5 !py-2.5 text-xs">
+                      {cta.seePrices[lang]}
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
                   </div>
                 </article>
               </Reveal>

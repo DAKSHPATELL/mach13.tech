@@ -92,7 +92,7 @@ export default function ReservationPage() {
                           )}
                         </div>
                         <div className="flex flex-none items-center gap-3">
-                          <span className="font-display text-lg font-semibold text-magenta">
+                          <span className="font-display text-lg font-semibold text-gold-ink">
                             {item.price === null ? R.onQuote[lang] : `${item.from ? "" : ""}${item.price} €`}
                           </span>
                           <button
@@ -159,14 +159,14 @@ export default function ReservationPage() {
                             <span className="text-xs text-muted">{f.categoryTitle}</span>
                           </span>
                           <span className="flex flex-none items-center gap-2">
-                            <span className="text-sm font-semibold text-magenta">
+                            <span className="text-sm font-semibold text-gold-ink">
                               {f.item.price === null ? R.onQuote[lang] : `${f.item.price} €`}
                             </span>
                             <button
                               type="button"
                               onClick={() => toggle(f.key)}
                               aria-label={R.remove[lang]}
-                              className="text-plum-400 hover:text-magenta"
+                              className="text-plum-400 hover:text-gold-ink"
                             >
                               <Close className="h-4 w-4" />
                             </button>
@@ -242,7 +242,7 @@ export default function ReservationPage() {
                   <ul className="mt-4 space-y-1.5 text-xs text-muted">
                     {R.notes.map((n, i) => (
                       <li key={i} className="flex gap-2">
-                        <span className="text-magenta">•</span>
+                        <span className="text-gold">•</span>
                         {n[lang]}
                       </li>
                     ))}

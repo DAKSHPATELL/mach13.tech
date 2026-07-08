@@ -78,11 +78,11 @@ export default function ContactPage() {
               </span>
               <span className="flex-1">
                 <span className="block font-medium text-plum-900">{site.address}</span>
-                <span className="mt-0.5 block text-sm text-magenta">
+                <span className="mt-0.5 block text-sm text-gold-ink">
                   {lang === "fr" ? "Ouvrir dans Google Maps" : "Open in Google Maps"}
                 </span>
               </span>
-              <ArrowRight className="h-5 w-5 text-plum-400 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="h-5 w-5 text-gold transition-transform group-hover:translate-x-1" />
             </a>
           </Reveal>
 
@@ -102,7 +102,7 @@ export default function ContactPage() {
                   </span>
                   <span className="mt-1 block text-sm text-muted">{contactPage.callCardText[lang]}</span>
                 </span>
-                <span className="text-sm font-semibold text-magenta">{site.phone}</span>
+                <span className="text-sm font-semibold text-gold-ink">{site.phone}</span>
               </a>
 
               <Link href="/reservation" className="block">

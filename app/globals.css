@@ -4,6 +4,7 @@
 
 :root {
   color-scheme: light;
+  --ease-lux: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 html {
@@ -17,10 +18,11 @@ body {
   font-feature-settings: "kern" 1, "liga" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 ::selection {
-  background: theme("colors.plum.200");
+  background: theme("colors.gold.champagne");
   color: theme("colors.plum.900");
 }
 
@@ -29,28 +31,68 @@ body {
     @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
   }
 
+  /* Small-caps engraved eyebrow, flanked by ornament in markup */
   .eyebrow {
-    @apply inline-block text-xs font-semibold uppercase tracking-[0.28em] text-magenta;
+    @apply inline-flex items-center gap-2.5 font-caps text-xs uppercase tracking-[0.32em] text-gold-ink;
   }
 
   .display {
-    @apply font-display font-medium leading-[1.05] tracking-tight text-plum-900;
+    @apply font-display font-medium leading-[0.98] tracking-[-0.01em] text-plum-900;
+  }
+
+  /* Real gold — used as TEXT via background-clip. Solid fallback below for reduced-motion/no-clip. */
+  .foil {
+    background: theme("backgroundImage.gold-foil");
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  .foil-sweep {
+    animation: theme("animation.shimmer-once");
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-magenta/60 focus-visible:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:ring-offset-2;
   }
 
+  /* Plum→magenta pill wearing a 1px gold keyline ring + shimmer sweep on hover */
   .btn-primary {
-    @apply btn bg-plum-gradient text-white shadow-glow hover:-translate-y-0.5 hover:shadow-[0_26px_70px_-18px_rgba(200,30,147,0.55)];
+    @apply btn relative overflow-hidden bg-plum-gradient text-white shadow-glow ring-1 ring-inset ring-gold/50 hover:-translate-y-0.5 hover:shadow-gold-glow;
+  }
+  .btn-primary::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      100deg,
+      transparent 20%,
+      rgba(246, 229, 180, 0.5) 50%,
+      transparent 80%
+    );
+    transform: translateX(-120%);
+    transition: transform 0.8s var(--ease-lux);
+  }
+  .btn-primary:hover::after {
+    transform: translateX(120%);
   }
 
   .btn-ghost {
-    @apply btn border border-plum-200 bg-white/70 text-plum-800 hover:border-plum-400 hover:bg-white;
+    @apply btn border border-plum-200 bg-white/60 text-plum-800 hover:border-gold hover:bg-white;
+  }
+
+  .btn-gold {
+    @apply btn bg-ivoire text-plum-900 ring-1 ring-inset ring-gold hover:-translate-y-0.5 hover:shadow-gold-glow;
   }
 
   .card {
     @apply rounded-3xl border border-line bg-white/85 shadow-card backdrop-blur-sm;
+  }
+
+  /* Gold hairline frame that fades in on hover */
+  .gold-hair {
+    box-shadow: inset 0 0 0 1px theme("colors.gold.hair");
   }
 
   .chip {
@@ -58,33 +100,128 @@ body {
   }
 
   .icon-badge {
-    @apply flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-plum-50 text-plum-600 ring-1 ring-plum-100;
+    @apply flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-plum-50 text-plum-600 ring-1 ring-gold/30;
   }
 
   .link-quiet {
-    @apply text-muted transition-colors hover:text-magenta;
+    @apply text-muted transition-colors hover:text-plum-800;
+  }
+
+  /* Editorial drop-cap */
+  .dropcap::first-letter {
+    @apply font-display text-gold-ink;
+    font-size: 4.6rem;
+    line-height: 0.7;
+    float: left;
+    padding: 0.35rem 0.6rem 0 0;
+  }
+
+  /* Sliding paisley/gold underline for nav links */
+  .nav-underline {
+    @apply relative;
+  }
+  .nav-underline::after {
+    content: "";
+    position: absolute;
+    left: 0.9rem;
+    right: 0.9rem;
+    bottom: 0.35rem;
+    height: 1px;
+    background: theme("backgroundImage.gold-foil");
+    background-size: 200% 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s var(--ease-lux);
+  }
+  .nav-underline:hover::after,
+  .nav-underline[data-active="true"]::after {
+    transform: scaleX(1);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Marquee ticker (duplicate content inside; track is 200% wide) */
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 34s linear infinite;
+}
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation: none;
   }
 }
 
 /* Scroll-reveal (progressive enhancement — visible by default if JS is off) */
 .reveal {
   opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(24px);
+  transition: opacity 0.8s var(--ease-lux), transform 0.8s var(--ease-lux);
   will-change: opacity, transform;
 }
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Self-drawing ornament. Paths must set pathLength="1". Draws when an ancestor
+   gains .is-visible (via IntersectionObserver) or on the hero .draw-now. */
+.draw-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+.is-visible .draw-path,
+.draw-now .draw-path {
+  animation: draw-stroke 2s var(--ease-lux) forwards;
+}
+.is-visible .draw-path,
+.draw-now .draw-path {
+  animation-delay: var(--draw-delay, 0s);
+}
+@keyframes draw-stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   .reveal {
     opacity: 1;
     transform: none;
     transition: none;
   }
-  html {
-    scroll-behavior: auto;
+  .draw-path {
+    stroke-dashoffset: 0 !important;
+    animation: none !important;
+  }
+  .foil-sweep,
+  .animate-shimmer-once,
+  .animate-rotate-slow,
+  .animate-float-slow,
+  .animate-diya-pulse {
+    animation: none !important;
+  }
+  /* Gold text falls back to a readable solid when the clip trick can't shimmer */
+  .foil {
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    color: theme("colors.gold.ink");
   }
 }
 

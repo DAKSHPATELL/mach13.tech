@@ -35,24 +35,30 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b transition-all duration-300 ${
-        scrolled
-          ? "border-line bg-cream/85 backdrop-blur-md"
-          : "border-transparent bg-cream/60 backdrop-blur-sm"
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-cream/90 backdrop-blur-md" : "bg-cream/60 backdrop-blur-sm"
       }`}
     >
-      <div className="container-x flex h-[4.6rem] items-center justify-between gap-4">
+      {/* gold hairline underlining the bar */}
+      <span
+        aria-hidden
+        className={`pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent transition-opacity duration-500 ${
+          scrolled ? "opacity-90" : "opacity-0"
+        }`}
+      />
+      <div className="container-x flex h-[4.7rem] items-center justify-between gap-4">
         <Logo />
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
+        <nav className="hidden items-center lg:flex" aria-label="Primary">
           {navOrder.map((item) => {
             const active = pathname === item.href;
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                  active ? "text-magenta" : "text-plum-800 hover:text-magenta"
+                data-active={active}
+                className={`nav-underline px-3.5 py-2 text-sm tracking-wide transition-colors ${
+                  active ? "text-plum-900" : "text-plum-800 hover:text-plum-900"
                 }`}
                 aria-current={active ? "page" : undefined}
               >
