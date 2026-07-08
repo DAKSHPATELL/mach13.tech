@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import Marquee from "@/components/Marquee";
+import Faq from "@/components/Faq";
+import InstagramStrip from "@/components/InstagramStrip";
 import { Icon } from "@/components/Icons";
 import { Calendar, ArrowRight } from "@/components/Icons";
 import {
@@ -283,6 +285,12 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* ───────────────────────── Instagram ───────────────────────── */}
+      <InstagramStrip />
+
+      {/* ───────────────────────── FAQ ───────────────────────── */}
+      <Faq />
 
       {/* ───────────────────────── CTA jewel box ───────────────────────── */}
       <section className="container-x pb-24">

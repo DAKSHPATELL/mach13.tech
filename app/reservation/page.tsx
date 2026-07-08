@@ -16,6 +16,7 @@ export default function ReservationPage() {
   const { lang } = useLang();
   const [selected, setSelected] = useState<string[]>([]);
   const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
 
   const flat: FlatItem[] = useMemo(
     () =>
@@ -53,15 +54,47 @@ export default function ReservationPage() {
       ? R.onQuote[lang]
       : `${totalPrice} €${hasQuoteOnly ? " +" : ""}`;
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
-    if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+    const fd = new FormData(e.currentTarget);
+    const payload = {
+      firstName: fd.get("firstName"),
+      lastName: fd.get("lastName"),
+      phone: fd.get("phone"),
+      email: fd.get("email"),
+      address: fd.get("address"),
+      date: fd.get("date"),
+      time: fd.get("time"),
+      notes: fd.get("notes"),
+      lang,
+      items: selectedItems.map((f) => ({
+        label: f.item.label[lang],
+        category: f.categoryTitle,
+        price: f.item.price
+      })),
+      totalPrice,
+      durationLabel
+    };
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/reservation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      if (!res.ok) throw new Error("failed");
+      setStatus("idle");
+      setSubmitted(true);
+      if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+    } catch {
+      setStatus("error");
+    }
   };
 
   const reset = () => {
     setSubmitted(false);
     setSelected([]);
+    setStatus("idle");
   };
 
   return (
@@ -234,10 +267,23 @@ export default function ReservationPage() {
                     </div>
                   </div>
 
-                  <button type="submit" className="btn-primary mt-5 w-full">
+                  <button
+                    type="submit"
+                    disabled={status === "sending"}
+                    className="btn-primary mt-5 w-full disabled:cursor-not-allowed disabled:opacity-70"
+                  >
                     <Calendar className="h-4 w-4" />
-                    {R.form.submit[lang]}
+                    {status === "sending" ? R.form.sending[lang] : R.form.submit[lang]}
                   </button>
+
+                  {status === "error" && (
+                    <p className="mt-3 rounded-xl bg-red-50 px-3 py-2 text-center text-xs text-red-700">
+                      {R.form.errorMsg[lang]}{" "}
+                      <a href={`tel:${site.phoneHref}`} className="font-semibold underline">
+                        {site.phone}
+                      </a>
+                    </p>
+                  )}
 
                   <ul className="mt-4 space-y-1.5 text-xs text-muted">
                     {R.notes.map((n, i) => (
@@ -290,7 +336,7 @@ function Field({
     <div className={className}>
       <label className="mb-1 block text-xs font-medium text-plum-700" htmlFor={name}>
         {label}
-        {required && <span className="text-magenta"> *</span>}
+        {required && <span className="text-gold-ink"> *</span>}
       </label>
       <input
         id={name}

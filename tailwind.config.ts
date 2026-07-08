@@ -22,12 +22,12 @@ const config: Config = {
         // Jewel-box darks
         noir: { DEFAULT: "#1e0716", deep: "#160510", 800: "#2a0e20" },
         // Warm fields
-        cream: "#fbf4f8",
-        ivoire: "#fff8f0",
+        cream: "#fbf5ee", // warmed from cool pink → warm ivory (sits better with gold)
+        ivoire: "#fffaf2",
         blush: "#f3ddec",
         // Ink + text
         ink: "#2b1b28",
-        muted: "#6b5262", // darkened for WCAG AA on cream
+        muted: "#5f4857", // darkened for comfortable WCAG AA on cream
         // Accents
         magenta: "#c81e93", // "rani" — reserve for large/bold text & glints
         rani: "#c81e93",
@@ -55,11 +55,11 @@ const config: Config = {
         glow: "0 20px 60px -20px rgba(200, 30, 147, 0.4)"
       },
       backgroundImage: {
-        "plum-gradient": "linear-gradient(120deg, #71235a 0%, #a83f88 55%, #c81e93 100%)",
+        "plum-gradient": "linear-gradient(120deg, #571b45 0%, #71235a 48%, #a83f88 100%)",
         "gold-foil":
           "linear-gradient(100deg, #9a7526 0%, #c9a24b 22%, #f6e5b4 48%, #c9a24b 74%, #9a7526 100%)",
         "cream-radial":
-          "radial-gradient(120% 80% at 82% 0%, #fdeaf5 0%, #fbf4f8 45%, #ffffff 100%)",
+          "radial-gradient(120% 80% at 82% 0%, #fbeede 0%, #fbf5ee 45%, #fffdf9 100%)",
         "aubergine-radial":
           "radial-gradient(120% 95% at 50% 0%, #37122b 0%, #1e0716 58%, #160510 100%)"
       },

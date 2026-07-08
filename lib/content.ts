@@ -327,7 +327,12 @@ export const reservationPage = {
     time: t("Heure", "Time"),
     timePlaceholder: t("Choisir une heure", "Choose a time"),
     notes: t("Informations complémentaires", "Additional information"),
-    submit: t("Confirmer la demande de réservation", "Confirm booking request")
+    submit: t("Confirmer la demande de réservation", "Confirm booking request"),
+    sending: t("Envoi en cours…", "Sending…"),
+    errorMsg: t(
+      "Une erreur est survenue. Merci de réessayer ou de nous appeler.",
+      "Something went wrong. Please try again or call us."
+    )
   },
   notes: [
     t("Merci de vérifier vos coordonnées avant validation.", "Please check your details before confirming."),
@@ -400,6 +405,83 @@ export const testimonials: Testimonial[] = [
     )
   }
 ];
+
+export const openStatus = {
+  open: t("Ouvert maintenant", "Open now"),
+  closed: t("Fermé", "Closed"),
+  opensMon: t("Ouvre lundi à 10h", "Opens Monday at 10am"),
+  opensSoon: t("Ouvre à 10h", "Opens at 10am"),
+  // opening hours: Mon–Sat 10:00–19:00 (day 0 = Sunday)
+  openDays: [1, 2, 3, 4, 5, 6],
+  openFrom: 10,
+  openTo: 19
+};
+
+export const instagram = {
+  eyebrow: t("Instagram", "Instagram"),
+  title: t("Suivez-nous", "Follow us"),
+  handle: "@shree.beaute.indienne",
+  url: "https://www.instagram.com/",
+  cta: t("Voir le profil", "View profile"),
+  images: ["/henne.png", "/onglerie.png", "/soin-visage.png", "/epilation.png", "/banner.png", "/modelage.png"]
+};
+
+export const team = {
+  eyebrow: t("L'équipe", "The team"),
+  title: t("Des mains expertes", "Expert hands"),
+  intro: t(
+    "Une équipe de praticiennes passionnées, formées à chaque geste et à l'écoute de vos envies.",
+    "A team of passionate practitioners, trained in every gesture and attentive to your wishes."
+  ),
+  members: [
+    { icon: "flower" as IconName, role: t("Fondatrice & experte henné", "Founder & henna expert") },
+    { icon: "leaf" as IconName, role: t("Spécialiste épilation au fil", "Threading specialist") },
+    { icon: "hand" as IconName, role: t("Praticienne onglerie", "Nail technician") },
+    { icon: "sparkle" as IconName, role: t("Esthéticienne soins visage", "Facial esthetician") }
+  ]
+};
+
+export const faq = {
+  eyebrow: t("Questions fréquentes", "FAQ"),
+  title: t("Bon à savoir", "Good to know"),
+  items: [
+    {
+      q: t("Faut-il prendre rendez-vous ?", "Do I need an appointment?"),
+      a: t(
+        "C'est conseillé pour garantir votre créneau, mais nous accueillons aussi sans rendez-vous selon les disponibilités.",
+        "It's recommended to secure your slot, but we also welcome walk-ins subject to availability."
+      )
+    },
+    {
+      q: t("Comment régler ma prestation ?", "How do I pay?"),
+      a: t(
+        "Le paiement se fait directement au salon, en espèces ou par carte. La réservation en ligne ne demande aucun prépaiement.",
+        "Payment is made at the salon, by cash or card. Online booking requires no prepayment."
+      )
+    },
+    {
+      q: t("Proposez-vous le henné pour les mariages ?", "Do you offer henna for weddings?"),
+      a: t(
+        "Oui. Nous réalisons des motifs traditionnels et sur-mesure pour les mariages et événements. Réservez à l'avance pour les grandes occasions.",
+        "Yes. We create traditional and bespoke designs for weddings and events. Book ahead for special occasions."
+      )
+    },
+    {
+      q: t("Vos protocoles d'hygiène ?", "What about hygiene?"),
+      a: t(
+        "Postes nettoyés entre chaque cliente, matériel désinfecté et usage unique lorsque nécessaire. Votre sécurité est notre priorité.",
+        "Stations cleaned between clients, disinfected tools and single-use items where needed. Your safety comes first."
+      )
+    },
+    {
+      q: t("Où êtes-vous situées ?", "Where are you located?"),
+      a: t(
+        "Au 77 rue des Pyrénées, Paris 20ᵉ — facilement accessible en métro et en bus.",
+        "At 77 rue des Pyrénées, Paris 20th — easily reached by metro and bus."
+      )
+    }
+  ]
+};
 
 export const footer = {
   quickLinks: t("Liens rapides", "Quick links"),

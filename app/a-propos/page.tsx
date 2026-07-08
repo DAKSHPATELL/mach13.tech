@@ -6,7 +6,7 @@ import PageHero from "@/components/PageHero";
 import { Icon } from "@/components/Icons";
 import { Paisley, GoldRule, ArchFrame, WaxSeal } from "@/components/Ornaments";
 import { useLang } from "@/lib/i18n";
-import { aboutPage, engagements } from "@/lib/content";
+import { aboutPage, engagements, team } from "@/lib/content";
 
 export default function AboutPage() {
   const { lang } = useLang();
@@ -88,6 +88,39 @@ export default function AboutPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="container-x py-20 sm:py-24">
+        <Reveal className="text-center">
+          <span className="eyebrow justify-center">
+            <Paisley gold className="h-4 w-4" />
+            {team.eyebrow[lang]}
+          </span>
+          <h2 className="display mx-auto mt-4 max-w-2xl text-4xl sm:text-5xl">{team.title[lang]}</h2>
+          <p className="mx-auto mt-5 max-w-xl text-muted">{team.intro[lang]}</p>
+          <GoldRule className="mt-6" />
+        </Reveal>
+        <div className="mx-auto mt-14 grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {team.members.map((m, i) => (
+            <Reveal key={i} delay={i * 80}>
+              <div className="group flex h-full flex-col items-center rounded-3xl border border-line bg-white/80 p-7 text-center shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-gold-glow">
+                <span
+                  className="flex h-20 w-20 items-center justify-center rounded-full text-plum-700"
+                  style={{
+                    background: "radial-gradient(circle at 35% 30%, #fffaf2, #f3ddec 75%)",
+                    boxShadow: "inset 0 0 0 1px rgba(201,162,75,0.6)"
+                  }}
+                >
+                  <Icon name={m.icon} className="h-8 w-8" />
+                </span>
+                <p className="mt-4 font-caps text-xs uppercase tracking-[0.16em] text-gold-ink">
+                  {m.role[lang]}
+                </p>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </section>
     </>
