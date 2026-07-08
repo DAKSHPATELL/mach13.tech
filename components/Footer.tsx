@@ -89,7 +89,7 @@ export default function Footer() {
       </div>
 
       <div className="relative border-t border-white/10">
-        <div className="container-x py-5 text-center font-caps text-xs uppercase tracking-[0.22em] text-ivoire/50">
+        <div className="container-x py-5 pb-24 text-center font-caps text-xs uppercase tracking-[0.22em] text-ivoire/50 lg:pb-5">
           {footer.rights[lang]}
         </div>
       </div>

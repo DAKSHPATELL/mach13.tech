@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
+import OpenStatus from "@/components/OpenStatus";
 import { MapPin, Phone, Clock, Calendar, ArrowRight } from "@/components/Icons";
 import { useLang } from "@/lib/i18n";
 import { contactPage, site, hours } from "@/lib/content";
@@ -37,7 +38,10 @@ export default function ContactPage() {
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Coordinates */}
           <Reveal>
-            <span className="eyebrow">{contactPage.coordsEyebrow[lang]}</span>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="eyebrow">{contactPage.coordsEyebrow[lang]}</span>
+              <OpenStatus />
+            </div>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {coords.map((c, i) => {
                 const Body = (
@@ -73,7 +77,7 @@ export default function ContactPage() {
               rel="noopener noreferrer"
               className="group mt-6 flex items-center gap-4 overflow-hidden rounded-3xl border border-line bg-plum-50/60 p-6 shadow-card transition-transform hover:-translate-y-0.5"
             >
-              <span className="flex h-14 w-14 flex-none items-center justify-center rounded-2xl bg-white text-magenta shadow-sm">
+              <span className="flex h-14 w-14 flex-none items-center justify-center rounded-2xl bg-white text-gold-ink shadow-sm">
                 <MapPin className="h-7 w-7" />
               </span>
               <span className="flex-1">
@@ -84,6 +88,16 @@ export default function ContactPage() {
               </span>
               <ArrowRight className="h-5 w-5 text-gold transition-transform group-hover:translate-x-1" />
             </a>
+
+            <div className="mt-5 overflow-hidden rounded-3xl border border-line shadow-card gold-hair">
+              <iframe
+                title={site.address}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-64 w-full grayscale-[0.15]"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=2.3888%2C48.8585%2C2.3972%2C48.8655&layer=mapnik&marker=48.8620%2C2.3930"
+              />
+            </div>
           </Reveal>
 
           {/* Actions */}

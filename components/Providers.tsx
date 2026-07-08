@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 import { LanguageProvider, useLang } from "@/lib/i18n";
 import Header from "./Header";
 import Footer from "./Footer";
+import MobileBookBar from "./MobileBookBar";
 import { GoldDefs } from "./Ornaments";
 
 function SkipLink() {
@@ -23,6 +24,7 @@ export default function Providers({ children }: { children: ReactNode }) {
       <Header />
       <main id="main">{children}</main>
       <Footer />
+      <MobileBookBar />
     </LanguageProvider>
   );
 }

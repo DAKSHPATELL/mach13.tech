@@ -98,7 +98,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className={`rounded-2xl px-4 py-3 text-base font-medium ${
-                  active ? "bg-plum-50 text-magenta" : "text-plum-800 hover:bg-plum-50"
+                  active ? "bg-plum-50 text-gold-ink" : "text-plum-800 hover:bg-plum-50"
                 }`}
               >
                 {item.label[lang]}
