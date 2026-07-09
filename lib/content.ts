@@ -38,12 +38,13 @@ export const cta = {
   call: t("Appeler le salon", "Call the salon")
 };
 
+// Real hours from the salon's own brochure: open every day, Wednesday opens later.
 export const hours = {
   title: t("Horaires", "Opening hours"),
-  weekdays: t("Lundi – Samedi", "Monday – Saturday"),
-  weekdaysTime: "10h00 – 19h00",
-  sunday: t("Dimanche", "Sunday"),
-  closed: t("Fermé", "Closed")
+  everyDay: t("Tous les jours", "Every day"),
+  everyDayTime: "10h00 – 19h30",
+  exceptionDay: t("Mercredi", "Wednesday"),
+  exceptionTime: "14h00 – 19h30"
 };
 
 export type IconName = "flower" | "user" | "shield" | "sparkle" | "heart" | "hand" | "leaf" | "clock";
@@ -124,7 +125,7 @@ export type Service = {
 export const services: Service[] = [
   {
     id: "epilation",
-    image: "/epilation.png",
+    image: "/epilation.jpg",
     icon: "leaf",
     title: t("Épilation", "Waxing & threading"),
     text: t(
@@ -135,7 +136,7 @@ export const services: Service[] = [
   },
   {
     id: "onglerie",
-    image: "/onglerie.png",
+    image: "/onglerie.jpg",
     icon: "hand",
     title: t("Onglerie", "Nail care"),
     text: t(
@@ -157,7 +158,7 @@ export const services: Service[] = [
   },
   {
     id: "modelage",
-    image: "/modelage.png",
+    image: "/modelage.webp",
     icon: "heart",
     title: t("Modelage", "Massage"),
     text: t(
@@ -238,8 +239,8 @@ export const galleryPage = {
   eyebrow: t("Galerie", "Gallery"),
   title: t("Espaces et instants beauté", "Spaces and beauty moments"),
   intro: t(
-    "Un aperçu de l'ambiance du salon, des soins et des finitions. De vraies photos viendront enrichir cette galerie.",
-    "A glimpse of the salon's atmosphere, treatments and finishes. Real photos will enrich this gallery soon."
+    "Un aperçu de l'ambiance du salon, des soins et des finitions.",
+    "A glimpse of the salon's atmosphere, treatments and finishes."
   ),
   items: [
     {
@@ -248,12 +249,17 @@ export const galleryPage = {
       text: t("Ambiance douce, détails floraux et finitions soyeuses.", "Soft mood, floral details and silky finishes.")
     },
     {
-      image: "/onglerie.png",
+      image: "/onglerie.jpg",
       title: t("Rituel mains", "Hand ritual"),
       text: t("Des gestes précis pour une manucure nette et féminine.", "Precise gestures for a clean, feminine manicure.")
     },
     {
-      image: "/modelage.png",
+      image: "/pedicure.jpg",
+      title: t("Rituel pieds", "Foot ritual"),
+      text: t("Beauté des pieds et soin des ongles jusqu'au bout des orteils.", "Foot care and nail finishing down to the very last toe.")
+    },
+    {
+      image: "/modelage.webp",
       title: t("Moment détente", "Relaxing moment"),
       text: t("Un espace calme pour vous recentrer et prendre soin de vous.", "A calm space to recentre and care for yourself.")
     },
@@ -263,7 +269,7 @@ export const galleryPage = {
       text: t("Motifs fins et traditionnels pour sublimer vos occasions.", "Fine, traditional patterns to elevate your occasions.")
     },
     {
-      image: "/epilation.png",
+      image: "/epilation.jpg",
       title: t("Peau nette", "Smooth skin"),
       text: t("Épilation soignée pour une peau douce et impeccable.", "Careful waxing for soft, flawless skin.")
     },
@@ -286,7 +292,7 @@ export const contactPage = {
   addressLabel: t("Adresse", "Address"),
   phoneLabel: t("Téléphone", "Phone"),
   hoursLabel: t("Horaires", "Hours"),
-  sundayLabel: t("Dimanche", "Sunday"),
+  exceptionLabel: t("Mercredi", "Wednesday"),
   actionEyebrow: t("Réservation", "Booking"),
   actionTitle: t("Passez à l'action", "Take the next step"),
   callCardTitle: t("Appeler le salon", "Call the salon"),
@@ -336,7 +342,10 @@ export const reservationPage = {
   },
   notes: [
     t("Merci de vérifier vos coordonnées avant validation.", "Please check your details before confirming."),
-    t("Créneaux proposés du lundi au samedi.", "Slots available Monday to Saturday."),
+    t(
+      "Ouvert 7j/7, 10h00–19h30 (dès 14h00 le mercredi).",
+      "Open 7 days a week, 10am–7:30pm (from 2pm on Wednesdays)."
+    ),
     t("Confirmation manuelle par le salon après réception.", "Manual confirmation by the salon after receipt.")
   ],
   successTitle: t("Demande envoyée", "Request sent"),
@@ -351,7 +360,7 @@ export const reservationPage = {
 export const timeSlots = [
   "10:00", "10:30", "11:00", "11:30", "12:00", "12:30", "13:00",
   "14:00", "14:30", "15:00", "15:30", "16:00", "16:30",
-  "17:00", "17:30", "18:00", "18:30"
+  "17:00", "17:30", "18:00", "18:30", "19:00"
 ];
 
 export const henneChapter = {
@@ -409,12 +418,17 @@ export const testimonials: Testimonial[] = [
 export const openStatus = {
   open: t("Ouvert maintenant", "Open now"),
   closed: t("Fermé", "Closed"),
-  opensMon: t("Ouvre lundi à 10h", "Opens Monday at 10am"),
-  opensSoon: t("Ouvre à 10h", "Opens at 10am"),
-  // opening hours: Mon–Sat 10:00–19:00 (day 0 = Sunday)
-  openDays: [1, 2, 3, 4, 5, 6],
-  openFrom: 10,
-  openTo: 19
+  // Open every day 10:00–19:30, except Wednesday (day 3) which opens at 14:00.
+  // day index: 0 = Sunday … 6 = Saturday
+  hoursByDay: {
+    0: [10, 19.5],
+    1: [10, 19.5],
+    2: [10, 19.5],
+    3: [14, 19.5],
+    4: [10, 19.5],
+    5: [10, 19.5],
+    6: [10, 19.5]
+  } as Record<number, [number, number]>
 };
 
 export const instagram = {
@@ -423,7 +437,7 @@ export const instagram = {
   handle: "@shree.beaute.indienne",
   url: "https://www.instagram.com/",
   cta: t("Voir le profil", "View profile"),
-  images: ["/henne.png", "/onglerie.png", "/soin-visage.png", "/epilation.png", "/banner.png", "/modelage.png"]
+  images: ["/henne.png", "/onglerie.jpg", "/soin-visage.png", "/epilation.jpg", "/pedicure.jpg", "/modelage.webp"]
 };
 
 export const team = {

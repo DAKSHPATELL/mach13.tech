@@ -149,9 +149,9 @@ export const priceCategories: PriceCategory[] = [
     group: t("Modelage", "Massage"),
     title: t("Modelage corporel", "Body massage"),
     items: [
-      { label: t("Modelage du dos", "Back massage"), price: 25, duration: 30 },
-      { label: t("Modelage du corps", "Full-body massage"), price: 49, duration: 60 },
-      { label: t("Modelage de la tête", "Head massage"), price: 25, duration: 30 }
+      { label: t("Modelage du dos", "Back massage"), price: 25, duration: 25 },
+      { label: t("Modelage du corps", "Full-body massage"), price: 49, duration: 45 },
+      { label: t("Modelage de la tête", "Head massage"), price: 25, duration: 25 }
     ]
   },
   {
