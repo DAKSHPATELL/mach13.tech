@@ -48,7 +48,7 @@ export async function POST(request: Request) {
   const itemsRows = items
     .map(
       (i) =>
-        `<tr><td style="padding:4px 12px 4px 0">${esc(i.label)}</td><td style="padding:4px 0;color:#6b5262">${esc(
+        `<tr><td style="padding:4px 12px 4px 0">${esc(i.label)}</td><td style="padding:4px 0;color:#6b5560">${esc(
           i.category
         )}</td><td style="padding:4px 0;text-align:right;font-weight:600">${
           i.price == null ? "—" : `${i.price} €`
@@ -57,31 +57,31 @@ export async function POST(request: Request) {
     .join("");
 
   const html = `
-    <div style="font-family:system-ui,-apple-system,sans-serif;color:#2b1b28;max-width:560px">
-      <h2 style="color:#571b45;margin:0 0 4px">Nouvelle demande de réservation</h2>
-      <p style="color:#6b5262;margin:0 0 16px">Shree Beauté Indienne — via salon.mach13.tech</p>
+    <div style="font-family:system-ui,-apple-system,sans-serif;color:#2b1620;max-width:560px">
+      <h2 style="color:#5a1e3c;margin:0 0 4px">Nouvelle demande de réservation</h2>
+      <p style="color:#6b5560;margin:0 0 16px">Shree Beauté Indienne — via salon.mach13.tech</p>
       <table style="border-collapse:collapse;font-size:14px;margin-bottom:16px">
-        <tr><td style="padding:3px 16px 3px 0;color:#6b5262">Client·e</td><td><strong>${esc(body.firstName)} ${esc(
+        <tr><td style="padding:3px 16px 3px 0;color:#6b5560">Client·e</td><td><strong>${esc(body.firstName)} ${esc(
           body.lastName
         )}</strong></td></tr>
-        <tr><td style="padding:3px 16px 3px 0;color:#6b5262">Téléphone</td><td>${esc(body.phone)}</td></tr>
-        <tr><td style="padding:3px 16px 3px 0;color:#6b5262">Email</td><td>${esc(body.email) || "—"}</td></tr>
-        <tr><td style="padding:3px 16px 3px 0;color:#6b5262">Adresse</td><td>${esc(body.address) || "—"}</td></tr>
-        <tr><td style="padding:3px 16px 3px 0;color:#6b5262">Date / heure</td><td>${esc(body.date) || "—"} · ${esc(
+        <tr><td style="padding:3px 16px 3px 0;color:#6b5560">Téléphone</td><td>${esc(body.phone)}</td></tr>
+        <tr><td style="padding:3px 16px 3px 0;color:#6b5560">Email</td><td>${esc(body.email) || "—"}</td></tr>
+        <tr><td style="padding:3px 16px 3px 0;color:#6b5560">Adresse</td><td>${esc(body.address) || "—"}</td></tr>
+        <tr><td style="padding:3px 16px 3px 0;color:#6b5560">Date / heure</td><td>${esc(body.date) || "—"} · ${esc(
           body.time
         ) || "—"}</td></tr>
-        <tr><td style="padding:3px 16px 3px 0;color:#6b5262">Durée estimée</td><td>${esc(body.durationLabel) || "—"}</td></tr>
+        <tr><td style="padding:3px 16px 3px 0;color:#6b5560">Durée estimée</td><td>${esc(body.durationLabel) || "—"}</td></tr>
       </table>
       ${
         itemsRows
-          ? `<table style="border-collapse:collapse;font-size:14px;width:100%;border-top:1px solid #efe0ea;border-bottom:1px solid #efe0ea">
+          ? `<table style="border-collapse:collapse;font-size:14px;width:100%;border-top:1px solid #e8ddcb;border-bottom:1px solid #e8ddcb">
               <thead><tr><th style="text-align:left;padding:8px 0;color:#7a5b1e;font-size:12px;letter-spacing:.08em;text-transform:uppercase">Prestations</th><th></th><th></th></tr></thead>
               <tbody>${itemsRows}</tbody>
             </table>
             <p style="text-align:right;font-size:16px;margin:10px 0 0">Total estimé : <strong>${
               body.totalPrice ?? 0
             } €</strong></p>`
-          : "<p style='color:#6b5262'>Aucune prestation sélectionnée.</p>"
+          : "<p style='color:#6b5560'>Aucune prestation sélectionnée.</p>"
       }
       ${body.notes ? `<p style="margin-top:16px"><em>Note :</em> ${esc(body.notes)}</p>` : ""}
     </div>`;
