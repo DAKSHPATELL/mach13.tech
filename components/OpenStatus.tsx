@@ -13,8 +13,8 @@ export default function OpenStatus({ className = "" }: { className?: string }) {
       const now = new Date();
       const day = now.getDay();
       const hour = now.getHours() + now.getMinutes() / 60;
-      const open =
-        openStatus.openDays.includes(day) && hour >= openStatus.openFrom && hour < openStatus.openTo;
+      const [from, to] = openStatus.hoursByDay[day];
+      const open = hour >= from && hour < to;
       setState({ open });
     };
     compute();

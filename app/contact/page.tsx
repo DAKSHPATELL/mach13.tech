@@ -20,9 +20,13 @@ export default function ContactPage() {
     {
       icon: Clock,
       label: contactPage.hoursLabel[lang],
-      value: `${hours.weekdays[lang]}, ${hours.weekdaysTime}`
+      value: `${hours.everyDay[lang]}, ${hours.everyDayTime}`
     },
-    { icon: Clock, label: contactPage.sundayLabel[lang], value: hours.closed[lang] }
+    {
+      icon: Clock,
+      label: contactPage.exceptionLabel[lang],
+      value: hours.exceptionTime
+    }
   ];
 
   return (

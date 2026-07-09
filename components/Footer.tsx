@@ -51,15 +51,15 @@ export default function Footer() {
             <li className="flex items-start gap-3">
               <Clock className="mt-0.5 h-4 w-4 flex-none text-gold" />
               <span>
-                <span className="block text-ivoire">{hours.weekdays[lang]}</span>
-                {hours.weekdaysTime}
+                <span className="block text-ivoire">{hours.everyDay[lang]}</span>
+                {hours.everyDayTime}
               </span>
             </li>
             <li className="flex items-start gap-3">
               <span className="mt-0.5 h-4 w-4 flex-none" />
               <span>
-                <span className="block text-ivoire">{hours.sunday[lang]}</span>
-                {hours.closed[lang]}
+                <span className="block text-ivoire">{hours.exceptionDay[lang]}</span>
+                {hours.exceptionTime}
               </span>
             </li>
           </ul>
