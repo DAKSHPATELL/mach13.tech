@@ -53,7 +53,7 @@ export default function HomePage() {
           <div className="animate-fade-up">
             <span className="eyebrow">
               <Paisley gold className="h-4 w-4" />
-              {home.eyebrow[lang]} · Paris 20ᵉ
+              {home.eyebrow[lang]} · Bagnolet
             </span>
             <h1 className="display mt-6 text-6xl leading-[0.95] sm:text-7xl md:text-[5.4rem]">
               <span className="block text-plum-900">{home.heroTitle1[lang]}</span>

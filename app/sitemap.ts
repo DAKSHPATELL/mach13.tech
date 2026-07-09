@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const base = "https://mach13.tech";
+const base = "https://salon.mach13.tech";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = ["", "/a-propos", "/prestations", "/tarifs", "/galerie", "/contact", "/reservation"];

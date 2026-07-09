@@ -14,8 +14,8 @@ export const site = {
   phone: "01 88 48 07 12",
   phoneHref: "+33188480712",
   email: "contact@shreebeaute.fr",
-  address: "77 rue des Pyrénées, 75020 Paris",
-  mapsQuery: "77 rue des Pyrénées, 75020 Paris"
+  address: "8 rue Raoul Berton, 93170 Bagnolet",
+  mapsQuery: "8 rue Raoul Berton, 93170 Bagnolet"
 };
 
 export const nav = {
@@ -382,7 +382,7 @@ export type Testimonial = { name: string; text: L; city: L };
 export const testimonials: Testimonial[] = [
   {
     name: "Amélie R.",
-    city: t("Paris 20ᵉ", "Paris 20th"),
+    city: t("Bagnolet", "Bagnolet"),
     text: t(
       "Un accueil chaleureux et un henné magnifique pour mon mariage. Un vrai moment d'exception.",
       "A warm welcome and gorgeous henna for my wedding. A truly exceptional moment."
@@ -476,8 +476,8 @@ export const faq = {
     {
       q: t("Où êtes-vous situées ?", "Where are you located?"),
       a: t(
-        "Au 77 rue des Pyrénées, Paris 20ᵉ — facilement accessible en métro et en bus.",
-        "At 77 rue des Pyrénées, Paris 20th — easily reached by metro and bus."
+        "Au 8 rue Raoul Berton, 93170 Bagnolet — aux portes de Paris, facilement accessible en métro et en bus.",
+        "At 8 rue Raoul Berton, 93170 Bagnolet — right at the gates of Paris, easily reached by metro and bus."
       )
     }
   ]
