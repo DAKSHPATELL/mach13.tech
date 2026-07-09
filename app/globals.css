@@ -57,7 +57,7 @@ body {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-wide transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 focus-visible:ring-offset-2;
   }
 
-  /* Plum→magenta pill wearing a 1px gold keyline ring + shimmer sweep on hover */
+  /* Oxblood pill wearing a 1px champagne keyline ring + shimmer sweep on hover */
   .btn-primary {
     @apply btn relative overflow-hidden bg-plum-gradient text-white shadow-glow ring-1 ring-inset ring-gold/50 hover:-translate-y-0.5 hover:shadow-gold-glow;
   }
@@ -68,7 +68,7 @@ body {
     background: linear-gradient(
       100deg,
       transparent 20%,
-      rgba(246, 229, 180, 0.5) 50%,
+      rgba(226, 207, 164, 0.5) 50%,
       transparent 80%
     );
     transform: translateX(-120%);
@@ -217,11 +217,16 @@ body {
   .animate-diya-pulse {
     animation: none !important;
   }
-  /* Gold text falls back to a readable solid when the clip trick can't shimmer */
+  /* Gold text falls back to a readable solid when the clip trick can't shimmer.
+     gold-ink is AA on parchment but only 3.1:1 on the near-black sections, so
+     .foil-dark falls back to champagne (12.7:1) instead. */
   .foil {
     background: none;
     -webkit-text-fill-color: currentColor;
     color: theme("colors.gold.ink");
+  }
+  .foil-dark {
+    color: theme("colors.gold.champagne");
   }
 }
 

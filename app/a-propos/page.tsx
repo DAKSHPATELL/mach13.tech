@@ -109,8 +109,8 @@ export default function AboutPage() {
                 <span
                   className="flex h-20 w-20 items-center justify-center rounded-full text-plum-700"
                   style={{
-                    background: "radial-gradient(circle at 35% 30%, #fffaf2, #f3ddec 75%)",
-                    boxShadow: "inset 0 0 0 1px rgba(201,162,75,0.6)"
+                    background: "radial-gradient(circle at 35% 30%, #fffdf8, #f0e6d5 75%)",
+                    boxShadow: "inset 0 0 0 1px rgba(184,152,95,0.65)"
                   }}
                 >
                   <Icon name={m.icon} className="h-8 w-8" />

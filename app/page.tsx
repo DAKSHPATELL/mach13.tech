@@ -176,14 +176,14 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-aubergine-radial py-24 text-ivoire">
         <span aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
         <span aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
-        <span aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-saffron/10 blur-[100px]" />
+        <span aria-hidden className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/10 blur-[100px]" />
 
         <div className="container-x relative grid items-center gap-14 lg:grid-cols-2">
           <Reveal className="order-2 lg:order-1">
             <div className="relative mx-auto grid aspect-square max-w-md place-items-center">
               {/* mandala centrepiece with self-painting mehndi vines */}
               <Mandala gold petals={24} className="absolute inset-0 h-full w-full opacity-90 animate-fade-up" />
-              <span aria-hidden className="absolute inset-0 rounded-full bg-saffron/5 blur-2xl" />
+              <span aria-hidden className="absolute inset-0 rounded-full bg-gold/5 blur-2xl" />
               <MehndiVine gold className="absolute left-0 top-[38%] h-10 w-full" />
               <MehndiVine gold className="absolute left-0 top-[62%] h-10 w-full rotate-180" />
               <span className="relative font-caps text-[0.72rem] uppercase tracking-[0.32em] text-gold">
@@ -198,7 +198,7 @@ export default function HomePage() {
               {henneChapter.eyebrow[lang]}
             </span>
             <h2 className="display mt-5 text-5xl text-ivoire sm:text-6xl">
-              <span className="foil bg-gold-foil">{henneChapter.title[lang]}</span>
+              <span className="foil foil-dark bg-gold-foil">{henneChapter.title[lang]}</span>
             </h2>
             <p className="mt-6 font-display text-2xl italic text-gold-champagne">
               « {henneChapter.quote[lang]} »
@@ -236,7 +236,7 @@ export default function HomePage() {
           <div className="grid gap-5 sm:grid-cols-3">
             {engagements.map((e, i) => (
               <Reveal key={e.icon} delay={i * 90}>
-                <div className="group h-full rounded-3xl border border-line bg-white/80 p-6 text-center shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-gold-glow hover:[box-shadow:inset_0_0_0_1px_theme(colors.gold.hair),0_24px_70px_-24px_rgba(201,162,75,0.45)]">
+                <div className="group h-full rounded-3xl border border-line bg-white/80 p-6 text-center shadow-card transition-all duration-500 hover:-translate-y-1 hover:shadow-gold-glow hover:[box-shadow:inset_0_0_0_1px_theme(colors.gold.hair),0_24px_70px_-24px_rgba(184,152,95,0.45)]">
                   <WaxSeal className="mx-auto">
                     <Icon name={e.icon} className="h-6 w-6" />
                   </WaxSeal>
@@ -249,40 +249,46 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ───────────────────────── Testimonials ───────────────────────── */}
-      <section className="container-x py-24">
-        <Reveal className="text-center">
-          <span className="eyebrow justify-center">
-            <Paisley gold className="h-4 w-4" />
-            {lang === "fr" ? "On dit de nous" : "What they say"}
-          </span>
-          <h2 className="display mx-auto mt-5 max-w-2xl text-4xl sm:text-5xl">
-            {lang === "fr" ? "Des clientes conquises" : "Clients who adore us"}
-          </h2>
-          <GoldRule className="mt-6" />
-        </Reveal>
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {testimonials.map((tm, i) => (
-            <Reveal key={tm.name} delay={i * 90}>
-              <figure className="card h-full p-7">
-                <span className="font-display text-6xl leading-none text-gold/50">“</span>
-                <blockquote className="-mt-4 font-display text-xl italic leading-snug text-plum-900">
-                  {tm.text[lang]}
-                </blockquote>
-                <figcaption className="mt-5 flex items-center gap-3 border-t border-line pt-4">
-                  <span className="flex items-center gap-1 text-gold">
-                    {Array.from({ length: 5 }).map((_, s) => (
-                      <Mandala key={s} gold petals={8} className="h-3 w-3" />
-                    ))}
-                  </span>
-                  <span className="ml-auto text-right">
-                    <span className="block text-sm font-medium text-plum-900">{tm.name}</span>
-                    <span className="block text-xs text-muted">{tm.city[lang]}</span>
-                  </span>
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
+      {/* ───────────────────────── Testimonials (velvet jewel box) ───────────────────────── */}
+      <section className="relative overflow-hidden bg-aubergine-radial py-24 text-ivoire">
+        <span aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <span aria-hidden className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent" />
+        <MandalaWatermark gold className="-left-32 -bottom-40 h-[32rem] w-[32rem] opacity-[0.06]" />
+
+        <div className="container-x relative">
+          <Reveal className="text-center">
+            <span className="eyebrow justify-center text-gold">
+              <Paisley gold className="h-4 w-4" />
+              {lang === "fr" ? "On dit de nous" : "What they say"}
+            </span>
+            <h2 className="display mx-auto mt-5 max-w-2xl text-4xl text-ivoire sm:text-5xl">
+              {lang === "fr" ? "Des clientes conquises" : "Clients who adore us"}
+            </h2>
+            <GoldRule className="mt-6" />
+          </Reveal>
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {testimonials.map((tm, i) => (
+              <Reveal key={tm.name} delay={i * 90}>
+                <figure className="h-full rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-sm transition-colors duration-500 hover:border-gold/40">
+                  <span className="font-display text-6xl leading-none text-gold/60">“</span>
+                  <blockquote className="-mt-4 font-display text-xl italic leading-snug text-gold-champagne">
+                    {tm.text[lang]}
+                  </blockquote>
+                  <figcaption className="mt-5 flex items-center gap-3 border-t border-white/10 pt-4">
+                    <span className="flex items-center gap-1 text-gold">
+                      {Array.from({ length: 5 }).map((_, s) => (
+                        <Mandala key={s} gold petals={8} className="h-3 w-3" />
+                      ))}
+                    </span>
+                    <span className="ml-auto text-right">
+                      <span className="block text-sm font-medium text-ivoire">{tm.name}</span>
+                      <span className="block text-xs text-ivoire/55">{tm.city[lang]}</span>
+                    </span>
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -304,7 +310,7 @@ export default function HomePage() {
                 {cta.book[lang]}
               </span>
               <h2 className="display mx-auto mt-5 max-w-2xl text-5xl sm:text-6xl">
-                <span className="foil bg-gold-foil">{home.ctaTitle[lang]}</span>
+                <span className="foil foil-dark bg-gold-foil">{home.ctaTitle[lang]}</span>
               </h2>
               <p className="mx-auto mt-5 max-w-xl text-ivoire/80">{home.ctaText[lang]}</p>
               <div className="mt-9 flex justify-center">

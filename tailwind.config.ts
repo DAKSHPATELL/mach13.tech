@@ -1,47 +1,53 @@
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 
+/**
+ * "Parchemin & Oxblood" — three colours, nothing else.
+ * Parchment (field) · Oxblood (brand) · Antique champagne (metal), plus near-black
+ * jewel-box darks. Token names are kept from the old plum palette so existing
+ * class names keep working; only the values changed.
+ */
 const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./lib/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
+        // Oxblood scale (formerly "plum")
         plum: {
-          50: "#faf1f7",
-          100: "#f3ddec",
-          200: "#e7bcd9",
-          300: "#d68fc0",
-          400: "#c163a4",
-          500: "#a83f88",
-          600: "#8c2c6f",
-          700: "#71235a",
-          800: "#571b45",
-          900: "#3f1332",
-          950: "#2a0c21"
+          50: "#faf2ef",
+          100: "#f2e0da",
+          200: "#e3c2b9",
+          300: "#cf9a90",
+          400: "#b26f6b",
+          500: "#93424f",
+          600: "#762f45",
+          700: "#5a1e3c", // brand primary
+          800: "#46172f",
+          900: "#331024", // headings
+          950: "#1e0915"
         },
-        // Jewel-box darks
-        noir: { DEFAULT: "#1e0716", deep: "#160510", 800: "#2a0e20" },
+        // Near-black jewel-box darks
+        noir: { DEFAULT: "#14090f", deep: "#0e0609", 800: "#1f1018" },
         // Warm fields
-        cream: "#fbf5ee", // warmed from cool pink → warm ivory (sits better with gold)
-        ivoire: "#fffaf2",
-        blush: "#f3ddec",
+        cream: "#f6f0e6", // parchment
+        ivoire: "#fffdf8",
+        blush: "#f0e6d5",
         // Ink + text
-        ink: "#2b1b28",
-        muted: "#5f4857", // darkened for comfortable WCAG AA on cream
-        // Accents
-        magenta: "#c81e93", // "rani" — reserve for large/bold text & glints
-        rani: "#c81e93",
-        emerald: "#0f6b5f",
-        saffron: { DEFAULT: "#e1922b", ink: "#b4661a" },
-        // Gold system — decorative gradient vs readable ink
+        ink: "#2b1620",
+        muted: "#6b5560", // AA on parchment
+        // Antique champagne (the only metal)
         gold: {
-          DEFAULT: "#c9a24b",
-          champagne: "#f6e5b4",
-          antique: "#9a7526",
-          ink: "#7a5b1e", // readable gold text (AA on light)
-          hair: "#e7cfa0"
+          DEFAULT: "#b8985f",
+          champagne: "#e2cfa4",
+          antique: "#8a6a34",
+          ink: "#7a5b1e", // readable gold text (AA on parchment)
+          hair: "#ddc79b"
         },
-        line: "#efe0ea"
+        line: "#e8ddcb",
+        // Retained tokens, brought on-palette (functional use only)
+        magenta: "#5a1e3c",
+        rani: "#5a1e3c",
+        emerald: "#4f6b5c" // desaturated sage — only the "open now" dot
       },
       fontFamily: {
         display: ["var(--font-display)", ...defaultTheme.fontFamily.serif],
@@ -49,19 +55,19 @@ const config: Config = {
         sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans]
       },
       boxShadow: {
-        soft: "0 18px 50px -24px rgba(42, 12, 33, 0.35)",
-        card: "0 12px 44px -22px rgba(42, 12, 33, 0.30)",
-        "gold-glow": "0 24px 70px -24px rgba(201, 162, 75, 0.45)",
-        glow: "0 20px 60px -20px rgba(200, 30, 147, 0.4)"
+        soft: "0 18px 50px -24px rgba(30, 9, 21, 0.35)",
+        card: "0 12px 44px -22px rgba(30, 9, 21, 0.26)",
+        "gold-glow": "0 24px 70px -24px rgba(184, 152, 95, 0.42)",
+        glow: "0 20px 60px -20px rgba(90, 30, 60, 0.38)"
       },
       backgroundImage: {
-        "plum-gradient": "linear-gradient(120deg, #571b45 0%, #71235a 48%, #a83f88 100%)",
+        "plum-gradient": "linear-gradient(120deg, #46172f 0%, #5a1e3c 48%, #762f45 100%)",
         "gold-foil":
-          "linear-gradient(100deg, #9a7526 0%, #c9a24b 22%, #f6e5b4 48%, #c9a24b 74%, #9a7526 100%)",
+          "linear-gradient(100deg, #8a6a34 0%, #b8985f 22%, #e2cfa4 48%, #b8985f 74%, #8a6a34 100%)",
         "cream-radial":
-          "radial-gradient(120% 80% at 82% 0%, #fbeede 0%, #fbf5ee 45%, #fffdf9 100%)",
+          "radial-gradient(120% 80% at 82% 0%, #f9f2e2 0%, #f6f0e6 45%, #fffdf8 100%)",
         "aubergine-radial":
-          "radial-gradient(120% 95% at 50% 0%, #37122b 0%, #1e0716 58%, #160510 100%)"
+          "radial-gradient(120% 95% at 50% 0%, #241320 0%, #14090f 58%, #0e0609 100%)"
       },
       keyframes: {
         shimmer: {

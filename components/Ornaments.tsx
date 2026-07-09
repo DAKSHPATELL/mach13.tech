@@ -6,10 +6,10 @@ export function GoldDefs() {
     <svg width="0" height="0" aria-hidden focusable="false" style={{ position: "absolute" }}>
       <defs>
         <linearGradient id="gold-grad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#9a7526" />
-          <stop offset="35%" stopColor="#c9a24b" />
-          <stop offset="60%" stopColor="#f6e5b4" />
-          <stop offset="100%" stopColor="#9a7526" />
+          <stop offset="0%" stopColor="#8a6a34" />
+          <stop offset="35%" stopColor="#b8985f" />
+          <stop offset="60%" stopColor="#e2cfa4" />
+          <stop offset="100%" stopColor="#8a6a34" />
         </linearGradient>
       </defs>
     </svg>
@@ -136,35 +136,29 @@ export function ArchFrame({
   className?: string;
   drawBorder?: boolean;
 }) {
-  // Multifoil arch path in a 100x120 box (top arch, straight sides, flat base).
-  const d =
-    "M6 116 V54 C6 30 22 6 50 6 C78 6 94 30 94 54 V116 Z";
+  /*
+   * The arch is a pure-CSS shape. We previously clipped with an SVG <clipPath>
+   * referenced from a 0×0 hidden <svg>; some Chrome builds refuse to resolve
+   * that and silently clip the image to nothing (empty arches). border-radius
+   * is equivalent here and bulletproof.
+   */
+  const radius = "50% 50% 1.25rem 1.25rem / 44% 44% 1.25rem 1.25rem";
   return (
-    <div className={`relative ${className}`}>
-      <svg width="0" height="0" aria-hidden style={{ position: "absolute" }}>
-        <defs>
-          <clipPath id={id} clipPathUnits="objectBoundingBox">
-            {/* normalized version of the arch path */}
-            <path d="M0.06 0.966 V0.45 C0.06 0.25 0.22 0.05 0.5 0.05 C0.78 0.05 0.94 0.25 0.94 0.45 V0.966 Z" />
-          </clipPath>
-        </defs>
-      </svg>
-      <div
-        className="relative h-full w-full overflow-hidden"
-        style={{ clipPath: `url(#${id})`, WebkitClipPath: `url(#${id})` }}
-      >
+    <div className={`relative ${className}`} data-arch={id}>
+      <div className="relative h-full w-full overflow-hidden" style={{ borderRadius: radius }}>
         {children}
       </div>
-      {/* Double gold keyline tracing the same arch */}
-      <svg
-        viewBox="0 0 100 120"
-        preserveAspectRatio="none"
-        className="pointer-events-none absolute inset-0 h-full w-full"
+      {/* Double champagne keyline tracing the same arch */}
+      <span
         aria-hidden
-      >
-        <path d={d} fill="none" stroke="url(#gold-grad)" strokeWidth={1.4} className={drawBorder ? "draw-path" : ""} pathLength={drawBorder ? 1 : undefined} />
-        <path d={d} fill="none" stroke="url(#gold-grad)" strokeWidth={0.5} opacity={0.6} transform="scale(0.94) translate(3.2 3.6)" />
-      </svg>
+        className={`pointer-events-none absolute inset-0 ${drawBorder ? "animate-fade-up" : ""}`}
+        style={{ borderRadius: radius, boxShadow: "inset 0 0 0 1.5px #b8985f" }}
+      />
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-[7px]"
+        style={{ borderRadius: radius, boxShadow: "inset 0 0 0 1px rgba(184,152,95,0.5)" }}
+      />
     </div>
   );
 }
@@ -206,7 +200,7 @@ export function GoldDust({ count = 10 }: { count?: number }) {
           bottom: `-10px`,
           width: `${size}px`,
           height: `${size}px`,
-          boxShadow: "0 0 6px 1px rgba(246,229,180,0.8)",
+          boxShadow: "0 0 6px 1px rgba(226,207,164,0.85)",
           animation: `float-dust ${dur}s linear ${delay}s infinite`
         }}
       />
@@ -225,8 +219,8 @@ export function WaxSeal({ children, className = "" }: { children: ReactNode; cla
     <span
       className={`relative flex h-12 w-12 flex-none items-center justify-center rounded-full ${className}`}
       style={{
-        background: "radial-gradient(circle at 35% 30%, #fff8f0, #f3ddec 70%)",
-        boxShadow: "inset 0 0 0 1px rgba(201,162,75,0.7), 0 6px 16px -8px rgba(122,91,30,0.6)"
+        background: "radial-gradient(circle at 35% 30%, #fffdf8, #f0e6d5 70%)",
+        boxShadow: "inset 0 0 0 1px rgba(184,152,95,0.75), 0 6px 16px -8px rgba(122,91,30,0.55)"
       }}
       aria-hidden
     >
