@@ -125,7 +125,7 @@ export type Service = {
 export const services: Service[] = [
   {
     id: "epilation",
-    image: "/epilation.jpg",
+    image: "/epilation.webp",
     icon: "leaf",
     title: t("Épilation", "Waxing & threading"),
     text: t(
@@ -158,7 +158,7 @@ export const services: Service[] = [
   },
   {
     id: "modelage",
-    image: "/modelage.webp",
+    image: "/modelage.jpg",
     icon: "heart",
     title: t("Modelage", "Massage"),
     text: t(
@@ -259,7 +259,7 @@ export const galleryPage = {
       text: t("Beauté des pieds et soin des ongles jusqu'au bout des orteils.", "Foot care and nail finishing down to the very last toe.")
     },
     {
-      image: "/modelage.webp",
+      image: "/modelage.jpg",
       title: t("Moment détente", "Relaxing moment"),
       text: t("Un espace calme pour vous recentrer et prendre soin de vous.", "A calm space to recentre and care for yourself.")
     },
@@ -269,7 +269,7 @@ export const galleryPage = {
       text: t("Motifs fins et traditionnels pour sublimer vos occasions.", "Fine, traditional patterns to elevate your occasions.")
     },
     {
-      image: "/epilation.jpg",
+      image: "/epilation.webp",
       title: t("Peau nette", "Smooth skin"),
       text: t("Épilation soignée pour une peau douce et impeccable.", "Careful waxing for soft, flawless skin.")
     },
@@ -437,7 +437,7 @@ export const instagram = {
   handle: "@shree.beaute.indienne",
   url: "https://www.instagram.com/",
   cta: t("Voir le profil", "View profile"),
-  images: ["/henne.png", "/onglerie.jpg", "/soin-visage.png", "/epilation.jpg", "/pedicure.jpg", "/modelage.webp"]
+  images: ["/henne.png", "/onglerie.jpg", "/soin-visage.png", "/epilation.webp", "/pedicure.jpg", "/modelage.jpg"]
 };
 
 export const team = {
