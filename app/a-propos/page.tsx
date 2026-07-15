@@ -23,19 +23,16 @@ export default function AboutPage() {
       <section className="container-x py-20 sm:py-24">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <Reveal>
-            <div className="relative mx-auto w-full max-w-sm">
-              <ArchFrame id="about-arch" drawBorder className="aspect-[3/4]">
+            <div className="group relative mx-auto w-full max-w-md">
+              <ArchFrame id="about-arch" drawBorder className="aspect-[4/5]">
                 <Image
                   src="/banner.png"
                   alt={aboutPage.passionTitle[lang]}
                   fill
-                  sizes="(max-width: 1024px) 90vw, 400px"
-                  className="object-cover"
+                  sizes="(max-width: 1024px) 90vw, 460px"
+                  className="object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
                 />
               </ArchFrame>
-              <span className="absolute left-1/2 top-4 -translate-x-1/2 opacity-80">
-                <Paisley gold className="h-6 w-6" />
-              </span>
             </div>
           </Reveal>
           <Reveal delay={100}>

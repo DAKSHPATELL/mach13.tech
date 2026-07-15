@@ -95,9 +95,14 @@ const config: Config = {
         "diya-pulse": {
           "0%, 100%": { opacity: "0.55" },
           "50%": { opacity: "0.9" }
+        },
+        ken: {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.08)" }
         }
       },
       animation: {
+        ken: "ken 16s ease-in-out infinite alternate",
         "shimmer-once": "shimmer 2.6s cubic-bezier(0.22,1,0.36,1) 0.35s both",
         "rotate-slow": "rotate-slow 120s linear infinite",
         "float-slow": "float-slow 7s ease-in-out infinite",

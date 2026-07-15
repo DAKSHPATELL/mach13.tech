@@ -122,8 +122,10 @@ export function GoldRule({ className }: { className?: string }) {
 }
 
 /*
- * ArchFrame — clips children (typically an image) inside a cusped multifoil
- * (jharokha) arch, with a double gold keyline. `id` must be unique per instance.
+ * ImageFrame — a modern, photography-forward frame: large soft-rounded corners,
+ * one whisper-thin gold hairline (kept for a touch of luxe, not an ornate arch),
+ * and a soft floating shadow. Replaces the old jharokha-arch + double keyline.
+ * Named ArchFrame still for call-site compatibility.
  */
 export function ArchFrame({
   id,
@@ -136,28 +138,18 @@ export function ArchFrame({
   className?: string;
   drawBorder?: boolean;
 }) {
-  /*
-   * The arch is a pure-CSS shape. We previously clipped with an SVG <clipPath>
-   * referenced from a 0×0 hidden <svg>; some Chrome builds refuse to resolve
-   * that and silently clip the image to nothing (empty arches). border-radius
-   * is equivalent here and bulletproof.
-   */
-  const radius = "50% 50% 1.25rem 1.25rem / 44% 44% 1.25rem 1.25rem";
   return (
-    <div className={`relative ${className}`} data-arch={id}>
-      <div className="relative h-full w-full overflow-hidden" style={{ borderRadius: radius }}>
-        {children}
-      </div>
-      {/* Double champagne keyline tracing the same arch */}
+    <div
+      className={`relative overflow-hidden rounded-[1.85rem] bg-plum-50 shadow-[0_30px_60px_-32px_rgba(30,9,21,0.55)] ${className}`}
+      data-arch={id}
+    >
+      {children}
+      {/* whisper-thin gold hairline for definition + a hint of luxe */}
       <span
         aria-hidden
-        className={`pointer-events-none absolute inset-0 ${drawBorder ? "animate-fade-up" : ""}`}
-        style={{ borderRadius: radius, boxShadow: "inset 0 0 0 1.5px #b8985f" }}
-      />
-      <span
-        aria-hidden
-        className="pointer-events-none absolute inset-[7px]"
-        style={{ borderRadius: radius, boxShadow: "inset 0 0 0 1px rgba(184,152,95,0.5)" }}
+        className={`pointer-events-none absolute inset-0 rounded-[1.85rem] ring-1 ring-inset ${
+          drawBorder ? "ring-gold/25" : "ring-gold/15"
+        }`}
       />
     </div>
   );
