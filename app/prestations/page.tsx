@@ -55,20 +55,22 @@ export default function ServicesPage() {
             const from = fromPrice(s.id);
             return (
               <Reveal key={s.id} delay={i * 70}>
-                <article className="group flex h-full flex-col text-center">
-                  <div className="relative mx-auto w-full max-w-[17rem]">
-                    <ArchFrame id={`prest-${s.id}`} className="aspect-[3/4]">
+                <article className="group flex h-full flex-col text-center transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5">
+                  <div className="relative w-full">
+                    <ArchFrame id={`prest-${s.id}`} className="aspect-[4/5]">
                       <Image
                         src={s.image}
                         alt={s.title[lang]}
                         fill
-                        sizes="(max-width: 640px) 80vw, 280px"
-                        className="object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+                        sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+                        className="object-cover transition-transform duration-[1200ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.07]"
                       />
+                      {from !== null && (
+                        <span className="absolute right-3.5 top-3.5 rounded-full bg-ivoire/90 px-3 py-1 text-xs font-semibold text-plum-800 shadow-sm backdrop-blur">
+                          {servicesPage.fromLabel[lang]} {from} €
+                        </span>
+                      )}
                     </ArchFrame>
-                    <span className="absolute left-1/2 top-3 -translate-x-1/2 opacity-70 transition-opacity group-hover:opacity-100">
-                      <Paisley gold className="h-5 w-5" />
-                    </span>
                   </div>
                   <span className="mt-6 flex items-center justify-center gap-2 text-plum-600">
                     <Icon name={s.icon} className="h-5 w-5" />
@@ -77,12 +79,6 @@ export default function ServicesPage() {
                   <p className="mx-auto mt-2 max-w-xs flex-1 text-sm leading-relaxed text-muted">
                     {s.text[lang]}
                   </p>
-                  {from !== null && (
-                    <p className="mt-3 font-caps text-xs uppercase tracking-[0.18em] text-gold-ink">
-                      {servicesPage.fromLabel[lang]}{" "}
-                      <span className="text-plum-800">{from} €</span>
-                    </p>
-                  )}
                   <div className="mt-5 flex flex-wrap justify-center gap-2.5">
                     <Link href="/reservation" className="btn-primary !px-5 !py-2.5 text-xs">
                       <Calendar className="h-4 w-4" />

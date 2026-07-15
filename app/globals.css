@@ -214,7 +214,8 @@ body {
   .animate-shimmer-once,
   .animate-rotate-slow,
   .animate-float-slow,
-  .animate-diya-pulse {
+  .animate-diya-pulse,
+  .animate-ken {
     animation: none !important;
   }
   /* Gold text falls back to a readable solid when the clip trick can't shimmer.
